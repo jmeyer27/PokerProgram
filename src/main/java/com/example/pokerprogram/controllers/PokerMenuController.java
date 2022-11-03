@@ -1,19 +1,19 @@
-package com.example.pokerprogram;
+package com.example.pokerprogram.controllers;
 
+import com.example.pokerprogram.ThePokerGame;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import org.controlsfx.control.action.Action;
-
 import java.io.IOException;
 
-//this class will control events like button clicks for the Poker Game Menu
+
+//this class will handle the events from the pokerMenu-view.xml file
 public class PokerMenuController {
+
     /*
     This button's purpose is to start the poker game from the poker game menu
     */
@@ -26,6 +26,7 @@ public class PokerMenuController {
         controller.setPreScene(gameButton.getScene());
 
         Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        stage.setTitle("Welcome to The Poker Game!");
         stage.setScene(scene);
         stage.show();
 

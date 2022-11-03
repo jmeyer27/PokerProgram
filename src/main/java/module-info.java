@@ -7,4 +7,6 @@ module com.example.pokerprogram {
 
     opens com.example.pokerprogram to javafx.fxml;
     exports com.example.pokerprogram;
+    exports com.example.pokerprogram.controllers;
+    opens com.example.pokerprogram.controllers to javafx.fxml;
 }

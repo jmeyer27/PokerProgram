@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 
 <AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.pokerprogram.PokerMenuController">
+            fx:controller="com.example.pokerprogram.controllers.PokerMenuController">
    <children>
       <Button fx:id="gameButton" onAction= "#startGameAction"
               layoutX="300.0" layoutY="150.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="212.0"

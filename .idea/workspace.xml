@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Menu&#10;Start game button will load poker game window. (Which is currently empty)">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/PokerGameController.java" afterDir="false" />
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="The Poker Game and Poker Menu&#10;Changed how the start game button switches scenes to the Poker Game.&#10;Added a button in the Poker Game that will return the user back to the menu">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/PokerMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/HelloApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/PokerGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/PokerMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/ThePokerGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/ThePokerGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerGame-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerGame-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerMenu-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerMenu-view.fxml" afterDir="false" />
     </list>
@@ -54,13 +53,21 @@
     "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources" />
+      <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram" />
+      <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src" />
+      <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\images" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="ThePokerGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.pokerprogram.ThePokerGame" />
       <module name="PokerProgram" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.pokerprogram.*" />
+          <option name="PATTERN" value="com.example.pokerprogram.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667497475135</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="The Poker Game and Poker Menu&#10;Changed how the start game button switches scenes to the Poker Game.&#10;Added a button in the Poker Game that will return the user back to the menu">
+      <created>1667500805076</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667500805076</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,6 +136,7 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Menu&#10;A crude menu was added to Poker Game.&#10;The only button that works as intended right now is the Exit button :)" />
     <MESSAGE value="Menu&#10;Start game button will load poker game window. (Which is currently empty)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Menu&#10;Start game button will load poker game window. (Which is currently empty)" />
+    <MESSAGE value="The Poker Game and Poker Menu&#10;Changed how the start game button switches scenes to the Poker Game.&#10;Added a button in the Poker Game that will return the user back to the menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="The Poker Game and Poker Menu&#10;Changed how the start game button switches scenes to the Poker Game.&#10;Added a button in the Poker Game that will return the user back to the menu" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-package com.example.pokerprogram;
+package com.example.pokerprogram.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 
-//this class will control events like button clicks for The Poker Game
+//this class will handle the events from the pokerGame-view.xml file
 public class PokerGameController {
 
     /*
@@ -32,6 +32,7 @@ public class PokerGameController {
     public Button returnToMenuButton;
     public void returnToMenuAction(ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setTitle("Welcome to The Poker Game Menu!");
         stage.setScene(preScene);
         stage.show();
     }
