@@ -1,6 +1,6 @@
 <h1 align="center">Poker Card Game</h1>
 <h2 align="center">A project by Poker Programmers</h2>
-<h2 align="center">Deadline: December ????, 2022 11:59PM</h2>
+<h2 align="center">Deadline: December 18, 2022 11:59PM</h2>
 
 
 

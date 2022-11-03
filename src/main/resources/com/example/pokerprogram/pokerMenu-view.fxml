@@ -6,8 +6,11 @@
 <AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.example.pokerprogram.Controller">
    <children>
-      <Button layoutX="300.0" layoutY="150.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="212.0" text="Play Game Button Placeholder" />
+      <Button fx:id="gameButton" onAction= "#startGameAction"
+              layoutX="300.0" layoutY="150.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="212.0"
+              text="Play Game Button Placeholder" />
       <Button layoutX="200.0" layoutY="400.0" mnemonicParsing="false" text="Statistics Button Placeholder" />
-      <Button fx:id="exitButton" onAction= "#closeButtonAction" layoutX="500.0" layoutY="400.0" mnemonicParsing="false" text="Quit Button Placeholder" />
+      <Button fx:id="exitButton" onAction= "#closeButtonAction"
+              layoutX="500.0" layoutY="400.0" mnemonicParsing="false" text="Quit Button Placeholder" />
    </children>
 </AnchorPane>
