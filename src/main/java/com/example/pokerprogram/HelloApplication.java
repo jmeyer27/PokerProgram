@@ -7,6 +7,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+
+/*
+This is a class that is an example. We can remove this class.
+It's cute though.
+ */
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
