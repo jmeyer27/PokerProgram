@@ -3,8 +3,6 @@
 <h2 align="center">Deadline: December ????, 2022 11:59PM</h2>
 
 
-# Poker Programmers
-
 
 Overview of Project:
 
