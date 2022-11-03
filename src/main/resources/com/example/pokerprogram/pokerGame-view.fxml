@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
-<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokerprogram.ThePokerGame">
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokerprogram.PokerGameController">
    <children>
-      <Text layoutX="186.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0"
-            text="Insert Poker Game here" wrappingWidth="311.162109375" />
+      <Text layoutX="186.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insert Poker Game here" wrappingWidth="311.162109375" />
+      <Button id="returnToMenuButton" onAction="#returnToMenuAction"
+              layoutX="200.0" layoutY="287.0" mnemonicParsing="false" text="Return to Menu placeholder button" />
    </children>
 </AnchorPane>

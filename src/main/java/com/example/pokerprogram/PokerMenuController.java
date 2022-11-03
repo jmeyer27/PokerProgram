@@ -1,26 +1,34 @@
 package com.example.pokerprogram;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import org.controlsfx.control.action.Action;
 
 import java.io.IOException;
 
-//this class will control events like button clicks
-public class Controller {
-
+//this class will control events like button clicks for the Poker Game Menu
+public class PokerMenuController {
     /*
     This button's purpose is to start the poker game from the poker game menu
     */
     public Button gameButton;
-    public void startGameAction() throws IOException {
-        Stage stage = (Stage) gameButton.getScene().getWindow();
-        System.out.println("Game start!");
-        Parent newRoot = FXMLLoader.load(getClass().getResource("pokerGame-view.fxml"));
-        stage.getScene().setRoot(newRoot);
+    public void startGameAction(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(ThePokerGame.class.getResource("pokerGame-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        PokerGameController controller = fxmlLoader.getController();
+        controller.setPreScene(gameButton.getScene());
+
+        Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+
     }
 
 
@@ -41,6 +49,15 @@ public class Controller {
         Stage stage = (Stage) exitButton.getScene().getWindow();
         stage.close();
     }
+
+
+
+    /*
+    This button is so that users are able to load up their statistics information
+    Todo: Make this button do some action when clicked
+     */
+    public Button statisticsButton;
+
 
 
 }//end of Controller class
