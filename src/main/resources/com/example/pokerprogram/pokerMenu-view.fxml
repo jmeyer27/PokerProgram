@@ -2,16 +2,20 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
+<?import java.net.URL?>
 <AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.example.pokerprogram.controllers.PokerMenuController">
+
    <children>
-      <Button fx:id="gameButton" onAction= "#startGameAction"
-              layoutX="300.0" layoutY="150.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="212.0"
-              text="Play Game Button Placeholder" />
-      <Button fx:id="statisticsButton"
-              layoutX="200.0" layoutY="400.0" mnemonicParsing="false" text="Statistics Button Placeholder" />
-      <Button fx:id="exitButton" onAction= "#closeButtonAction"
-              layoutX="500.0" layoutY="400.0" mnemonicParsing="false" text="Quit Button Placeholder" />
+
+      <Button fx:id="gameButton" layoutX="300.0" layoutY="150.0" mnemonicParsing="false" onAction="#startGameAction" prefHeight="91.0" prefWidth="212.0" text="Play Game Button Placeholder" />
+      <Button fx:id="statisticsButton" layoutX="200.0" layoutY="400.0" mnemonicParsing="false" text="Statistics Button Placeholder" />
+      <Button fx:id="exitButton" layoutX="500.0" layoutY="400.0" mnemonicParsing="false" onAction="#closeButtonAction" text="Quit Button Placeholder" />
+      <Text layoutX="100.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Poker Game!" wrappingWidth="725.1367073059082">
+         <font>
+            <Font size="48.0" />
+         </font></Text>
    </children>
 </AnchorPane>
