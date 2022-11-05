@@ -4,16 +4,15 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="MenuAnchorPane" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokerprogram.controllers.PokerMenuController">
+<AnchorPane id="MenuAnchorPane" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokerprogram.controllers.PokerMenuController">
 
    <children>
-      <Button fx:id="gameButton" layoutX="300.0" layoutY="150.0" mnemonicParsing="false" onAction="#startGameAction" prefHeight="91.0" prefWidth="212.0" text="Play Game Button Placeholder" />
-      <Button fx:id="statisticsButton" layoutX="200.0" layoutY="400.0" mnemonicParsing="false" text="Statistics Button Placeholder" />
-      <Button fx:id="exitButton" layoutX="500.0" layoutY="400.0" mnemonicParsing="false" onAction="#closeButtonAction" text="Quit Button Placeholder" />
-      <Text layoutX="100.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Poker Game!" wrappingWidth="725.1367073059082">
+      <Button fx:id="gameButton" layoutX="96.0" layoutY="151.0" mnemonicParsing="false" onAction="#startGameAction" prefHeight="183.0" prefWidth="635.0" text="Play Game Button Placeholder" />
+      <Button fx:id="statisticsButton" layoutX="347.0" layoutY="426.0" mnemonicParsing="false" text="Statistics Button Placeholder" />
+      <Button fx:id="exitButton" layoutX="615.0" layoutY="426.0" mnemonicParsing="false" onAction="#closeButtonAction" text="Quit Button Placeholder" />
+      <Text layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Poker Game!" textAlignment="CENTER" wrappingWidth="825.8000000000001">
          <font>
-            <Font size="48.0" />
+            <Font name="Georgia" size="50.0" />
          </font></Text>
    </children>
 </AnchorPane>

@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Uploaded files&#10;uploaded a background, have not been able to add it to the menu yet&#10;Created a .css folder to use to set background if able to make it work&#10;Added some enums to card class">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Menu Background&#10;Added a background to the main menu&#10;(If someone finds a better one, you can easily change it or ask me and I'll change it)">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/ThePokerGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/ThePokerGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/style/menuStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/menuStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/menuStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerMenu-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerMenu-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,11 +53,11 @@
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram\styles" />
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\java\com\example\pokerprogram\style" />
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\java\com\example\pokerprogram" />
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram\images" />
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram" />
-      <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources" />
     </key>
   </component>
   <component name="RunManager">
@@ -134,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667593763422</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Menu Background&#10;Added a background to the main menu&#10;(If someone finds a better one, you can easily change it or ask me and I'll change it)">
+      <created>1667686905467</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1667686905467</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -155,6 +159,7 @@
     <MESSAGE value="The Poker Game and Poker Menu&#10;Changed how the start game button switches scenes to the Poker Game.&#10;Added a button in the Poker Game that will return the user back to the menu" />
     <MESSAGE value="Small changes&#10;Changed icon for app to be a cute joker card&#10;Changed some comments for various classes&#10;Made a controller folder to keep things more organized" />
     <MESSAGE value="Uploaded files&#10;uploaded a background, have not been able to add it to the menu yet&#10;Created a .css folder to use to set background if able to make it work&#10;Added some enums to card class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Uploaded files&#10;uploaded a background, have not been able to add it to the menu yet&#10;Created a .css folder to use to set background if able to make it work&#10;Added some enums to card class" />
+    <MESSAGE value="Menu Background&#10;Added a background to the main menu&#10;(If someone finds a better one, you can easily change it or ask me and I'll change it)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Menu Background&#10;Added a background to the main menu&#10;(If someone finds a better one, you can easily change it or ask me and I'll change it)" />
   </component>
 </project>
