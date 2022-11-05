@@ -4,12 +4,10 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<?import java.net.URL?>
-<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.pokerprogram.controllers.PokerMenuController">
+<AnchorPane id="MenuAnchorPane" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokerprogram.controllers.PokerMenuController">
 
    <children>
-
       <Button fx:id="gameButton" layoutX="300.0" layoutY="150.0" mnemonicParsing="false" onAction="#startGameAction" prefHeight="91.0" prefWidth="212.0" text="Play Game Button Placeholder" />
       <Button fx:id="statisticsButton" layoutX="200.0" layoutY="400.0" mnemonicParsing="false" text="Statistics Button Placeholder" />
       <Button fx:id="exitButton" layoutX="500.0" layoutY="400.0" mnemonicParsing="false" onAction="#closeButtonAction" text="Quit Button Placeholder" />

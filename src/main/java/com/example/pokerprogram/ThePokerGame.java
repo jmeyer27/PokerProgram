@@ -2,17 +2,9 @@ package com.example.pokerprogram;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.CornerRadii;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.ImagePattern;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.util.Objects;
 
@@ -37,13 +29,13 @@ public class ThePokerGame extends Application {
         //Todo: If this is too big or too small feel free to change the values :)
         Scene scene = new Scene(fxmlLoader.load(), 800, 800);
 
-        //add icon picture
+        //add icon picture (this shows up in the upper left corner of the window and is the icon in the task bar)
         Image icon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/icon.png")));
         stage.getIcons().add(icon);
 
-        //Todo: set background of menu to image (can change image if you wish)
-        //Image background = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/menu_background.jpg")));
-        //scene.getStylesheets().addAll(Objects.requireNonNull(this.getClass().getResource("style/menuStyle.css")).toExternalForm());
+        //Set background of menu to image using CSS style sheet (can change image if you wish :) )
+        String css = this.getClass().getResource("menuStyle.css").toExternalForm();
+        scene.getStylesheets().add(css);
 
         //set title of scene
         stage.setTitle("Welcome to The Poker Game Menu!");
