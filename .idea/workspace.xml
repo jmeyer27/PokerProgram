@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Menu Background&#10;Added a background to the main menu&#10;(If someone finds a better one, you can easily change it or ask me and I'll change it)">
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Menu&#10;Changed layout of menu">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/images/background2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/images/background4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/ThePokerGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/ThePokerGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/menuStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/menuStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerMenu-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerMenu-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,20 +49,21 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_directory_selection": "C:/Users/jasmi/IdeaProjects/PokerProgram/src/main/resources/com/example/pokerprogram",
-    "last_opened_file_path": "C:/Users/jasmi/IdeaProjects/PokerProgram/src/main/resources/com/example/pokerprogram",
+    "last_opened_file_path": "C:/Users/jasmi/IdeaProjects/PokerProgram/src/main/resources/com/example/pokerprogram/images",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram\images" />
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram\images" />
+      <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram\music" />
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram\styles" />
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\java\com\example\pokerprogram\style" />
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\java\com\example\pokerprogram" />
-      <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram\images" />
-      <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram" />
     </key>
   </component>
   <component name="RunManager">
@@ -138,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667686905467</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Menu&#10;Changed layout of menu">
+      <created>1667687294464</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1667687294464</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,6 +173,7 @@
     <MESSAGE value="Small changes&#10;Changed icon for app to be a cute joker card&#10;Changed some comments for various classes&#10;Made a controller folder to keep things more organized" />
     <MESSAGE value="Uploaded files&#10;uploaded a background, have not been able to add it to the menu yet&#10;Created a .css folder to use to set background if able to make it work&#10;Added some enums to card class" />
     <MESSAGE value="Menu Background&#10;Added a background to the main menu&#10;(If someone finds a better one, you can easily change it or ask me and I'll change it)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Menu Background&#10;Added a background to the main menu&#10;(If someone finds a better one, you can easily change it or ask me and I'll change it)" />
+    <MESSAGE value="Menu&#10;Changed layout of menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Menu&#10;Changed layout of menu" />
   </component>
 </project>
