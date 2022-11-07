@@ -22,12 +22,16 @@ public class Card {
             this.value = value;
         };
 
+    }
 
+     int rank = 0;
+     int suit = 0;
 
-
-
-
-
+     //constructor for Card class
+    public Card(int newRank, int newSuit)
+    {
+        rank = newRank;
+        suit = newSuit;
     }
 
 
