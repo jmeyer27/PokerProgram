@@ -1,5 +1,6 @@
 package com.example.pokerprogram.controllers;
 
+import com.example.pokerprogram.Deck;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -15,6 +17,8 @@ import java.io.IOException;
 
 //this class will handle the events from the pokerGame-view.xml file
 public class PokerGameController {
+
+    private Deck deck;
 
     /*
     This is to set up the previous scene information so that the user can return to the menu
@@ -36,4 +40,11 @@ public class PokerGameController {
         stage.setScene(preScene);
         stage.show();
     }
+
+
+
+
+
+
+
 }
