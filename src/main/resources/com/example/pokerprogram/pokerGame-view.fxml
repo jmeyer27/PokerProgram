@@ -5,15 +5,15 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokerprogram.controllers.PokerGameController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokerprogram.controllers.PokerGameController">
    <children>
-      <Text layoutX="186.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insert Poker Game here" wrappingWidth="311.162109375" />
-      <Button id="returnToMenuButton" layoutX="305.0" layoutY="24.0" mnemonicParsing="false" onAction="#returnToMenuAction" prefHeight="87.0" prefWidth="205.0" text="Return to Menu placeholder button" />
-      <ImageView fx:id="imageView_Hand1" fitHeight="177.0" fitWidth="119.0" layoutX="420.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true">
+      <Text layoutX="363.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insert Poker Game here" wrappingWidth="311.162109375" />
+      <Button id="returnToMenuButton" layoutX="648.0" layoutY="362.0" mnemonicParsing="false" onAction="#returnToMenuAction" prefHeight="212.0" prefWidth="319.0" text="Return to Menu placeholder button" />
+      <ImageView fx:id="imageView_Hand1" fitHeight="177.0" fitWidth="119.0" layoutX="67.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/pokerCardImages/10_of_diamonds.png" />
          </image></ImageView>
-      <ImageView fx:id="imageView_Hand2" fitHeight="196.0" fitWidth="119.0" layoutX="552.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imageView_Hand2" fitHeight="196.0" fitWidth="119.0" layoutX="223.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/pokerCardImages/2_of_clubs.png" />
          </image>

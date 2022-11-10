@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Changed layout of Menu and background image">
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Added a few get methods to Card class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerGame-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerGame-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -147,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667687294464</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Uploaded card images&#10;Also tested out card images in Poker Game">
+      <created>1667853391985</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1667853391985</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -170,6 +177,8 @@
     <MESSAGE value="Uploaded files&#10;uploaded a background, have not been able to add it to the menu yet&#10;Created a .css folder to use to set background if able to make it work&#10;Added some enums to card class" />
     <MESSAGE value="Menu Background&#10;Added a background to the main menu&#10;(If someone finds a better one, you can easily change it or ask me and I'll change it)" />
     <MESSAGE value="Menu&#10;Changed layout of menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Menu&#10;Changed layout of menu" />
+    <MESSAGE value="Uploaded card images&#10;Also tested out card images in Poker Game" />
+    <MESSAGE value="Added a few get methods to Card class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a few get methods to Card class" />
   </component>
 </project>
