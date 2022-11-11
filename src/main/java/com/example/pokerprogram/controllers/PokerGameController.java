@@ -43,8 +43,15 @@ public class PokerGameController {
 
 
 
+    public Button bStartGame;
 
-
-
-
+    /**
+     *
+     * @param actionEvent
+     */
+    public void startGame(ActionEvent actionEvent) {
+        deck = new Deck();
+        deck.shuffle();
+        System.out.println("new game begins debug");
+    }
 }

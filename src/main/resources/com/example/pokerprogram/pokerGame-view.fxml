@@ -18,5 +18,6 @@
             <Image url="@images/pokerCardImages/2_of_clubs.png" />
          </image>
       </ImageView>
+      <Button id="bNewGame" fx:id="bNewGame" layoutX="519.0" layoutY="399.0" mnemonicParsing="false" onAction="#startGame" text="New Game" />
    </children>
 </AnchorPane>

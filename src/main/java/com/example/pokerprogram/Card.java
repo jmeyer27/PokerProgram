@@ -10,7 +10,6 @@ public class Card {
     private int rank;
     private int suit;
 
-    //todo someone can finish the class :)
     //if you want to implement Suit and Rank differently please feel free to do whatever and delete what I have here
     //~~~~~~~~~~thanks~~~~~~~~~~
 
@@ -37,17 +36,17 @@ public class Card {
     {
         rank = newRank;
         suit = newSuit;
-        String imageRank = getRank(newRank);
-        String imageSuit = getSuit(newSuit);
+        String imageRank = getRank();
+        String imageSuit = getSuit();
         String fileName = imageRank + "_of_" +imageSuit + ".png";
-        //todo test if this actually returns image
-        cardImage = new Image("/images/pokerCardImages/"+fileName);
+        //todo test if this actually returns image (lol no it is broken)
+        //cardImage = new Image("/images/pokerCardImages/"+fileName);
 
     }
 
     //todo test this method
-    private String getSuit(int newSuit) {
-       return switch(newSuit){
+    private String getSuit() {
+       return switch(this.suit){
            case 1 -> "hearts";
            case 2 -> "clubs";
            case 3 -> "diamonds";
@@ -57,12 +56,12 @@ public class Card {
     }
 
     //todo test this method
-    private String getRank(int newRank) {
-        return switch (newRank) {
+    private String getRank() {
+        return switch (this.rank) {
             case 11 -> "jack";
             case 12 -> "queen";
             case 13 -> "king";
-            default -> String.valueOf(newRank);
+            default -> String.valueOf(this.rank);
         };
     }
 
