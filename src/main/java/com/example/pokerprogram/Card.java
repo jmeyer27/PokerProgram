@@ -39,8 +39,9 @@ public class Card {
         String imageRank = getRank();
         String imageSuit = getSuit();
         String fileName = imageRank + "_of_" +imageSuit + ".png";
+        System.out.println(fileName); //line for debugging file name
         //todo test if this actually returns image (lol no it is broken)
-        //cardImage = new Image("/images/pokerCardImages/"+fileName);
+        //cardImage = new Image("images/pokerCardImages/2_of_clubs.png");//+fileName);
 
     }
 
@@ -58,6 +59,7 @@ public class Card {
     //todo test this method
     private String getRank() {
         return switch (this.rank) {
+            case 1 -> "ace";
             case 11 -> "jack";
             case 12 -> "queen";
             case 13 -> "king";

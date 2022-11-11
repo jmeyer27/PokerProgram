@@ -17,10 +17,10 @@ public class Deck {
 
     public void createDeck()
     {
-        for (int i = 1; i <= 4; i++) {
-            for(int j = 1; j <= 13; j++)
+        for (int suit = 1; suit <= 4; suit++) {
+            for(int rank = 1; rank <= 13; rank++)
             {
-                deck.add(new Card(i,j));
+                deck.add(new Card(rank,suit));
             }
         }
     }
