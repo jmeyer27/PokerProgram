@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Minor bug fixes&#10;In Deck class swapped added values to new cards (rank and suit were switched)&#10;In Card class added rank 1 is Ace instead of leaving it as 1">
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Cards now are correctly referenced in Poker Game&#10;Fixed file path to card images in Card&#10;Deck now deals top card after shuffling&#10;Card now has getCardImage() method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Deck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerGame-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerGame-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerMenuController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668132352798</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Cards now are correctly referenced in Poker Game&#10;Fixed file path to card images in Card&#10;Deck now deals top card after shuffling&#10;Card now has getCardImage() method">
+      <created>1668536609144</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1668536609144</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -205,6 +210,7 @@
     <MESSAGE value="Added a few get methods to Card class" />
     <MESSAGE value="New Game Button&#10;Fixed some bugs in Card class&#10;Fixed some bugs in Deck class&#10;Created a 'New Game' button in pokerGame-view and it so far it only creates a new deck and shuffles it." />
     <MESSAGE value="Minor bug fixes&#10;In Deck class swapped added values to new cards (rank and suit were switched)&#10;In Card class added rank 1 is Ace instead of leaving it as 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor bug fixes&#10;In Deck class swapped added values to new cards (rank and suit were switched)&#10;In Card class added rank 1 is Ace instead of leaving it as 1" />
+    <MESSAGE value="Cards now are correctly referenced in Poker Game&#10;Fixed file path to card images in Card&#10;Deck now deals top card after shuffling&#10;Card now has getCardImage() method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cards now are correctly referenced in Poker Game&#10;Fixed file path to card images in Card&#10;Deck now deals top card after shuffling&#10;Card now has getCardImage() method" />
   </component>
 </project>

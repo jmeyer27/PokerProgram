@@ -40,7 +40,6 @@ public class PokerMenuController {
          */
     @FXML
     private javafx.scene.control.Button exitButton;
-
     /*
     This is the action event function for when the exit button is clicked in the ThePokerGame pokerMenu
     Todo: Make this quit (or exit) button confirm with user that they really want to quit.

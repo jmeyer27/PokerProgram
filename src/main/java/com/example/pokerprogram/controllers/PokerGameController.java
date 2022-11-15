@@ -3,16 +3,17 @@ package com.example.pokerprogram.controllers;
 import com.example.pokerprogram.Deck;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.ButtonType;
 import javafx.scene.image.ImageView;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Optional;
 
 
 //this class will handle the events from the pokerGame-view.xml file
@@ -36,14 +37,27 @@ public class PokerGameController {
 
     /*
     This button's purpose is to return the user to the menu screen
-    Todo: Prompt user if they really want to return to the menu
      */
     public Button returnToMenuButton;
     public void returnToMenuAction(ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
-        stage.setTitle("Welcome to The Poker Game Menu!");
-        stage.setScene(preScene);
-        stage.show();
+
+        Alert.AlertType type = Alert.AlertType.CONFIRMATION;
+        Alert alert = new Alert(type, "");
+        alert.initModality(Modality.APPLICATION_MODAL);
+        alert.initOwner(stage);
+        alert.getDialogPane().setContentText("You will lose all progress.");
+        alert.getDialogPane().setHeaderText("Do you wish to exit the game?");
+
+        Optional<ButtonType> result = alert.showAndWait();
+            if(result.get() == ButtonType.OK){
+                stage.setTitle("Welcome to The Poker Game Menu!");
+                stage.setScene(preScene);
+                stage.show();
+            } else if(result.get() == ButtonType.CANCEL){
+                //nothing
+            }
+
     }
 
 
@@ -51,14 +65,17 @@ public class PokerGameController {
     public Button bStartGame;
 
     /**
-     *
-     * @param actionEvent
+     * Starts game when Start Game button is clicked by user
+     * @param actionEvent user clicks Start Game button
      */
     public void startGame(ActionEvent actionEvent) {
+        //get new deck and shuffle deck
         deck = new Deck();
         deck.shuffle();
-        System.out.println("new game begins debug");
 
+        //the two player cards are set out in front of them
+        //Todo: Warning: There is no player hand class or anything yet keeping track of what cards are out
+        //that would be the next step in this poker game
         imageView_Hand1.setImage(deck.dealTopCard().getCardImage());
         imageView_Hand2.setImage(deck.dealTopCard().getCardImage());
     }
