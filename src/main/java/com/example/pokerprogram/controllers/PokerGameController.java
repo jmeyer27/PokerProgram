@@ -19,6 +19,11 @@ import java.io.IOException;
 public class PokerGameController {
 
     private Deck deck;
+    @FXML
+    private ImageView imageView_Hand2;
+    @FXML
+    private ImageView imageView_Hand1;
+
 
     /*
     This is to set up the previous scene information so that the user can return to the menu
@@ -53,5 +58,8 @@ public class PokerGameController {
         deck = new Deck();
         deck.shuffle();
         System.out.println("new game begins debug");
+
+        imageView_Hand1.setImage(deck.dealTopCard().getCardImage());
+        imageView_Hand2.setImage(deck.dealTopCard().getCardImage());
     }
 }

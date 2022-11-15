@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="New Game Button&#10;Fixed some bugs in Card class&#10;Fixed some bugs in Deck class&#10;Created a 'New Game' button in pokerGame-view and it so far it only creates a new deck and shuffles it.">
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Minor bug fixes&#10;In Deck class swapped added values to new cards (rank and suit were switched)&#10;In Card class added rank 1 is Ace instead of leaving it as 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerGame-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerGame-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,16 +41,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_directory_selection": "C:/Users/jasmi/IdeaProjects/PokerProgram/src/main/resources/com/example/pokerprogram",
-    "last_opened_file_path": "C:/Users/jasmi/IdeaProjects/PokerProgram/src/main/java/com/example/pokerprogram",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/jasmi/IdeaProjects/PokerProgram/src/main/resources/com/example/pokerprogram&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jasmi/IdeaProjects/PokerProgram/src/main/java/com/example/pokerprogram&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\java\com\example\pokerprogram" />
@@ -169,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668130487210</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Minor bug fixes&#10;In Deck class swapped added values to new cards (rank and suit were switched)&#10;In Card class added rank 1 is Ace instead of leaving it as 1">
+      <created>1668132352798</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1668132352798</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,6 +204,7 @@
     <MESSAGE value="Uploaded card images&#10;Also tested out card images in Poker Game" />
     <MESSAGE value="Added a few get methods to Card class" />
     <MESSAGE value="New Game Button&#10;Fixed some bugs in Card class&#10;Fixed some bugs in Deck class&#10;Created a 'New Game' button in pokerGame-view and it so far it only creates a new deck and shuffles it." />
-    <option name="LAST_COMMIT_MESSAGE" value="New Game Button&#10;Fixed some bugs in Card class&#10;Fixed some bugs in Deck class&#10;Created a 'New Game' button in pokerGame-view and it so far it only creates a new deck and shuffles it." />
+    <MESSAGE value="Minor bug fixes&#10;In Deck class swapped added values to new cards (rank and suit were switched)&#10;In Card class added rank 1 is Ace instead of leaving it as 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor bug fixes&#10;In Deck class swapped added values to new cards (rank and suit were switched)&#10;In Card class added rank 1 is Ace instead of leaving it as 1" />
   </component>
 </project>

@@ -10,13 +10,8 @@
       <Text layoutX="363.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insert Poker Game here" wrappingWidth="311.162109375" />
       <Button id="returnToMenuButton" layoutX="648.0" layoutY="362.0" mnemonicParsing="false" onAction="#returnToMenuAction" prefHeight="212.0" prefWidth="319.0" text="Return to Menu placeholder button" />
       <ImageView fx:id="imageView_Hand1" fitHeight="177.0" fitWidth="119.0" layoutX="67.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/pokerCardImages/10_of_diamonds.png" />
-         </image></ImageView>
+         </ImageView>
       <ImageView fx:id="imageView_Hand2" fitHeight="196.0" fitWidth="119.0" layoutX="223.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/pokerCardImages/2_of_clubs.png" />
-         </image>
       </ImageView>
       <Button id="bNewGame" fx:id="bNewGame" layoutX="519.0" layoutY="399.0" mnemonicParsing="false" onAction="#startGame" text="New Game" />
    </children>

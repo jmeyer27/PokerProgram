@@ -2,6 +2,8 @@ package com.example.pokerprogram;
 
 import javafx.scene.image.Image;
 
+import java.util.Objects;
+
 public class Card {
 
 //    private final Enum<Card.Rank> Rank;
@@ -31,7 +33,11 @@ public class Card {
 //    }
 
 
-     //constructor for Card class
+    /**
+     * Constructor for card class
+     * @param newRank the rank of the new card
+     * @param newSuit the suit of the new card
+     */
     public Card(int newRank, int newSuit)
     {
         rank = newRank;
@@ -39,13 +45,12 @@ public class Card {
         String imageRank = getRank();
         String imageSuit = getSuit();
         String fileName = imageRank + "_of_" +imageSuit + ".png";
-        System.out.println(fileName); //line for debugging file name
+        //System.out.println(fileName); //line for debugging file name and card creation
         //todo test if this actually returns image (lol no it is broken)
-        //cardImage = new Image("images/pokerCardImages/2_of_clubs.png");//+fileName);
+        cardImage = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/pokerCardImages/" + fileName)));
 
     }
 
-    //todo test this method
     private String getSuit() {
        return switch(this.suit){
            case 1 -> "hearts";
@@ -56,7 +61,6 @@ public class Card {
        };
     }
 
-    //todo test this method
     private String getRank() {
         return switch (this.rank) {
             case 1 -> "ace";
@@ -65,6 +69,10 @@ public class Card {
             case 13 -> "king";
             default -> String.valueOf(this.rank);
         };
+    }
+
+    public Image getCardImage(){
+        return cardImage;
     }
 
 

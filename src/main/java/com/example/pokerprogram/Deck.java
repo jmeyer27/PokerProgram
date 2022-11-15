@@ -1,5 +1,7 @@
 package com.example.pokerprogram;
 
+import javafx.scene.image.Image;
+
 import java.util.ArrayList;
 import java.util.Collections;
 public class Deck {
@@ -30,8 +32,12 @@ public class Deck {
         Collections.shuffle(deck);
     }
 
-    public void deal(){
 
+    public Card dealTopCard(){
+        if(deck.size() > 0){
+            return deck.remove(0);
+        }
+        return null;
     }
 
 }
