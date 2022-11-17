@@ -6,31 +6,9 @@ import java.util.Objects;
 
 public class Card {
 
-//    private final Enum<Card.Rank> Rank;
-//    private final Enum<Card.Suit> Suit;
     private Image cardImage;
     private int rank;
     private int suit;
-
-    //if you want to implement Suit and Rank differently please feel free to do whatever and delete what I have here
-    //~~~~~~~~~~thanks~~~~~~~~~~
-
-//    //set up enums
-//    public enum Suit{
-//        HEARTS, CLUBS, DIAMONDS, SPADES
-//    };
-
-//    public enum Rank{
-//        TWO(2), THREE(3), FOUR(4), FIVE(5), SIX(6),
-//        SEVEN(7), EIGHT(8), NINE(9), TEN(10), JACK(11),
-//        QUEEN(12), KING(13), ACE(1);
-//
-//        final int value;
-//        private Rank(int value){
-//            this.value = value;
-//        }
-//
-//    }
 
 
     /**
@@ -46,11 +24,14 @@ public class Card {
         String imageSuit = getSuit();
         String fileName = imageRank + "_of_" +imageSuit + ".png";
         //System.out.println(fileName); //line for debugging file name and card creation
-        //todo test if this actually returns image (lol no it is broken)
         cardImage = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/pokerCardImages/" + fileName)));
 
     }
 
+    /**
+     * A get method that returns the suit of the card
+     * @return the suit of the card
+     */
     private String getSuit() {
        return switch(this.suit){
            case 1 -> "hearts";
@@ -61,6 +42,10 @@ public class Card {
        };
     }
 
+    /**
+     * A get method that determines the correct rank of the card based on the int value of their rank
+     * @return return cards rank
+     */
     private String getRank() {
         return switch (this.rank) {
             case 1 -> "ace";
@@ -71,6 +56,10 @@ public class Card {
         };
     }
 
+    /**
+     * A get method that returns the image of the card used in GUI
+     * @return the .png image of the card
+     */
     public Image getCardImage(){
         return cardImage;
     }

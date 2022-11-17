@@ -4,7 +4,8 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="MenuAnchorPane" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokerprogram.controllers.PokerMenuController">
+<AnchorPane id="MenuAnchorPane" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokerprogram.controllers.PokerMenuController">
 
    <children>
       <Button fx:id="gameButton" layoutX="96.0" layoutY="151.0" mnemonicParsing="false" onAction="#startGameAction" prefHeight="183.0" prefWidth="635.0" text="Play Game" textFill="#4e4a4a">
@@ -17,5 +18,6 @@
          <font>
             <Font name="Georgia" size="50.0" />
          </font></Text>
+      <Button fx:id="bHowToPlay" layoutX="109.0" layoutY="426.0" mnemonicParsing="false" onAction="#getHowToPlay" text="How to Play" />
    </children>
 </AnchorPane>

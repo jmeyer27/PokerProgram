@@ -42,6 +42,7 @@ public class PokerGameController {
     public void returnToMenuAction(ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
 
+        //prompt user if they want to return to menu
         Alert.AlertType type = Alert.AlertType.CONFIRMATION;
         Alert alert = new Alert(type, "");
         alert.initModality(Modality.APPLICATION_MODAL);

@@ -41,6 +41,8 @@ public class ThePokerGame extends Application {
 
         //set title of scene
         stage.setTitle("Welcome to The Poker Game Menu!");
+        //disable full screen because it makes the program C R A Z Y looking
+        stage.setResizable(false);
 
         //set up the scene and run the menu
         stage.setScene(scene);
