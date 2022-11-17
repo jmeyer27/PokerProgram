@@ -1,6 +1,8 @@
 package com.example.pokerprogram.controllers;
 
+import com.example.pokerprogram.Card;
 import com.example.pokerprogram.Deck;
+import com.example.pokerprogram.Player;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -35,10 +37,12 @@ public class PokerGameController {
     }
 
 
-    /*
-    This button's purpose is to return the user to the menu screen
+    /**
+     * This will return player to the menu screen from poker game screen
+     * Will also prompt user to specify if they wish to end the game or not
+     * @param actionEvent the returnToMenuButton is clicked in the pokerGame-view.fxml window
+     * @throws IOException exception thrown in the event of an error
      */
-    public Button returnToMenuButton;
     public void returnToMenuAction(ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
 
@@ -73,11 +77,14 @@ public class PokerGameController {
         //get new deck and shuffle deck
         deck = new Deck();
         deck.shuffle();
+        Player player1 = new Player();
+        player1.addCard(deck.dealTopCard()); //add card 1
+        player1.addCard(deck.dealTopCard()); //add card 2
+
 
         //the two player cards are set out in front of them
-        //Todo: Warning: There is no player hand class or anything yet keeping track of what cards are out
-        //that would be the next step in this poker game
-        imageView_Hand1.setImage(deck.dealTopCard().getCardImage());
-        imageView_Hand2.setImage(deck.dealTopCard().getCardImage());
+        imageView_Hand1.setImage(player1.getHand(0).getCardImage());
+        imageView_Hand2.setImage(player1.getHand(1).getCardImage());
+
     }
 }

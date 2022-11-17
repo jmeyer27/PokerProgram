@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Confirmation Dialog for returning to menu from Poker Game">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/HowToPlayController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/howToPlay-view.fxml" afterDir="false" />
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="How to Play window added&#10;Created a new fxml for this new window (howToPlay-view.fxml)&#10;Created a new controller for this new window (HowToPlayController.java)&#10;In various classes fixed comments and javadocs">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/ThePokerGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/ThePokerGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerMenu-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerMenu-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668538852628</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="How to Play window added&#10;Created a new fxml for this new window (howToPlay-view.fxml)&#10;Created a new controller for this new window (HowToPlayController.java)&#10;In various classes fixed comments and javadocs">
+      <created>1668650463947</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1668650463947</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -224,6 +226,7 @@
     <MESSAGE value="Minor bug fixes&#10;In Deck class swapped added values to new cards (rank and suit were switched)&#10;In Card class added rank 1 is Ace instead of leaving it as 1" />
     <MESSAGE value="Cards now are correctly referenced in Poker Game&#10;Fixed file path to card images in Card&#10;Deck now deals top card after shuffling&#10;Card now has getCardImage() method" />
     <MESSAGE value="Confirmation Dialog for returning to menu from Poker Game" />
-    <option name="LAST_COMMIT_MESSAGE" value="Confirmation Dialog for returning to menu from Poker Game" />
+    <MESSAGE value="How to Play window added&#10;Created a new fxml for this new window (howToPlay-view.fxml)&#10;Created a new controller for this new window (HowToPlayController.java)&#10;In various classes fixed comments and javadocs" />
+    <option name="LAST_COMMIT_MESSAGE" value="How to Play window added&#10;Created a new fxml for this new window (howToPlay-view.fxml)&#10;Created a new controller for this new window (HowToPlayController.java)&#10;In various classes fixed comments and javadocs" />
   </component>
 </project>
