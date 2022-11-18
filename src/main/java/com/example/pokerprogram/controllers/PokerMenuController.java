@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
@@ -67,6 +68,7 @@ public class PokerMenuController {
 
         FXMLLoader fxmlLoader = new FXMLLoader(ThePokerGame.class.getResource("howToPlay-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        scene.setFill(Color.web("#81c483"));
 
         //Todo: This is optional but the icon for the new window is not set. The path (/images/icon.png) is not correct
         //add icon picture (this shows up in the upper left corner of the window and is the icon in the task bar)

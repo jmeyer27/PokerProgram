@@ -21,6 +21,8 @@ import java.util.Optional;
 //this class will handle the events from the pokerGame-view.xml file
 public class PokerGameController {
 
+    public ImageView imageView_Dealer1;
+    public ImageView imageView_Dealer2;
     private Deck deck;
     @FXML
     private ImageView imageView_Hand2;
@@ -77,14 +79,17 @@ public class PokerGameController {
         //get new deck and shuffle deck
         deck = new Deck();
         deck.shuffle();
+        //new player and give player 2 cards to their hand
         Player player1 = new Player();
         player1.addCard(deck.dealTopCard()); //add card 1
         player1.addCard(deck.dealTopCard()); //add card 2
-
 
         //the two player cards are set out in front of them
         imageView_Hand1.setImage(player1.getHand(0).getCardImage());
         imageView_Hand2.setImage(player1.getHand(1).getCardImage());
 
+        //todo: place these cards in a dealer/table arraylist? Need to keep track of cards on table.
+        imageView_Dealer1.setImage(deck.dealTopCard().getCardImage());
+        imageView_Dealer2.setImage(deck.dealTopCard().getCardImage());
     }
 }

@@ -3,6 +3,8 @@
 <?import javafx.scene.layout.*?>
 
 
-<AnchorPane prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokerprogram.controllers.HowToPlayController">
+<AnchorPane prefHeight="500.0" prefWidth="400.0"
+            style="-fx-background-color: #81c483;" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokerprogram.controllers.HowToPlayController">
 
 </AnchorPane>
