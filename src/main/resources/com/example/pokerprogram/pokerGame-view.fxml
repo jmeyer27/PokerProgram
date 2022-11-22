@@ -14,12 +14,12 @@
       <Button id="bNewGame" fx:id="bNewGame" layoutX="463.0" layoutY="35.0" mnemonicParsing="false" onAction="#startGame" text="New Game" />
       <ImageView fx:id="imageView_Dealer1" fitHeight="159.0" fitWidth="99.0" layoutX="71.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="imageView_Dealer2" fitHeight="159.0" fitWidth="99.0" layoutX="223.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="bFold" layoutX="821.0" layoutY="314.0" mnemonicParsing="false" onAction="#fold" prefHeight="54.0" prefWidth="67.0" text="Fold" />
+      <Button fx:id="bFold" visible = "false" layoutX="821.0" layoutY="314.0" mnemonicParsing="false" onAction="#fold" prefHeight="54.0" prefWidth="67.0" text="Fold" />
       <Button fx:id="bHowToPlay" layoutX="41.0" layoutY="35.0" mnemonicParsing="false" onAction="#getHowToPLay" text="How to Play" />
       <Label fx:id="gameText" layoutX="610.0" layoutY="61.0" prefHeight="121.0" prefWidth="359.0" />
-      <Button fx:id="bBet" layoutX="780.0" layoutY="382.0" mnemonicParsing="false" onAction="#bet" prefHeight="54.0" prefWidth="67.0" text="Bet" />
-      <Button fx:id="bCall" layoutX="865.0" layoutY="458.0" mnemonicParsing="false" onAction="#call" prefHeight="53.0" prefWidth="67.0" text="Call" />
-      <Button fx:id="bCheck" layoutX="865.0" layoutY="382.0" mnemonicParsing="false" onAction="#check" prefHeight="54.0" prefWidth="67.0" text="Check" />
-      <Button fx:id="bRaise" layoutX="780.0" layoutY="457.0" mnemonicParsing="false" onAction="#raise" prefHeight="54.0" prefWidth="67.0" text="Raise" />
+      <Button fx:id="bBet" visible = "false" layoutX="780.0" layoutY="382.0" mnemonicParsing="false" onAction="#bet" prefHeight="54.0" prefWidth="67.0" text="Bet" />
+      <Button fx:id="bCall" visible = "false" layoutX="865.0" layoutY="458.0" mnemonicParsing="false" onAction="#call" prefHeight="53.0" prefWidth="67.0" text="Call" />
+      <Button fx:id="bCheck" visible = "false" layoutX="865.0" layoutY="382.0" mnemonicParsing="false" onAction="#check" prefHeight="54.0" prefWidth="67.0" text="Check" />
+      <Button fx:id="bRaise" visible = "false" layoutX="780.0" layoutY="457.0" mnemonicParsing="false" onAction="#raise" prefHeight="54.0" prefWidth="67.0" text="Raise" />
    </children>
 </AnchorPane>

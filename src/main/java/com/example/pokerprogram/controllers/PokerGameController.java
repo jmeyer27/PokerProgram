@@ -19,17 +19,18 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 import java.util.Optional;
 
 
 //this class will handle the events from the pokerGame-view.xml file
 public class PokerGameController {
+    Player player1;
 
     public ImageView imageView_Dealer1;
     public ImageView imageView_Dealer2;
     public Button bFold;
     public Button bHowToPlay;
-
     @FXML
     public Label gameText;
     public Button bBet;
@@ -41,7 +42,6 @@ public class PokerGameController {
     private ImageView imageView_Hand2;
     @FXML
     private ImageView imageView_Hand1;
-
     public Button bStartGame;
 
 
@@ -93,7 +93,7 @@ public class PokerGameController {
         deck = new Deck();
         deck.shuffle();
         //new player and give player 2 cards to their hand
-        Player player1 = new Player();
+        player1 = new Player();
         player1.addCard(deck.dealTopCard()); //add card 1
         player1.addCard(deck.dealTopCard()); //add card 2
 
@@ -109,17 +109,9 @@ public class PokerGameController {
         gameText.setText("Poker game begins!");
 
         //Raise and Call cannot be used before a bet has been wagered
-        bRaise.setVisible(false);
-        bCall.setVisible(false);
-    }
-
-    public void fold(ActionEvent actionEvent) {
-        //set text in game text field
-        gameText.setText("Player has chosen to fold.");
-        //Todo fold function
-        //When the player folds they no longer are able to make other moves?
-        //Can only start new game in single player
-        //If we can make multiplayer then they would be unable to have a turn for the rest of the game?
+        bBet.setVisible(true);
+        bFold.setVisible(true);
+        bCheck.setVisible(true);
     }
 
     public void getHowToPLay(ActionEvent actionEvent) throws IOException {
@@ -145,6 +137,7 @@ public class PokerGameController {
     public void bet(ActionEvent actionEvent) {
         //set text in game text field
         gameText.setText("Player has chosen to make a bet."); //maybe add text to how much they chose to bet also :)
+
         //Todo bet function
         // prompt user how much they wish to bet
         // make sure the bet amount is within their currency range
@@ -154,7 +147,26 @@ public class PokerGameController {
         //make raise and call buttons no longer invisible for next round
         bRaise.setVisible(true);
         bCall.setVisible(true);
+        //set bet to now be disabled
+        bBet.setDisable(true);
 
+    }
+
+
+    public void fold(ActionEvent actionEvent) {
+        //set text in game text field
+        gameText.setText("Player has chosen to fold.");
+        //fold hand
+        imageView_Hand1.setImage(player1.getHand(0).getBackOfCard());
+        imageView_Hand2.setImage(player1.getHand(1).getBackOfCard());
+
+        //game cannot be used so are turned invisible
+        setInvisibleButtons();
+
+        //Todo fold function
+        //When the player folds they no longer are able to make other moves?
+        //Can only start new game in single player
+        //If we can make multiplayer then they would be unable to have a turn for the rest of the game?
     }
 
     public void call(ActionEvent actionEvent) {
@@ -174,4 +186,15 @@ public class PokerGameController {
         gameText.setText("Player has chosen to raise.");
         //Todo raise function
     }
+
+    public void setInvisibleButtons(){
+        bRaise.setVisible(false);
+        bCall.setVisible(false);
+        bFold.setVisible(false);
+        bCheck.setVisible(false);
+        bBet.setVisible(false);
+    }
+
+
+
 }

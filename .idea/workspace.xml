@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Updated PokerGame-view.fxml&#10;Added image placement for cards used by dealer&#10;Updated background color to howToPlay screen and PokerGame screen">
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Updated Poker Game with buttons&#10;Added buttons for bet, check, raise, call&#10;Created empty functions for these buttons&#10;Created text field called gameText where user actions are updated based on button clicks">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/images/pokerCardImages/Bicycle_Playing_Cards_red.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/ThePokerGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/ThePokerGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerGame-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerGame-view.fxml" afterDir="false" />
     </list>
@@ -40,21 +41,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/jasmi/IdeaProjects/PokerProgram/src/main/resources/com/example/pokerprogram&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jasmi/IdeaProjects/PokerProgram/src/main/java/com/example/pokerprogram&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_directory_selection": "C:/Users/jasmi/IdeaProjects/PokerProgram/src/main/resources/com/example/pokerprogram",
+    "last_opened_file_path": "C:/Users/jasmi/IdeaProjects/PokerProgram/src/main/resources/com/example/pokerprogram/images/pokerCardImages",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram\images\pokerCardImages" />
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\java\com\example\pokerprogram" />
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram" />
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram\images" />
@@ -215,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668732815774</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Updated Poker Game with buttons&#10;Added buttons for bet, check, raise, call&#10;Created empty functions for these buttons&#10;Created text field called gameText where user actions are updated based on button clicks">
+      <created>1669152463428</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1669152463428</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -247,6 +256,7 @@
     <MESSAGE value="How to Play window added&#10;Created a new fxml for this new window (howToPlay-view.fxml)&#10;Created a new controller for this new window (HowToPlayController.java)&#10;In various classes fixed comments and javadocs" />
     <MESSAGE value="Created player class&#10;Player class has balance and hand of cards&#10;When game begins deck cards are given now to Players hand" />
     <MESSAGE value="Updated PokerGame-view.fxml&#10;Added image placement for cards used by dealer&#10;Updated background color to howToPlay screen and PokerGame screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated PokerGame-view.fxml&#10;Added image placement for cards used by dealer&#10;Updated background color to howToPlay screen and PokerGame screen" />
+    <MESSAGE value="Updated Poker Game with buttons&#10;Added buttons for bet, check, raise, call&#10;Created empty functions for these buttons&#10;Created text field called gameText where user actions are updated based on button clicks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Poker Game with buttons&#10;Added buttons for bet, check, raise, call&#10;Created empty functions for these buttons&#10;Created text field called gameText where user actions are updated based on button clicks" />
   </component>
 </project>

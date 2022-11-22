@@ -7,6 +7,7 @@ import java.util.Objects;
 public class Card {
 
     private Image cardImage;
+    private Image backOfCard;
     private int rank;
     private int suit;
 
@@ -25,7 +26,7 @@ public class Card {
         String fileName = imageRank + "_of_" +imageSuit + ".png";
         //System.out.println(fileName); //line for debugging file name and card creation
         cardImage = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/pokerCardImages/" + fileName)));
-
+        backOfCard = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/pokerCardImages/Bicycle_Playing_Cards_red.jpg")));
     }
 
     /**
@@ -63,6 +64,7 @@ public class Card {
     public Image getCardImage(){
         return cardImage;
     }
+    public Image getBackOfCard(){ return backOfCard;}
 
 
 }
