@@ -6,13 +6,20 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #2e8545;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokerprogram.controllers.PokerGameController">
    <children>
-      <Button id="returnToMenuButton" layoutX="462.0" layoutY="22.0" mnemonicParsing="false" onAction="#returnToMenuAction" prefHeight="107.0" prefWidth="258.0" text="Return to Menu placeholder button" />
+      <Button id="returnToMenuButton" layoutX="140.0" layoutY="61.0" mnemonicParsing="false" onAction="#returnToMenuAction" prefHeight="62.0" prefWidth="253.0" text="Return to Menu placeholder button" />
       <ImageView fx:id="imageView_Hand1" fitHeight="177.0" fitWidth="119.0" layoutX="67.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
          </ImageView>
       <ImageView fx:id="imageView_Hand2" fitHeight="196.0" fitWidth="119.0" layoutX="223.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
       </ImageView>
-      <Button id="bNewGame" fx:id="bNewGame" layoutX="357.0" layoutY="22.0" mnemonicParsing="false" onAction="#startGame" text="New Game" />
+      <Button id="bNewGame" fx:id="bNewGame" layoutX="463.0" layoutY="35.0" mnemonicParsing="false" onAction="#startGame" text="New Game" />
       <ImageView fx:id="imageView_Dealer1" fitHeight="159.0" fitWidth="99.0" layoutX="71.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="imageView_Dealer2" fitHeight="159.0" fitWidth="99.0" layoutX="223.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="bFold" layoutX="821.0" layoutY="314.0" mnemonicParsing="false" onAction="#fold" prefHeight="54.0" prefWidth="67.0" text="Fold" />
+      <Button fx:id="bHowToPlay" layoutX="41.0" layoutY="35.0" mnemonicParsing="false" onAction="#getHowToPLay" text="How to Play" />
+      <Label fx:id="gameText" layoutX="610.0" layoutY="61.0" prefHeight="121.0" prefWidth="359.0" />
+      <Button fx:id="bBet" layoutX="780.0" layoutY="382.0" mnemonicParsing="false" onAction="#bet" prefHeight="54.0" prefWidth="67.0" text="Bet" />
+      <Button fx:id="bCall" layoutX="865.0" layoutY="458.0" mnemonicParsing="false" onAction="#call" prefHeight="53.0" prefWidth="67.0" text="Call" />
+      <Button fx:id="bCheck" layoutX="865.0" layoutY="382.0" mnemonicParsing="false" onAction="#check" prefHeight="54.0" prefWidth="67.0" text="Check" />
+      <Button fx:id="bRaise" layoutX="780.0" layoutY="457.0" mnemonicParsing="false" onAction="#raise" prefHeight="54.0" prefWidth="67.0" text="Raise" />
    </children>
 </AnchorPane>

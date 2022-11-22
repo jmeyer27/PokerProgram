@@ -28,7 +28,6 @@ public class ThePokerGame extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(ThePokerGame.class.getResource("pokerMenu-view.fxml"));
 
         //initialize new scene and set size of menu
-        //Todo: If this is too big or too small feel free to change the values :)
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
 
         //add icon picture (this shows up in the upper left corner of the window and is the icon in the task bar)
