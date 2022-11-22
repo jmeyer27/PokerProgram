@@ -112,6 +112,11 @@ public class PokerGameController {
         bBet.setVisible(true);
         bFold.setVisible(true);
         bCheck.setVisible(true);
+        //sets bet to be not disabled in the event that the last round had a bet
+        bBet.setDisable(false);
+        //sets raise and call to be disabled
+        bRaise.setVisible(false);
+        bCall.setVisible(false);
     }
 
     public void getHowToPLay(ActionEvent actionEvent) throws IOException {

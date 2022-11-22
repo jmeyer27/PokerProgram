@@ -4,8 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="MenuAnchorPane" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.pokerprogram.controllers.PokerMenuController">
+<AnchorPane id="MenuAnchorPane" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokerprogram.controllers.PokerMenuController">
 
 
    <children>
@@ -14,7 +13,7 @@
             <Font name="Georgia Bold" size="47.0" />
          </font></Button>
       <Button fx:id="statisticsButton" layoutX="347.0" layoutY="426.0" mnemonicParsing="false" text="Statistics Button Placeholder" />
-      <Button fx:id="exitButton" layoutX="615.0" layoutY="426.0" mnemonicParsing="false" onAction="#closeButtonAction" text="Quit Button Placeholder" />
+      <Button fx:id="exitButton" layoutX="669.0" layoutY="426.0" mnemonicParsing="false" onAction="#closeButtonAction" text="Quit Game" />
       <Text fill="#b1b6ba" fontSmoothingType="LCD" layoutY="122.0" stroke="#302f2f" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Poker Game!" textAlignment="CENTER" wrappingWidth="825.8000000000001">
          <font>
             <Font name="Georgia" size="50.0" />
