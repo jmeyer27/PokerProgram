@@ -7,18 +7,26 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+
+import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 
 //this class will handle the events from the pokerMenu-view.xml file
 public class PokerMenuController {
-
+    @FXML
     public Button bHowToPlay;
+    @FXML
     public Button gameButton;
+    @FXML
+    private CheckBox toggleMusic;
     @FXML
     private javafx.scene.control.Button exitButton;
     /*
@@ -27,10 +35,23 @@ public class PokerMenuController {
      */
     public Button statisticsButton;
 
+    //This is all for the menu music. Gets path and sets up media player.
+    String path = "src/main/java/com/example/pokerprogram/Smooth as Ice - Steven O'Brien (Must Credit, CC-BY, www.steven-obrien.net).mp3";
+    Media media = new Media(new File(path).toURI().toString());
+    MediaPlayer mediaPlayer = new MediaPlayer(media);
+    //todo credit music to creator Steven O'Brien (Must Credit, CC-BY, www.steven-obrien.net)
+
+
+
     /*
     This button's purpose is to start the poker game from the poker game menu
     */
     public void startGameAction(ActionEvent event) throws IOException {
+
+        //stop music pls
+        mediaPlayer.pause();
+        toggleMusic.setSelected(false);
+
         FXMLLoader fxmlLoader = new FXMLLoader(ThePokerGame.class.getResource("pokerGame-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
@@ -80,5 +101,20 @@ public class PokerMenuController {
         howToPlayStage.setTitle("How to play");
         howToPlayStage.setScene(scene);
         howToPlayStage.show();
+    }
+
+    public void toggleMusic(ActionEvent actionEvent) {
+        //String songName = "Smooth as Ice - Steven O'Brien (Must Credit, CC-BY, www.steven-obrien.net).mp3";
+
+
+        //if checkmark
+        if(toggleMusic.isSelected()){
+            //play song
+            mediaPlayer.play();
+        }else{//no checkmark
+            //no music
+            mediaPlayer.pause();
+        }
+
     }
 }//end of Controller class

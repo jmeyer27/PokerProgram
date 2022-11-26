@@ -35,6 +35,7 @@ public class ThePokerGame extends Application {
         stage.getIcons().add(icon);
 
         //Set background of menu to image using CSS style sheet (can change image if you wish :) )
+        //todo change to not css somehow at some point if we have extra time
         String css = this.getClass().getResource("menuStyle.css").toExternalForm();
         scene.getStylesheets().add(css);
 

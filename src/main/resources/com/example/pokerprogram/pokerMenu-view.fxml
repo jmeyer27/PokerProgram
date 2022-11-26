@@ -19,5 +19,9 @@
             <Font name="Georgia" size="50.0" />
          </font></Text>
       <Button fx:id="bHowToPlay" layoutX="109.0" layoutY="426.0" mnemonicParsing="false" onAction="#getHowToPlay" text="How to Play" />
+      <CheckBox fx:id="toggleMusic" layoutX="675.0" layoutY="27.0" mnemonicParsing="false" onAction="#toggleMusic" text="♫ Music" textFill="#dfd7d7">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></CheckBox>
    </children>
 </AnchorPane>

@@ -9,15 +9,15 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,6 +25,8 @@ import java.util.Optional;
 
 //this class will handle the events from the pokerGame-view.xml file
 public class PokerGameController {
+    @FXML
+    public CheckBox toggleMusic;
     Player player1;
 
     public ImageView imageView_Dealer1;
@@ -43,6 +45,14 @@ public class PokerGameController {
     @FXML
     private ImageView imageView_Hand1;
     public Button bStartGame;
+    //betting pot for game, this is where bets go
+    private Integer bettingPot;
+
+    //This is all for the menu music. Gets path and sets up media player.
+    String path = "src/main/java/com/example/pokerprogram/Smooth as Ice - Steven O'Brien (Must Credit, CC-BY, www.steven-obrien.net).mp3";
+    Media media = new Media(new File(path).toURI().toString());
+    MediaPlayer mediaPlayer = new MediaPlayer(media);
+    //todo credit music to creator Steven O'Brien (Must Credit, CC-BY, www.steven-obrien.net)
 
 
     /*
@@ -89,6 +99,8 @@ public class PokerGameController {
      * @param actionEvent user clicks Start Game button
      */
     public void startGame(ActionEvent actionEvent) {
+        //set pot to 0
+        bettingPot = 0;
         //get new deck and shuffle deck
         deck = new Deck();
         deck.shuffle();
@@ -119,6 +131,11 @@ public class PokerGameController {
         bCall.setVisible(false);
     }
 
+    /**
+     * Action that allows user to access how to play window
+     * @param actionEvent User clicks on how to play button
+     * @throws IOException exception thrown
+     */
     public void getHowToPLay(ActionEvent actionEvent) throws IOException {
         Stage howToPlayStage = new Stage();
         howToPlayStage.setResizable(false);
@@ -139,6 +156,10 @@ public class PokerGameController {
         howToPlayStage.show();
     }
 
+    /**
+     * Action for the user to bet
+     * @param actionEvent the bBet button is clicked
+     */
     public void bet(ActionEvent actionEvent) {
         //set text in game text field
         gameText.setText("Player has chosen to make a bet."); //maybe add text to how much they chose to bet also :)
@@ -147,7 +168,7 @@ public class PokerGameController {
         // prompt user how much they wish to bet
         // make sure the bet amount is within their currency range
         // subtract bet from currency
-        // add bet to betting pool WHICH DOES NOT EXIST ATM btw
+        // add bet to pot (bettingPot)
 
         //make raise and call buttons no longer invisible for next round
         bRaise.setVisible(true);
@@ -157,7 +178,12 @@ public class PokerGameController {
 
     }
 
-
+    /**
+     * Action for the user to fold their cards in the Poker Game
+     * Sets card images to the back of the cards
+     * Disables button clicks for the rest of the game
+     * @param actionEvent the bFold button is clicked
+     */
     public void fold(ActionEvent actionEvent) {
         //set text in game text field
         gameText.setText("Player has chosen to fold.");
@@ -169,29 +195,53 @@ public class PokerGameController {
         setInvisibleButtons();
 
         //Todo fold function
-        //When the player folds they no longer are able to make other moves?
+        // turn should go to next player (round if single player)
+        //When the player folds they no longer are able to make other moves
         //Can only start new game in single player
-        //If we can make multiplayer then they would be unable to have a turn for the rest of the game?
+        //If we can make multiplayer then they would be unable to have a turn for the rest of the game
+        //would have to make the buttons visible for each player and not attached to the game? idk trickyy
     }
 
+    /**
+     * Action for the user to call their bet in the Poker Game
+     * @param actionEvent the bCall button is clicked
+     */
     public void call(ActionEvent actionEvent) {
         //set text in game text field
         gameText.setText("Player has chosen to call.");
         //Todo call function
+        // check if enough balance
+        // add bet to pot (bettingPot)
+        // turn should go to next player (round if single player)
     }
 
+    /**
+     * Action for the user to check their bet in the Poker Game
+     * @param actionEvent the bCheck button is clicked
+     */
     public void check(ActionEvent actionEvent) {
         //set text in game text field
         gameText.setText("Player has chosen to check.");
-        //Todo check function
+        //todo turn should go to next player (round if single player)
     }
 
+    /**
+     * Action for the user to raise their bet in the Poker Game
+     * @param actionEvent the bRaise button is clicked
+     */
     public void raise(ActionEvent actionEvent) {
         //set text in game text field
         gameText.setText("Player has chosen to raise.");
         //Todo raise function
+        // check if enough balance
+        // prompt player for raise amount
+        // add amount to pot (bettingPot)
+        // turn should go to next player (round if single player)
     }
 
+    /**
+     * Set all game buttons invisible so that the user is not able to click them when the game is not in session
+     */
     public void setInvisibleButtons(){
         bRaise.setVisible(false);
         bCall.setVisible(false);
@@ -201,5 +251,14 @@ public class PokerGameController {
     }
 
 
-
+    public void toggleMusic(ActionEvent actionEvent) {
+        //if checkmark
+        if(toggleMusic.isSelected()){
+            //play song
+            mediaPlayer.play();
+        }else{//no checkmark
+            //no music
+            mediaPlayer.pause();
+        }
+    }
 }
