@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -17,6 +18,7 @@ import java.io.IOException;
 import java.util.Objects;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.util.Duration;
 
 
 //this class will handle the events from the pokerMenu-view.xml file
@@ -31,7 +33,6 @@ public class PokerMenuController {
     private javafx.scene.control.Button exitButton;
     /*
     This button is so that users are able to load up their statistics information
-    Todo: Make this button do some action when clicked
      */
     public Button statisticsButton;
 
@@ -39,7 +40,13 @@ public class PokerMenuController {
     String path = "src/main/java/com/example/pokerprogram/Smooth as Ice - Steven O'Brien (Must Credit, CC-BY, www.steven-obrien.net).mp3";
     Media media = new Media(new File(path).toURI().toString());
     MediaPlayer mediaPlayer = new MediaPlayer(media);
-    //todo credit music to creator Steven O'Brien (Must Credit, CC-BY, www.steven-obrien.net)
+    //credit music to creator Steven O'Brien (Must Credit, CC-BY, www.steven-obrien.net) with below
+    /*
+        Music by: Steven O'Brien
+        https://www.steven-obrien.net/
+        Smooth as Ice
+        (Used for free under a Creative Commons Attribution-NoDerivatives 4.0 License: https://creativecommons.org/licenses/by-nd/4.0/)
+     */
 
 
 
@@ -106,6 +113,23 @@ public class PokerMenuController {
     public void toggleMusic(ActionEvent actionEvent) {
         //String songName = "Smooth as Ice - Steven O'Brien (Must Credit, CC-BY, www.steven-obrien.net).mp3";
 
+        //this lets the music loop
+        mediaPlayer.setOnEndOfMedia(new Runnable() {
+            @Override
+            public void run() {
+                    mediaPlayer.seek(Duration.ZERO);
+                    mediaPlayer.play();
+            }
+        });
+
+        //set credit text for song
+        //toggleMusic.hoverProperty().addListener((event)-> System.out.println("You did it"));
+        toggleMusic.setTooltip(new Tooltip("Music by: Steven O'Brien\n" +
+                "https://www.steven-obrien.net/\n" +
+                "\n" +
+                "Smooth as Ice\n" +
+                "\n" +
+                "(Used for free under a Creative Commons Attribution-NoDerivatives 4.0 License: https://creativecommons.org/licenses/by-nd/4.0/)"));
 
         //if checkmark
         if(toggleMusic.isSelected()){

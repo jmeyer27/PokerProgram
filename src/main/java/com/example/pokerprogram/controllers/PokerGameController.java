@@ -16,6 +16,7 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.File;
 import java.io.IOException;
@@ -48,11 +49,18 @@ public class PokerGameController {
     //betting pot for game, this is where bets go
     private Integer bettingPot;
 
+
     //This is all for the menu music. Gets path and sets up media player.
     String path = "src/main/java/com/example/pokerprogram/Smooth as Ice - Steven O'Brien (Must Credit, CC-BY, www.steven-obrien.net).mp3";
     Media media = new Media(new File(path).toURI().toString());
     MediaPlayer mediaPlayer = new MediaPlayer(media);
-    //todo credit music to creator Steven O'Brien (Must Credit, CC-BY, www.steven-obrien.net)
+    //credit music to creator Steven O'Brien (Must Credit, CC-BY, www.steven-obrien.net) with below
+    /*
+        Music by: Steven O'Brien
+        https://www.steven-obrien.net/
+        Smooth as Ice
+        (Used for free under a Creative Commons Attribution-NoDerivatives 4.0 License: https://creativecommons.org/licenses/by-nd/4.0/)
+     */
 
 
     /*
@@ -252,6 +260,24 @@ public class PokerGameController {
 
 
     public void toggleMusic(ActionEvent actionEvent) {
+        //this lets the music loop
+        mediaPlayer.setOnEndOfMedia(new Runnable() {
+            @Override
+            public void run() {
+                mediaPlayer.seek(Duration.ZERO);
+                mediaPlayer.play();
+            }
+        });
+
+        //set credit text for song
+        //toggleMusic.hoverProperty().addListener((event)-> System.out.println("You did it"));
+        toggleMusic.setTooltip(new Tooltip("Music by: Steven O'Brien\n" +
+                "https://www.steven-obrien.net/\n" +
+                "\n" +
+                "Smooth as Ice\n" +
+                "\n" +
+                "(Used for free under a Creative Commons Attribution-NoDerivatives 4.0 License: https://creativecommons.org/licenses/by-nd/4.0/)"));
+
         //if checkmark
         if(toggleMusic.isSelected()){
             //play song
@@ -261,4 +287,5 @@ public class PokerGameController {
             mediaPlayer.pause();
         }
     }
+
 }

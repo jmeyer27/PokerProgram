@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Updated UI of Poker Game">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Smooth as Ice - Steven O'Brien (Must Credit, CC-BY, www.steven-obrien.net).mp3" afterDir="false" />
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Updated UI and added Music&#10;Updated UI of Poker Game&#10;Added music to menu and game&#10;New checkbox to toggle music playing/paused&#10;Updated dependencies for media player">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/ThePokerGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/ThePokerGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerGame-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerGame-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerMenu-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerMenu-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669157238581</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Updated UI and added Music&#10;Updated UI of Poker Game&#10;Added music to menu and game&#10;New checkbox to toggle music playing/paused&#10;Updated dependencies for media player">
+      <created>1669497774473</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1669497774473</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -279,6 +279,7 @@
     <MESSAGE value="Updated Poker Game with buttons&#10;Added buttons for bet, check, raise, call&#10;Created empty functions for these buttons&#10;Created text field called gameText where user actions are updated based on button clicks" />
     <MESSAGE value="Back of card image added&#10;Referenced in Card class to each card obj&#10;Fold function in poker game now folds players hand face down&#10;Buttons now are invisible before the game begins&#10;Visibility of buttons is different depending on game progress" />
     <MESSAGE value="Updated UI of Poker Game" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated UI of Poker Game" />
+    <MESSAGE value="Updated UI and added Music&#10;Updated UI of Poker Game&#10;Added music to menu and game&#10;New checkbox to toggle music playing/paused&#10;Updated dependencies for media player" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated UI and added Music&#10;Updated UI of Poker Game&#10;Added music to menu and game&#10;New checkbox to toggle music playing/paused&#10;Updated dependencies for media player" />
   </component>
 </project>
