@@ -8,7 +8,6 @@ public class Deck {
 
     ArrayList<Card> deck = new ArrayList<Card>();
 
-    private Card[] card;
 
     /**
      * Constructor of Deck class

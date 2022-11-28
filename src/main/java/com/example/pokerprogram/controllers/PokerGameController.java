@@ -1,12 +1,10 @@
 package com.example.pokerprogram.controllers;
 
-import com.example.pokerprogram.Card;
-import com.example.pokerprogram.Deck;
-import com.example.pokerprogram.Player;
-import com.example.pokerprogram.ThePokerGame;
+import com.example.pokerprogram.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -20,15 +18,24 @@ import javafx.util.Duration;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.ResourceBundle;
 
 
 //this class will handle the events from the pokerGame-view.xml file
-public class PokerGameController {
+public class PokerGameController implements Initializable {
+    Player player1;//player
+    String name; //players name
+
+
     @FXML
     public CheckBox toggleMusic;
-    Player player1;
+    @FXML
+    public Label playerBalance;
+    @FXML
+    public Label potBalance;
 
     public ImageView imageView_Dealer1;
     public ImageView imageView_Dealer2;
@@ -51,7 +58,7 @@ public class PokerGameController {
 
 
     //This is all for the menu music. Gets path and sets up media player.
-    String path = "src/main/java/com/example/pokerprogram/Smooth as Ice - Steven O'Brien (Must Credit, CC-BY, www.steven-obrien.net).mp3";
+    String path = "src/main/java/com/example/pokerprogram/music/Smooth as Ice - Steven O'Brien (Must Credit, CC-BY, www.steven-obrien.net).mp3";
     Media media = new Media(new File(path).toURI().toString());
     MediaPlayer mediaPlayer = new MediaPlayer(media);
     //credit music to creator Steven O'Brien (Must Credit, CC-BY, www.steven-obrien.net) with below
@@ -91,6 +98,8 @@ public class PokerGameController {
 
         Optional<ButtonType> result = alert.showAndWait();
             if(result.get() == ButtonType.OK){
+                //pause music first
+                mediaPlayer.pause();
                 stage.setTitle("Welcome to The Poker Game Menu!");
                 stage.setScene(preScene);
                 stage.show();
@@ -98,6 +107,38 @@ public class PokerGameController {
                 //nothing
             }
 
+    }
+
+
+    /**
+     * This supposedly will run some stuff when the scene is first launched. to be tested
+     * @param url idk
+     * @param resourceBundle idk
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        //todo ask user for name here
+        // going to make a new window with a new view? it will be reused for multiplayer also
+        // the below commented code works to get the users name but has a million ways the user can not put a name in
+        // it also does not say anything about insert name here or whatever but it works????
+        // maybe I'll just accept it lol
+        //window.initModality(Modality.APPLICATION_MODAL)=-0b987
+
+        TextInputDialog dialog = new TextInputDialog();
+        dialog.setTitle("Enter Name");
+        Optional<String> result = dialog.showAndWait();
+        result.ifPresent(string -> name = string);
+
+        //check for null first (user clicks cancel or the x button)
+        if(name == null){
+            name = "Player";
+        }
+        //then check if user didn't put anything in the textbox but clicked confirm
+        if(name.equals("") || name.isEmpty() ){
+            name = "Player";
+        }
+        //debug line to check name value
+        //System.out.println(name);
     }
 
 
@@ -114,6 +155,8 @@ public class PokerGameController {
         deck.shuffle();
         //new player and give player 2 cards to their hand
         player1 = new Player();
+        //todo set player name (below)
+        player1.setUsername(name);
         player1.addCard(deck.dealTopCard()); //add card 1
         player1.addCard(deck.dealTopCard()); //add card 2
 
@@ -127,6 +170,9 @@ public class PokerGameController {
 
         //set text in game text field
         gameText.setText("Poker game begins!");
+        //change bettingPot and user/player balance text
+        potBalance.setText("Pot balance: "+bettingPot);
+        playerBalance.setText(player1.getUsername() +"'s balance: "+player1.getBalance());//todo when player created change all instances of Player to username :)
 
         //Raise and Call cannot be used before a bet has been wagered
         bBet.setVisible(true);
@@ -170,13 +216,16 @@ public class PokerGameController {
      */
     public void bet(ActionEvent actionEvent) {
         //set text in game text field
-        gameText.setText("Player has chosen to make a bet."); //maybe add text to how much they chose to bet also :)
+        gameText.setText(player1.getUsername() +" has chosen to make a bet."); //maybe add text to how much they chose to bet also :)
 
         //Todo bet function
         // prompt user how much they wish to bet
         // make sure the bet amount is within their currency range
         // subtract bet from currency
         // add bet to pot (bettingPot)
+        //change bettingPot and user/player balance text
+        potBalance.setText("Pot balance: "+bettingPot);
+        playerBalance.setText(player1.getUsername() +" balance: "+player1.getBalance());
 
         //make raise and call buttons no longer invisible for next round
         bRaise.setVisible(true);
@@ -194,7 +243,7 @@ public class PokerGameController {
      */
     public void fold(ActionEvent actionEvent) {
         //set text in game text field
-        gameText.setText("Player has chosen to fold.");
+        gameText.setText(player1.getUsername() +" has chosen to fold.");
         //fold hand
         imageView_Hand1.setImage(player1.getHand(0).getBackOfCard());
         imageView_Hand2.setImage(player1.getHand(1).getBackOfCard());
@@ -216,11 +265,11 @@ public class PokerGameController {
      */
     public void call(ActionEvent actionEvent) {
         //set text in game text field
-        gameText.setText("Player has chosen to call.");
+        gameText.setText(player1.getUsername() +" has chosen to call.");
         //Todo call function
         // check if enough balance
         // add bet to pot (bettingPot)
-        // turn should go to next player (round if single player)
+        // turn should go to next player (round if single player?)
     }
 
     /**
@@ -229,7 +278,7 @@ public class PokerGameController {
      */
     public void check(ActionEvent actionEvent) {
         //set text in game text field
-        gameText.setText("Player has chosen to check.");
+        gameText.setText(player1.getUsername() +" has chosen to check.");
         //todo turn should go to next player (round if single player)
     }
 
@@ -239,12 +288,15 @@ public class PokerGameController {
      */
     public void raise(ActionEvent actionEvent) {
         //set text in game text field
-        gameText.setText("Player has chosen to raise.");
+        gameText.setText(player1.getUsername() +" has chosen to raise.");
         //Todo raise function
         // check if enough balance
         // prompt player for raise amount
         // add amount to pot (bettingPot)
         // turn should go to next player (round if single player)
+        //change bettingPot and user/player balance text
+        potBalance.setText("Pot balance: "+bettingPot);
+        playerBalance.setText(player1.getUsername() +" balance: "+player1.getBalance());
     }
 
     /**
@@ -270,7 +322,6 @@ public class PokerGameController {
         });
 
         //set credit text for song
-        //toggleMusic.hoverProperty().addListener((event)-> System.out.println("You did it"));
         toggleMusic.setTooltip(new Tooltip("Music by: Steven O'Brien\n" +
                 "https://www.steven-obrien.net/\n" +
                 "\n" +
@@ -287,5 +338,6 @@ public class PokerGameController {
             mediaPlayer.pause();
         }
     }
+
 
 }

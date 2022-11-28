@@ -37,7 +37,7 @@ public class PokerMenuController {
     public Button statisticsButton;
 
     //This is all for the menu music. Gets path and sets up media player.
-    String path = "src/main/java/com/example/pokerprogram/Smooth as Ice - Steven O'Brien (Must Credit, CC-BY, www.steven-obrien.net).mp3";
+    String path = "src/main/java/com/example/pokerprogram/music/Smooth as Ice - Steven O'Brien (Must Credit, CC-BY, www.steven-obrien.net).mp3";
     Media media = new Media(new File(path).toURI().toString());
     MediaPlayer mediaPlayer = new MediaPlayer(media);
     //credit music to creator Steven O'Brien (Must Credit, CC-BY, www.steven-obrien.net) with below

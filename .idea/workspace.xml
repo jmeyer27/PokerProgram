@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Updated UI and added Music&#10;Updated UI of Poker Game&#10;Added music to menu and game&#10;New checkbox to toggle music playing/paused&#10;Updated dependencies for media player">
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Music changes&#10;Music now loops when the song is completed&#10;Credit to music creator is now given as a tooltip to user">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Smooth as Ice - Steven O'Brien (Must Credit, CC-BY, www.steven-obrien.net).mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/music/Smooth as Ice - Steven O'Brien (Must Credit, CC-BY, www.steven-obrien.net).mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/ThePokerGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/ThePokerGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerGame-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerGame-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +49,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_directory_selection": "C:/Users/jasmi/IdeaProjects/PokerProgram/src/main/resources/com/example/pokerprogram",
-    "last_opened_file_path": "C:/Users/jasmi/IdeaProjects/PokerProgram",
+    "last_directory_selection": "C:/Users/jasmi/IdeaProjects/PokerProgram/src/main/java/com/example/pokerprogram",
+    "last_opened_file_path": "C:/Users/jasmi/IdeaProjects/PokerProgram/src/main/java/com/example/pokerprogram/music",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -54,11 +59,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\java\com\example\pokerprogram\music" />
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram" />
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram\images\pokerCardImages" />
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\java\com\example\pokerprogram" />
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram" />
-      <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\java\com\example\pokerprogram" />
@@ -66,6 +71,9 @@
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram" />
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram\images" />
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram\music" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.pokerprogram" />
     </key>
   </component>
   <component name="RunManager">
@@ -244,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669497774473</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Music changes&#10;Music now loops when the song is completed&#10;Credit to music creator is now given as a tooltip to user">
+      <created>1669499869617</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1669499869617</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -280,6 +295,7 @@
     <MESSAGE value="Back of card image added&#10;Referenced in Card class to each card obj&#10;Fold function in poker game now folds players hand face down&#10;Buttons now are invisible before the game begins&#10;Visibility of buttons is different depending on game progress" />
     <MESSAGE value="Updated UI of Poker Game" />
     <MESSAGE value="Updated UI and added Music&#10;Updated UI of Poker Game&#10;Added music to menu and game&#10;New checkbox to toggle music playing/paused&#10;Updated dependencies for media player" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated UI and added Music&#10;Updated UI of Poker Game&#10;Added music to menu and game&#10;New checkbox to toggle music playing/paused&#10;Updated dependencies for media player" />
+    <MESSAGE value="Music changes&#10;Music now loops when the song is completed&#10;Credit to music creator is now given as a tooltip to user" />
+    <option name="LAST_COMMIT_MESSAGE" value="Music changes&#10;Music now loops when the song is completed&#10;Credit to music creator is now given as a tooltip to user" />
   </component>
 </project>

@@ -11,6 +11,8 @@ public class Player {
     private int balance;
     //this holds players cards
     private ArrayList<Card> hand;
+    //the name of the user
+    private String username;
 
     /**
      * Constructor for player class
@@ -24,7 +26,7 @@ public class Player {
      * Get method for player class
      * @return value of players balance
      */
-    private int getBalance(){
+    public int getBalance(){
         return balance;
     }
 
@@ -32,7 +34,7 @@ public class Player {
      * Set method for player class
      * @param value new value of players balance
      */
-    private void setBalance(int value){
+    public void setBalance(int value){
         this.balance = value;
     }
 
@@ -51,6 +53,22 @@ public class Player {
      */
     public Card getHand(int index){
         return hand.get(index);
+    }
+
+    /**
+     * A setter to set a new username for the user
+     * @param newName the value of the new name
+     */
+    public void setUsername(String newName){
+        this.username = newName;
+    }
+
+    /**
+     * A getter to return the current username
+     * @return the value of the players username
+     */
+    public String getUsername(){
+        return this.username;
     }
 
 
