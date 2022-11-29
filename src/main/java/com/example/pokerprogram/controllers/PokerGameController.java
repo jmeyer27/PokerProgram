@@ -172,7 +172,7 @@ public class PokerGameController implements Initializable {
         gameText.setText("Poker game begins!");
         //change bettingPot and user/player balance text
         potBalance.setText("Pot balance: "+bettingPot);
-        playerBalance.setText(player1.getUsername() +"'s balance: "+player1.getBalance());//todo when player created change all instances of Player to username :)
+        playerBalance.setText(player1.getUsername() +"'s balance: "+player1.getBalance());
 
         //Raise and Call cannot be used before a bet has been wagered
         bBet.setVisible(true);

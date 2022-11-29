@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #7fa6ad;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokerprogram.controllers.ChooseGameController">
+   <children>
+      <Button fx:id="bSinglePlayer" layoutX="59.0" layoutY="291.0" mnemonicParsing="false" onAction="#launchGame" prefHeight="71.0" prefWidth="167.0" style="-fx-background-color: #f72a2a;" text="Single Player">
+         <font>
+            <Font name="Cambria Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button layoutX="355.0" layoutY="291.0" mnemonicParsing="false" onAction="#launchMultiPlayer" prefHeight="71.0" prefWidth="167.0" style="-fx-background-color: #f72a2a;" text="Multi-Player">
+         <font>
+            <Font name="Cambria Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Label layoutX="202.0" layoutY="24.0" text="Select game type">
+         <font>
+            <Font name="Cambria Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="191.0" fitWidth="149.0" layoutX="70.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/dog.jpg" />
+         </image>
+      </ImageView>
+
+      <ImageView fitHeight="198.0" fitWidth="155.0" layoutX="368.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/dogs.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
