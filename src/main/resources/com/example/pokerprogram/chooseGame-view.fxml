@@ -16,9 +16,9 @@
             <DropShadow />
          </effect>
       </Button>
-      <Button layoutX="355.0" layoutY="291.0" mnemonicParsing="false" onAction="#launchMultiPlayer" prefHeight="71.0" prefWidth="167.0" style="-fx-background-color: #f72a2a;" text="Multi-Player">
+      <Button layoutX="355.0" layoutY="291.0" mnemonicParsing="false" onAction="#launchMultiPlayer" prefHeight="71.0" prefWidth="167.0" style="-fx-background-color: #f72a2a;" text="Multi-Player COMING SOON!">
          <font>
-            <Font name="Cambria Bold" size="18.0" />
+            <Font name="Cambria Bold" size="11.0" />
          </font>
          <effect>
             <DropShadow />

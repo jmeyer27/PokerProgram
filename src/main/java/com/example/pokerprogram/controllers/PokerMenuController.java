@@ -59,7 +59,6 @@ public class PokerMenuController {
         mediaPlayer.pause();
         toggleMusic.setSelected(false);
 
-        //todo make this into a new popup window instead of transforming the entire window
         Stage chooseGameStage = new Stage();
         chooseGameStage.setResizable(false);
 
