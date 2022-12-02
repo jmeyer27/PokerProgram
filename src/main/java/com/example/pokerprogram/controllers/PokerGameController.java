@@ -57,6 +57,7 @@ public class PokerGameController implements Initializable {
     private Integer bettingPot;
 
 
+
     //This is all for the menu music. Gets path and sets up media player.
     String path = "src/main/java/com/example/pokerprogram/music/Smooth as Ice - Steven O'Brien (Must Credit, CC-BY, www.steven-obrien.net).mp3";
     Media media = new Media(new File(path).toURI().toString());
@@ -111,7 +112,7 @@ public class PokerGameController implements Initializable {
 
 
     /**
-     * This supposedly will run some stuff when the scene is first launched. to be tested
+     * This supposedly will run some stuff when the scene is first launched
      * @param url idk
      * @param resourceBundle idk
      */
@@ -225,7 +226,7 @@ public class PokerGameController implements Initializable {
         // add bet to pot (bettingPot)
         //change bettingPot and user/player balance text
         potBalance.setText("Pot balance: "+bettingPot);
-        playerBalance.setText(player1.getUsername() +" balance: "+player1.getBalance());
+        playerBalance.setText(player1.getUsername() +"'s balance: "+player1.getBalance());
 
         //make raise and call buttons no longer invisible for next round
         bRaise.setVisible(true);
@@ -296,7 +297,7 @@ public class PokerGameController implements Initializable {
         // turn should go to next player (round if single player)
         //change bettingPot and user/player balance text
         potBalance.setText("Pot balance: "+bettingPot);
-        playerBalance.setText(player1.getUsername() +" balance: "+player1.getBalance());
+        playerBalance.setText(player1.getUsername() +"'s balance: "+player1.getBalance());
     }
 
     /**
@@ -338,6 +339,22 @@ public class PokerGameController implements Initializable {
             mediaPlayer.pause();
         }
     }
+
+    /**
+     * These are some variables that are for the statistics
+     */
+    private Integer winCount;
+    private Integer foldCount;
+    private Integer currencyWon;
+    private Integer currencyLost;
+
+    //todo statistics stuff goes into the end-of-game function or whatv,
+    // no reason to update statistics when the game isn't completed
+    // should save info to a binary file (or a text file)
+    // and then in the menu it will open the file and load the contents in a nice way
+
+
+
 
 
 }

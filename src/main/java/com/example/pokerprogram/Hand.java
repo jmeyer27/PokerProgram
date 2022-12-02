@@ -33,24 +33,30 @@ public class Hand {
         cards.add(fifth);
     }
 
+    /**
+     * Checks if there are no pairs in the hand of cards
+     * @return boolean true if the cards have no pairs, false if there is a pair in the cards
+     */
     private boolean noPair()
     {
         for (int i = 0; i < cards.size(); i++)
         {
-            for (int j = i+1; j < cards.size(); j++)
+            for (int j = i+1; j < cards.size(); j++)//(also i'm worried if i is cards.size-1 then j would be cards.size would that be an overflow exception?)
             {
                 String rank1 = cards.get(i).getRank();
                 String rankNext2 =cards.get(j).getRank();
                 String suit1 = cards.get(i).getSuit();
                 String suitNext2 = cards.get(j).getSuit();
 
-                if ((rank1!=rankNext2) && (suit1!=suitNext2))
+                //if rank is equal but suit is not equal (these are a pair)
+                if ((rank1.equals(rankNext2)) && (!suit1.equals(suitNext2)))
                 {
-                    return true;
+                    return false;
                 }
             }
         }
-        return false;
+        //none of them were a pair, so it is true that there is no pair
+        return true;
     }
 
     private boolean onePair()
@@ -59,16 +65,12 @@ public class Hand {
         for (int i = 0; i < cards.size(); i++)
         {
             for (int j = 0; j < cards.size(); j++) {
-                if ((cards.get(i).getRank()) == (cards.get(j).getRank()) && (i != j))
+                if (cards.get(i).getRank().equals(cards.get(j).getRank()) && (i != j))
                     count++;
-            }
-            if(count == 1)
-            {
-                return true;
             }
 
         }
-        return false;
+        return count == 1;
     }
 
     private boolean twoPair()
@@ -76,16 +78,12 @@ public class Hand {
         int count = 0;
         for(int i = 0; i < cards.size(); i++)
         {
-            if(cards.get(i).getRank() == cards.get(i+1).getRank())
+            if(cards.get(i).getRank().equals(cards.get(i + 1).getRank()))
             {
                 count++;
             }
         }
-        if(count == 2)
-        {
-            return true;
-        }
-        return false;
+        return count == 2;
     }
 
     private boolean threeOfAKind()
@@ -96,17 +94,13 @@ public class Hand {
         {
             for(int j = 0; j < cards.size(); j++)
             {
-                if((cards.get(i).getRank() == cards.get(j).getRank()) && (i !=j))
+                if((cards.get(i).getRank().equals(cards.get(j).getRank())) && (i !=j))
                 {
                     count++;
                 }
             }
-            if(count == 2)
-            {
-                return true;
-            }
         }
-        return false;
+        return count == 3;
     }
 
     private boolean fourOfAKind()
@@ -117,17 +111,13 @@ public class Hand {
         {
             for(int j = 0; j < cards.size(); j++)
             {
-                if((cards.get(i).getRank() == cards.get(j).getRank()) && (i != j))
+                if((cards.get(i).getRank().equals(cards.get(j).getRank())) && (i != j))
                 {
                     count++;
                 }
             }
-            if(count == 3)
-            {
-                return true;
-            }
         }
-        return false;
+        return count == 4;
     }
 
 
@@ -136,7 +126,7 @@ public class Hand {
         //all cards are same suit
         for(int i = 0; i < cards.size()-1; i++)
         {
-            if(cards.get(i).getSuit() != cards.get(i+1).getSuit())
+            if(!cards.get(i).getSuit().equals(cards.get(i + 1).getSuit()))
             {
                 return false;
             }
@@ -147,11 +137,7 @@ public class Hand {
     private boolean fullHouse()
     {
         //has both a pair and a triple
-        if(onePair() == true && threeOfAKind() == true)
-        {
-            return true;
-        }
-        return false;
+        return onePair() && threeOfAKind();
     }
 
 }

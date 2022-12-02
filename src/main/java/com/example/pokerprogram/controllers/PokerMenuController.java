@@ -9,13 +9,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Tooltip;
-import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Objects;
+import java.io.ObjectInputStream;
+
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.util.Duration;
@@ -61,10 +62,6 @@ public class PokerMenuController {
 
         Stage chooseGameStage = new Stage();
         chooseGameStage.setResizable(false);
-
-        //stop music pls
-        mediaPlayer.pause();
-        toggleMusic.setSelected(false);
 
         //this makes the choose game type a new window which wasnt very good v.v
         FXMLLoader choosefxmlLoader = new FXMLLoader(ThePokerGame.class.getResource("chooseGame-view.fxml"));
@@ -127,6 +124,10 @@ public class PokerMenuController {
         howToPlayStage.show();
     }
 
+    /**
+     * This action event toggles music when the user clicks the checkmark in the checkbox
+     * @param actionEvent the checkbox is clicked by the user
+     */
     public void toggleMusic(ActionEvent actionEvent) {
         //String songName = "Smooth as Ice - Steven O'Brien (Must Credit, CC-BY, www.steven-obrien.net).mp3";
 
@@ -140,7 +141,6 @@ public class PokerMenuController {
         });
 
         //set credit text for song
-        //toggleMusic.hoverProperty().addListener((event)-> System.out.println("You did it"));
         toggleMusic.setTooltip(new Tooltip("Music by: Steven O'Brien\n" +
                 "https://www.steven-obrien.net/\n" +
                 "\n" +
@@ -158,4 +158,23 @@ public class PokerMenuController {
         }
 
     }
+
+    /**
+     * This should open a new window and show the user their statistics info
+     * @param actionEvent the user clicks on the statistics button
+     */
+    public void openStatistics(ActionEvent actionEvent) {
+        //todoooooo :) will always cause errors rn because the file does not exist yet
+        String fileName = "statistics.dat";//todo first check if the file exists
+//        try{
+//            ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(fileName));
+        //open new window with statistics here?
+//        }catch(IOException e){
+//            System.out.println("There was a file input stream error when opening statistics in poker menu!!!");
+//        }
+    }//end of openStatistics event
+
+
+
+
 }//end of Controller class
