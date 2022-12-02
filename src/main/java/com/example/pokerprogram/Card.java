@@ -33,7 +33,7 @@ public class Card {
      * A get method that returns the suit of the card
      * @return the suit of the card
      */
-    private String getSuit() {
+    public String getSuit() {
        return switch(this.suit){
            case 1 -> "hearts";
            case 2 -> "clubs";
@@ -47,7 +47,7 @@ public class Card {
      * A get method that determines the correct rank of the card based on the int value of their rank
      * @return return cards rank
      */
-    private String getRank() {
+    public String getRank() {
         return switch (this.rank) {
             case 1 -> "ace";
             case 11 -> "jack";
