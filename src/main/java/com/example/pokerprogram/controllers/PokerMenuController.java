@@ -164,14 +164,24 @@ public class PokerMenuController {
      * @param actionEvent the user clicks on the statistics button
      */
     public void openStatistics(ActionEvent actionEvent) {
-        //todoooooo :) will always cause errors rn because the file does not exist yet
+        //todoooooo :) the file cannot exist yet btw
         String fileName = "statistics.dat";//todo first check if the file exists
-//        try{
-//            ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(fileName));
-        //open new window with statistics here?
-//        }catch(IOException e){
-//            System.out.println("There was a file input stream error when opening statistics in poker menu!!!");
-//        }
+        try{
+            File file = new File(fileName);
+            if(!file.exists()){
+                //todo tell user that file does not exist
+                System.out.println("There was no file bruh");//debug line
+            }else{//???????????? is this right???????? haha
+                ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(fileName));
+                //todo lots of stuff (not necessarily in this order): open file, open new window to show stats, close window
+                System.out.println("The file existed!?!?");//debug line
+                inputStream.close();
+            }//end if file exists
+
+
+        }catch(IOException e){
+            System.out.println("There was a file input stream error when opening statistics in poker menu!!!");
+        }
     }//end of openStatistics event
 
 

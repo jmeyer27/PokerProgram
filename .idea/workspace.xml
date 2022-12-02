@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="added some validating hand methods">
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Starting statistics stuff&#10;Changed some comments in various classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Hand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/ChooseGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/ChooseGameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerMenu-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerMenu-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669942980515</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Starting statistics stuff&#10;Changed some comments in various classes">
+      <created>1670012298534</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1670012298534</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -293,7 +297,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial Commit" />
     <MESSAGE value="Menu&#10;A crude menu was added to Poker Game.&#10;The only button that works as intended right now is the Exit button :)" />
     <MESSAGE value="Menu&#10;Start game button will load poker game window. (Which is currently empty)" />
     <MESSAGE value="The Poker Game and Poker Menu&#10;Changed how the start game button switches scenes to the Poker Game.&#10;Added a button in the Poker Game that will return the user back to the menu" />
@@ -318,6 +321,7 @@
     <MESSAGE value="Changes to Player, PokerGame and others&#10;Moved song to Music folder and changed references&#10;Added username to Player&#10;PokerGame now references playerBalance and potBalance in UI&#10;Added a placeholder prompt for user to insert name&#10;Name is referened in poker game" />
     <MESSAGE value="Created ChooseGame Controller and view&#10;This new window will pop up when user clicks &quot;Play Game&quot; in menu&#10;User is able to click if they are playing a multiplayer or single player game&#10;so far multiplayer is not implemented so this is just a placeholder button&#10;Added two pictures dog.jpg and dogs.jpg to ChooseGame view" />
     <MESSAGE value="added some validating hand methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some validating hand methods" />
+    <MESSAGE value="Starting statistics stuff&#10;Changed some comments in various classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Starting statistics stuff&#10;Changed some comments in various classes" />
   </component>
 </project>

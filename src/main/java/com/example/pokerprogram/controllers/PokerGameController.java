@@ -56,6 +56,8 @@ public class PokerGameController implements Initializable {
     //betting pot for game, this is where bets go
     private Integer bettingPot;
 
+    boolean fold = false;
+
 
 
     //This is all for the menu music. Gets path and sets up media player.
@@ -112,7 +114,8 @@ public class PokerGameController implements Initializable {
 
 
     /**
-     * This supposedly will run some stuff when the scene is first launched
+     * This supposedly will run when the scene is first launched.
+     * This will prompt the user for their username for use in the game
      * @param url idk
      * @param resourceBundle idk
      */
@@ -252,12 +255,14 @@ public class PokerGameController implements Initializable {
         //game cannot be used so are turned invisible
         setInvisibleButtons();
 
-        //Todo fold function
-        // turn should go to next player (round if single player)
+        //fold function:
+        // turn should go to next player if multiplayer
         //When the player folds they no longer are able to make other moves
         //Can only start new game in single player
         //If we can make multiplayer then they would be unable to have a turn for the rest of the game
         //would have to make the buttons visible for each player and not attached to the game? idk trickyy
+        fold = true;
+        saveStatistics();//save stats
     }
 
     /**
@@ -354,6 +359,33 @@ public class PokerGameController implements Initializable {
     // and then in the menu it will open the file and load the contents in a nice way
 
 
+    /**
+     * This will check at the end of the game if the user's hand won
+     * also saves information to statistics
+     */
+    public void saveStatistics(){
+
+        //first check if file exists
+        //if not then create new file
+        //if it does exist then open the file for editing
+
+
+
+        if(fold){//game was ended with a fold
+            //append to file that fold++
+            System.out.println("player folded and statistics should be saved here");//debug line
+            fold = false;//set fold to false :)
+        }else{//game was ended in a normal way (like, the game was actually played and won/lost)
+            //save to file about wins
+            //save to file about currency won/lost (1000-playersbalance >0)
+            System.out.println("the game is done and statistics should be saved here");//debug line
+        }
+
+
+
+
+
+    }
 
 
 
