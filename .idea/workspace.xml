@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Hand.java" afterDir="false" />
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="added some validating hand methods">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Hand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669683039580</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="added some validating hand methods">
+      <created>1669942980515</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1669942980515</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -307,6 +313,7 @@
     <MESSAGE value="Music changes&#10;Music now loops when the song is completed&#10;Credit to music creator is now given as a tooltip to user" />
     <MESSAGE value="Changes to Player, PokerGame and others&#10;Moved song to Music folder and changed references&#10;Added username to Player&#10;PokerGame now references playerBalance and potBalance in UI&#10;Added a placeholder prompt for user to insert name&#10;Name is referened in poker game" />
     <MESSAGE value="Created ChooseGame Controller and view&#10;This new window will pop up when user clicks &quot;Play Game&quot; in menu&#10;User is able to click if they are playing a multiplayer or single player game&#10;so far multiplayer is not implemented so this is just a placeholder button&#10;Added two pictures dog.jpg and dogs.jpg to ChooseGame view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created ChooseGame Controller and view&#10;This new window will pop up when user clicks &quot;Play Game&quot; in menu&#10;User is able to click if they are playing a multiplayer or single player game&#10;so far multiplayer is not implemented so this is just a placeholder button&#10;Added two pictures dog.jpg and dogs.jpg to ChooseGame view" />
+    <MESSAGE value="added some validating hand methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="added some validating hand methods" />
   </component>
 </project>

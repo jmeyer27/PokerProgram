@@ -33,11 +33,6 @@ public class Hand {
         cards.add(fifth);
     }
 
-    /**
-     * Method determines if hand has no pairs.
-     *
-     * @return    if the hand has no pairs or not
-     */
     private boolean noPair()
     {
         for (int i = 0; i < cards.size(); i++)
@@ -58,36 +53,55 @@ public class Hand {
         return false;
     }
 
-    /**
-     * Method determines if hand is a flush.  All cards have to have the same suit.
-     *
-     * @return    if the hand is flush or not
-     */
-    private boolean flush()
+    private boolean onePair()
     {
-        for(int i = 0; i< cards.size()-1; i++)
+        int count = 0;
+        for (int i = 0; i < cards.size(); i++)
         {
-            String value = cards.get(i).getSuit();
-            String nextValue = cards.get(i+1).getSuit();
-            if(value != nextValue)
-            {
-                return false;
+            for (int j = 0; j < cards.size(); j++) {
+                if ((cards.get(i).getRank()) == (cards.get(j).getRank()) && (i != j))
+                    count++;
             }
+            if(count == 1)
+            {
+                return true;
+            }
+
         }
-        return true;
+        return false;
     }
 
-    /**
-     * Method finds rank of card at i in hand.
-     *
-     * @param  rank  rank of Card to compare to
-     * @return    if hand has that rank or not
-     */
-    private boolean findRank(int rank)
+    private boolean twoPair()
     {
+        int count = 0;
         for(int i = 0; i < cards.size(); i++)
         {
-            if(cards.get(i).getRank().equals(rank))
+            if(cards.get(i).getRank() == cards.get(i+1).getRank())
+            {
+                count++;
+            }
+        }
+        if(count == 2)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    private boolean threeOfAKind()
+    {
+        int count = 0;
+
+        for(int i = 0; i < cards.size(); i++)
+        {
+            for(int j = 0; j < cards.size(); j++)
+            {
+                if((cards.get(i).getRank() == cards.get(j).getRank()) && (i !=j))
+                {
+                    count++;
+                }
+            }
+            if(count == 2)
             {
                 return true;
             }
@@ -95,5 +109,49 @@ public class Hand {
         return false;
     }
 
+    private boolean fourOfAKind()
+    {
+        int count = 0;
+
+        for(int i = 0; i < cards.size(); i++)
+        {
+            for(int j = 0; j < cards.size(); j++)
+            {
+                if((cards.get(i).getRank() == cards.get(j).getRank()) && (i != j))
+                {
+                    count++;
+                }
+            }
+            if(count == 3)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    private boolean flush()
+    {
+        //all cards are same suit
+        for(int i = 0; i < cards.size()-1; i++)
+        {
+            if(cards.get(i).getSuit() != cards.get(i+1).getSuit())
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean fullHouse()
+    {
+        //has both a pair and a triple
+        if(onePair() == true && threeOfAKind() == true)
+        {
+            return true;
+        }
+        return false;
+    }
 
 }
