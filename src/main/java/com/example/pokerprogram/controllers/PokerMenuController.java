@@ -12,10 +12,8 @@ import javafx.scene.control.Tooltip;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
+import java.io.*;
+import java.util.Scanner;
 
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -164,18 +162,32 @@ public class PokerMenuController {
      * @param actionEvent the user clicks on the statistics button
      */
     public void openStatistics(ActionEvent actionEvent) {
-        //todoooooo :) the file cannot exist yet btw
-        String fileName = "statistics.dat";//todo first check if the file exists
+        //file name
+        String fileName = "statistics.txt";
+
+
         try{
             File file = new File(fileName);
-            if(!file.exists()){
+
+            if(!file.exists()){//if file does not exist
+
                 //todo tell user that file does not exist
-                System.out.println("There was no file bruh");//debug line
-            }else{//???????????? is this right???????? haha
-                ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(fileName));
-                //todo lots of stuff (not necessarily in this order): open file, open new window to show stats, close window
-                System.out.println("The file existed!?!?");//debug line
-                inputStream.close();
+                System.out.println("There was no file.");//debug line
+
+            }else{//the file exists open Statistics window
+
+                Stage howToPlayStage = new Stage();
+                howToPlayStage.setResizable(false);
+
+                FXMLLoader fxmlLoader = new FXMLLoader(ThePokerGame.class.getResource("statistics-view.fxml"));
+                Scene scene = new Scene(fxmlLoader.load());
+
+                StatisticsController controller = fxmlLoader.getController();
+
+                howToPlayStage.setTitle("Player Statistics");
+                howToPlayStage.setScene(scene);
+                howToPlayStage.show();
+
             }//end if file exists
 
 

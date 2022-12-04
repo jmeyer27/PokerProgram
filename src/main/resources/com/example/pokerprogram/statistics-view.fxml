@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #58bf81;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokerprogram.controllers.StatisticsController">
+   <children>
+      <Label fx:id="textBox" layoutX="40.0" layoutY="34.0" prefHeight="316.0" prefWidth="243.0" style="-fx-background-color: #bdfccd;">
+         <effect>
+            <DropShadow />
+         </effect></Label>
+      <Button fx:id="bShowStatistics" layoutX="400.0" layoutY="54.0" mnemonicParsing="false" onAction="#showStats" style="-fx-background-color: #faf87a;" text="Calculate Statistics">
+         <effect>
+            <DropShadow />
+         </effect></Button>
+   </children>
+</AnchorPane>

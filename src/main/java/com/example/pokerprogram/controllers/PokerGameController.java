@@ -16,12 +16,12 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
-import java.util.Objects;
+import java.util.Arrays;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 
 
 //this class will handle the events from the pokerGame-view.xml file
@@ -52,11 +52,10 @@ public class PokerGameController implements Initializable {
     private ImageView imageView_Hand2;
     @FXML
     private ImageView imageView_Hand1;
-    public Button bStartGame;
+
     //betting pot for game, this is where bets go
     private Integer bettingPot;
 
-    boolean fold = false;
 
 
 
@@ -157,9 +156,8 @@ public class PokerGameController implements Initializable {
         //get new deck and shuffle deck
         deck = new Deck();
         deck.shuffle();
-        //new player and give player 2 cards to their hand
+        //make new player, give them a name, and give player 2 cards to their hand
         player1 = new Player();
-        //todo set player name (below)
         player1.setUsername(name);
         player1.addCard(deck.dealTopCard()); //add card 1
         player1.addCard(deck.dealTopCard()); //add card 2
@@ -245,7 +243,7 @@ public class PokerGameController implements Initializable {
      * Disables button clicks for the rest of the game
      * @param actionEvent the bFold button is clicked
      */
-    public void fold(ActionEvent actionEvent) {
+    public void fold(ActionEvent actionEvent) throws IOException {
         //set text in game text field
         gameText.setText(player1.getUsername() +" has chosen to fold.");
         //fold hand
@@ -261,8 +259,9 @@ public class PokerGameController implements Initializable {
         //Can only start new game in single player
         //If we can make multiplayer then they would be unable to have a turn for the rest of the game
         //would have to make the buttons visible for each player and not attached to the game? idk trickyy
-        fold = true;
-        saveStatistics();//save stats
+
+        //todo move this to wherever the end of the game is l8r
+        saveStatistics();
     }
 
     /**
@@ -345,41 +344,68 @@ public class PokerGameController implements Initializable {
         }
     }
 
-    /**
-     * These are some variables that are for the statistics
-     */
-    private Integer winCount;
-    private Integer foldCount;
-    private Integer currencyWon;
-    private Integer currencyLost;
-
-    //todo statistics stuff goes into the end-of-game function or whatv,
-    // no reason to update statistics when the game isn't completed
-    // should save info to a binary file (or a text file)
-    // and then in the menu it will open the file and load the contents in a nice way
-
 
     /**
-     * This will check at the end of the game if the user's hand won
-     * also saves information to statistics
+     * This will save information to statistics
+     *
      */
-    public void saveStatistics(){
+    public void saveStatistics() throws IOException {
 
-        //first check if file exists
-        //if not then create new file
-        //if it does exist then open the file for editing
+        String fileName = "statistics.txt";
 
 
+        try{
+            File file = new File(fileName);
 
-        if(fold){//game was ended with a fold
-            //append to file that fold++
-            System.out.println("player folded and statistics should be saved here");//debug line
-            fold = false;//set fold to false :)
-        }else{//game was ended in a normal way (like, the game was actually played and won/lost)
+
+            //chck if file no exists
+            if(!file.exists()){
+                PrintWriter output = new PrintWriter(new FileOutputStream(file));
+                int win = 0;
+                //just write info to file
+                output.write(String.valueOf(win));
+
+                System.out.println("Successfully written data to a new file");
+                output.close();
+
+            }else{//file exist
+//                System.out.println("FILE EXISTS");
+//                PrintWriter output = new PrintWriter(new FileOutputStream(file));
+////                Scanner inputStream = new Scanner(new FileInputStream(file));
+////
+////
+////                int input = Integer.parseInt(inputStream.next());
+////                input ++;
+//
+//                Scanner scanner = new Scanner(new File(fileName));
+//                int[] statistics = new int [10]; //picked 10 randomly
+//                int i = 0;
+//                while(scanner.hasNextInt()){
+//                    System.out.println(statistics[i]);
+//                    statistics[i++] = scanner.nextInt();
+//                    System.out.println(statistics[i]);
+//                }
+//
+//                statistics[0] ++;
+//                System.out.println(statistics[0]);
+//                output.write((Arrays.toString(statistics)));
+
+
+
+                //System.out.println("Successfully updated data to the file");
+                //output.close();
+            }
+
+
+
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+
             //save to file about wins
             //save to file about currency won/lost (1000-playersbalance >0)
-            System.out.println("the game is done and statistics should be saved here");//debug line
-        }
+        //System.out.println("the game is done and statistics should be saved here");//debug line
+
 
 
 
