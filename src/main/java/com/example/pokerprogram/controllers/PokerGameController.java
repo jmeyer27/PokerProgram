@@ -347,7 +347,7 @@ public class PokerGameController implements Initializable {
 
     /**
      * This will save information to statistics
-     *
+     * todo add more statistics info for player
      */
     public void saveStatistics() throws IOException {
 
@@ -358,48 +358,49 @@ public class PokerGameController implements Initializable {
             File file = new File(fileName);
 
 
-            //chck if file no exists
+            //check if file does not exist
             if(!file.exists()){
                 PrintWriter output = new PrintWriter(new FileOutputStream(file));
-                int win = 0;
-                //just write info to file
-                output.write(String.valueOf(win));
 
-                System.out.println("Successfully written data to a new file");
+                //todo if player wins game then wins = 1, update $$ won or lost
+                int wins = 0;
+
+                output.println(wins);
+
+                //System.out.println("Successfully written data to a new file"); //debug line
                 output.close();
 
             }else{//file exist
-//                System.out.println("FILE EXISTS");
-//                PrintWriter output = new PrintWriter(new FileOutputStream(file));
-////                Scanner inputStream = new Scanner(new FileInputStream(file));
-////
-////
-////                int input = Integer.parseInt(inputStream.next());
-////                input ++;
-//
-//                Scanner scanner = new Scanner(new File(fileName));
-//                int[] statistics = new int [10]; //picked 10 randomly
-//                int i = 0;
-//                while(scanner.hasNextInt()){
-//                    System.out.println(statistics[i]);
-//                    statistics[i++] = scanner.nextInt();
-//                    System.out.println(statistics[i]);
-//                }
-//
-//                statistics[0] ++;
-//                System.out.println(statistics[0]);
-//                output.write((Arrays.toString(statistics)));
+                Scanner scanner = new Scanner(new File(fileName));
+                int[] statistics = new int [10]; //picked 10 randomly
+                int i = 0;
 
 
+                while(scanner.hasNextInt()){
+                    //System.out.println("There was a next int: " +statistics[i]); //debug line
+                    statistics[i++] = scanner.nextInt();
+                }
 
-                //System.out.println("Successfully updated data to the file");
-                //output.close();
+
+                PrintWriter output = new PrintWriter(new FileOutputStream(file));
+
+                //todo if player has won, then add to count
+                statistics[0] ++;
+
+                //put number into file
+                output.println(statistics[0]);
+
+
+                //System.out.println("Successfully updated data to the file"); //debug
+                output.close();
+                scanner.close();
             }
 
 
 
         }catch(IOException e){
-            e.printStackTrace();
+            //e.printStackTrace();
+            System.out.println("Error in saving file in Poker Game!");
         }
 
             //save to file about wins

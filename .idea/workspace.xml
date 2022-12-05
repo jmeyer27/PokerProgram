@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Created new PokerGame function saveStatistics&#10;Worked on statistics button event in poker menu, will give system out messages if file exists or not">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/StatisticsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/statistics-view.fxml" afterDir="false" />
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Created new Statistics window&#10;Game now saves statistics file when folding (will be when game ends when that is finished)&#10;Menu will open Statistics window that will show statistics info from text file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/StatisticsController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670016661636</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Created new Statistics window&#10;Game now saves statistics file when folding (will be when game ends when that is finished)&#10;Menu will open Statistics window that will show statistics info from text file">
+      <created>1670191814645</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1670191814646</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -309,7 +314,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Menu&#10;Start game button will load poker game window. (Which is currently empty)" />
     <MESSAGE value="The Poker Game and Poker Menu&#10;Changed how the start game button switches scenes to the Poker Game.&#10;Added a button in the Poker Game that will return the user back to the menu" />
     <MESSAGE value="Small changes&#10;Changed icon for app to be a cute joker card&#10;Changed some comments for various classes&#10;Made a controller folder to keep things more organized" />
     <MESSAGE value="Uploaded files&#10;uploaded a background, have not been able to add it to the menu yet&#10;Created a .css folder to use to set background if able to make it work&#10;Added some enums to card class" />
@@ -334,6 +338,7 @@
     <MESSAGE value="added some validating hand methods" />
     <MESSAGE value="Starting statistics stuff&#10;Changed some comments in various classes" />
     <MESSAGE value="Created new PokerGame function saveStatistics&#10;Worked on statistics button event in poker menu, will give system out messages if file exists or not" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created new PokerGame function saveStatistics&#10;Worked on statistics button event in poker menu, will give system out messages if file exists or not" />
+    <MESSAGE value="Created new Statistics window&#10;Game now saves statistics file when folding (will be when game ends when that is finished)&#10;Menu will open Statistics window that will show statistics info from text file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created new Statistics window&#10;Game now saves statistics file when folding (will be when game ends when that is finished)&#10;Menu will open Statistics window that will show statistics info from text file" />
   </component>
 </project>
