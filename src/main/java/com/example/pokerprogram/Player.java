@@ -28,27 +28,27 @@ public class Player {
 
     public void replaceFirstCard()
     {
-        hand.set(1, deckOfCards.dealTopCard());
+        hand.set(0, deckOfCards.dealTopCard());
     }
 
     public void replaceSecondCard()
     {
-        hand.set(2, deckOfCards.dealTopCard());
+        hand.set(1, deckOfCards.dealTopCard());
     }
 
     public void replaceThirdCard()
     {
-        hand.set(3, deckOfCards.dealTopCard());
+        hand.set(2, deckOfCards.dealTopCard());
     }
 
     public void replaceFourthCard()
     {
-        hand.set(4, deckOfCards.dealTopCard());
+        hand.set(3, deckOfCards.dealTopCard());
     }
 
     public void replaceFifthCard()
     {
-        hand.set(5, deckOfCards.dealTopCard());
+        hand.set(4, deckOfCards.dealTopCard());
     }
 
     /**

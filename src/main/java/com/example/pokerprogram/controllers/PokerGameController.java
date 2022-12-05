@@ -197,6 +197,9 @@ public class PokerGameController implements Initializable {
     public void startGame(ActionEvent actionEvent) {
         //set pot to 0
         bettingPot = 0;
+
+        //set count to 0
+        count = 0;
         //get new deck and shuffle deck
         deck = new Deck();
         deck.shuffle();
@@ -245,6 +248,8 @@ public class PokerGameController implements Initializable {
         bReplace.setVisible(true);
         bReplaceNothing.setVisible(true);
         bReplaceCardConfirm.setVisible(false);
+        enableChecks();
+        clearFields();
         setCardsInvisble();
 
 
@@ -389,17 +394,19 @@ public class PokerGameController implements Initializable {
     {
         disableChecks();
         System.out.println("Replace Confirm");
-        numCardsSelected();
-        replaceCards();
-        count = 0;
+        if(numCardsSelected() == true)
+        {
+            replaceCards();
+        }
 
+        count = 0;
     }
 
 
     /**
      * Check that user only selects 3 cards max to replace
      */
-    public void numCardsSelected()
+    public boolean numCardsSelected()
     {
         if(count > 3)
         {
@@ -410,7 +417,9 @@ public class PokerGameController implements Initializable {
             enableChecks();
             //debugging
             //System.out.println("Total is over 3");
+            return false;
         }
+        return true;
     }
 
     /**
@@ -538,6 +547,29 @@ public class PokerGameController implements Initializable {
             imageView_Hand1.setImage(player1.getHand(0).getCardImage());
 
         }
+        if(checkReplaceCard2.isSelected())
+        {
+            player1.replaceSecondCard();
+            imageView_Hand2.setImage(player1.getHand(1).getCardImage());
+
+        }
+        if(checkReplaceCard3.isSelected())
+        {
+            player1.replaceThirdCard();
+            imageView_Hand3.setImage(player1.getHand(2).getCardImage());
+        }
+        if(checkReplaceCard4.isSelected())
+        {
+            player1.replaceFourthCard();
+            imageView_Hand4.setImage(player1.getHand(3).getCardImage());
+
+        }
+        if(checkReplaceCard5.isSelected())
+        {
+            player1.replaceFifthCard();
+            imageView_Hand5.setImage(player1.getHand(4).getCardImage());
+
+        }
     }
 
     /**
@@ -563,6 +595,16 @@ public class PokerGameController implements Initializable {
         checkReplaceCard3.setDisable(false);
         checkReplaceCard4.setDisable(false);
         checkReplaceCard5.setDisable(false);
+
+    }
+
+    public void clearFields(){
+
+        checkReplaceCard1.setSelected(false);
+        checkReplaceCard2.setSelected(false);
+        checkReplaceCard3.setSelected(false);
+        checkReplaceCard4.setSelected(false);
+        checkReplaceCard5.setSelected(false);
 
     }
 
