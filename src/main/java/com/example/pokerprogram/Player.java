@@ -1,6 +1,7 @@
 package com.example.pokerprogram;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * This is a class that will represent the user and their resources in the Poker Game
@@ -22,7 +23,7 @@ public class Player {
 
     public Player(){
         balance = 1000;
-        hand = new ArrayList<>(5);
+        hand = new ArrayList<Card>(5);
         deckOfCards = new Deck();
     }
 
@@ -106,6 +107,7 @@ public class Player {
         int count = 0;
         for (int i = 0; i < hand.size(); i++)
         {
+            count = 0;
             for (int j = 0; j < hand.size(); j++) {
                 if (hand.get(i).getRank().equals(hand.get(j).getRank()) && (i != j))
                     count++;
@@ -144,14 +146,18 @@ public class Player {
     public boolean twoPair()
     {
         int count = 0;
-        for(int i = 0; i < hand.size(); i++)
+        for(int i = 0; i < hand.size()-1; i++)
         {
             if(hand.get(i).getRank().equals(hand.get(i + 1).getRank()))
             {
                 count++;
             }
         }
-        return count == 2;
+        if(count == 2)
+        {
+            return true;
+        }
+        return false;
     }
 
     public boolean threeOfAKind()
@@ -160,6 +166,7 @@ public class Player {
 
         for(int i = 0; i < hand.size(); i++)
         {
+            count = 0;
             for(int j = 0; j < hand.size(); j++)
             {
                 if((hand.get(i).getRank().equals(hand.get(j).getRank())) && (i !=j))
@@ -168,7 +175,11 @@ public class Player {
                 }
             }
         }
-        return count == 3;
+       if(count == 3)
+       {
+           return true;
+       }
+       return false;
     }
 
     public boolean fourOfAKind()
@@ -185,7 +196,7 @@ public class Player {
                 }
             }
         }
-        return count == 4;
+        return count == 3;
     }
 
 
@@ -208,5 +219,36 @@ public class Player {
         return onePair() && threeOfAKind();
     }
 
+    public boolean straight() {
+        int count = 0;
+        Collections.sort(hand);
+        for (int i = 0; i < hand.size()-1; i++) {
+            if ((hand.get(i+1).getRank() == (hand.get(i).getRank() + 1))
+                    || ((hand.get(0).getRank().equals(2)) && (hand.get(1).getRank().equals(3))
+                    && (hand.get(2).getRank().equals(4))
+                    && (hand.get(3).getRank().equals(5)) && (hand.get(4).getRank().equals(12))))
+                count++;
+        }
+        if (count == 4)
+        {
+            return true;
+        }
+        return false;
+    }
 
+    public boolean straightFlush()
+    {
+        //both a straight and a flush
+        if(straight() == true && flush() == true)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean royalFlush()
+    {
+        //both flush, straight, and begin with a 10
+        return true;
+    }
 }//end Player class

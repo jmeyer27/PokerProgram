@@ -4,7 +4,7 @@ import javafx.scene.image.Image;
 
 import java.util.Objects;
 
-public class Card {
+public class Card implements Comparable<Card> {
 
     private Image cardImage;
     private Image backOfCard;
@@ -66,5 +66,22 @@ public class Card {
     }
     public Image getBackOfCard(){ return backOfCard;}
 
+    public int compareTo(Card card2)
+    {
+        int compare = 0;
 
+        if(this.rank > card2.rank)
+        {
+            compare = 1;
+        }
+        if(this.rank < card2.rank)
+        {
+            compare = -1;
+        }
+        if(this.rank == card2.rank)
+        {
+            compare = 0;
+        }
+        return compare;
+    }
 }

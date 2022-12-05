@@ -25,7 +25,7 @@ public class Hand {
 
     public Hand(Card first, Card second, Card third, Card fourth, Card fifth)
     {
-        cards=new ArrayList<>();
+        cards=new ArrayList<Card>();
         cards.add(first);
         cards.add(second);
         cards.add(third);

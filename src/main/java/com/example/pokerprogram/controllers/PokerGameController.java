@@ -31,6 +31,7 @@ public class PokerGameController implements Initializable {
     String betAmount; //initial bet
 
     int count = 0;
+    boolean replaceConfirmClick = false;
 
 
     @FXML
@@ -122,6 +123,7 @@ public class PokerGameController implements Initializable {
     private Scene preScene;
     public void setPreScene(Scene preScene){
         this.preScene = preScene;
+        count = 0;
     }
 
 
@@ -133,6 +135,7 @@ public class PokerGameController implements Initializable {
      */
     public void returnToMenuAction(ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+        count = 0;
 
         //prompt user if they want to return to menu
         Alert.AlertType type = Alert.AlertType.CONFIRMATION;
@@ -200,6 +203,7 @@ public class PokerGameController implements Initializable {
 
         //set count to 0
         count = 0;
+
         //get new deck and shuffle deck
         deck = new Deck();
         deck.shuffle();
@@ -248,6 +252,7 @@ public class PokerGameController implements Initializable {
         bReplace.setVisible(true);
         bReplaceNothing.setVisible(true);
         bReplaceCardConfirm.setVisible(false);
+        replaceConfirmClick = false;
         enableChecks();
         clearFields();
         setCardsInvisble();
@@ -384,7 +389,11 @@ public class PokerGameController implements Initializable {
 
     public void noReplace(ActionEvent actionEvent)
     {
-        System.out.println("At do not replace any cards.");
+        System.out.println(evaluate());
+        Alert infoAlert = new Alert(Alert.AlertType.INFORMATION);
+        infoAlert.setHeaderText("Game Results");
+        infoAlert.setContentText(evaluate());
+        infoAlert.showAndWait();
     }
 
     /**
@@ -392,14 +401,22 @@ public class PokerGameController implements Initializable {
      */
     public void replaceConfirm()
     {
+        replaceConfirmClick = true;
         disableChecks();
         System.out.println("Replace Confirm");
         if(numCardsSelected() == true)
         {
             replaceCards();
+            System.out.println(evaluate());
+            Alert infoAlert = new Alert(Alert.AlertType.INFORMATION);
+            infoAlert.setHeaderText("Game Results");
+            infoAlert.setContentText(evaluate());
+            infoAlert.showAndWait();
+            count = 0;
         }
-
         count = 0;
+
+
     }
 
 
@@ -415,6 +432,7 @@ public class PokerGameController implements Initializable {
             errorAlert.setContentText("Please select a max of 3 cards to replace");
             errorAlert.showAndWait();
             enableChecks();
+            replaceConfirmClick = false;
             //debugging
             //System.out.println("Total is over 3");
             return false;
@@ -485,7 +503,7 @@ public class PokerGameController implements Initializable {
      */
     public void checkSelectedCard1()
     {
-        if(checkReplaceCard1.isSelected())
+        if(checkReplaceCard1.isSelected() && replaceConfirmClick == true)
         {
             count++;
         }
@@ -496,7 +514,7 @@ public class PokerGameController implements Initializable {
      */
     public void checkSelectedCard2()
     {
-        if(checkReplaceCard2.isSelected())
+        if(checkReplaceCard2.isSelected() && replaceConfirmClick == true)
         {
             count++;
         }
@@ -507,7 +525,7 @@ public class PokerGameController implements Initializable {
      */
     public void checkSelectedCard3()
     {
-        if(checkReplaceCard3.isSelected())
+        if(checkReplaceCard3.isSelected() && replaceConfirmClick == true)
         {
             count++;
         }
@@ -518,7 +536,7 @@ public class PokerGameController implements Initializable {
      */
     public void checkSelectedCard4()
     {
-        if(checkReplaceCard4.isSelected())
+        if(checkReplaceCard4.isSelected() && replaceConfirmClick == true)
         {
             count++;
         }
@@ -529,7 +547,7 @@ public class PokerGameController implements Initializable {
      */
     public void checkSelectedCard5()
     {
-        if(checkReplaceCard5.isSelected())
+        if(checkReplaceCard5.isSelected() && replaceConfirmClick == true)
         {
             count++;
         }
@@ -610,26 +628,27 @@ public class PokerGameController implements Initializable {
 
     public String evaluate()
     {
+
         String eval = "";
 
-        if(player1.onePair() == true)
+        /*if(player1.royalFlush() == true)
         {
-            eval = "One Pair";
+            eval = "Royal Flush";
             return eval;
-        }
-        if(player1.twoPair() == true)
+        }*/
+        if(player1.straightFlush() == true)
         {
-            eval = "Two Pair";
-            return eval;
-        }
-        if(player1.threeOfAKind() == true)
-        {
-            eval = "Three Of A Kind";
+            eval = "Straight Flush";
             return eval;
         }
         if(player1.fourOfAKind() == true)
         {
-            eval = "Four Of A Pair";
+            eval = "Four Of A Kind";
+            return eval;
+        }
+        if(player1.fullHouse() == true)
+        {
+            eval = "Full House";
             return eval;
         }
         if(player1.flush() == true)
@@ -637,9 +656,29 @@ public class PokerGameController implements Initializable {
             eval = "Flush";
             return eval;
         }
+        if(player1.straight() == true)
+        {
+            eval = "Straight";
+            return eval;
+        }
+        if(player1.threeOfAKind() == true)
+        {
+            eval = "Three Of A Kind";
+            return eval;
+        }
+        if(player1.twoPair() == true)
+        {
+            eval = "Two Pairs";
+            return eval;
+        }
         if(player1.onePair() == true)
         {
             eval = "One Pair";
+            return eval;
+        }
+        if(player1.noPair() == true)
+        {
+            eval = "No Pair";
             return eval;
         }
         return eval;

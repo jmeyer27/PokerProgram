@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="single player updates">
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="replace cards">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Hand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" afterDir="false" />
     </list>
@@ -306,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670209058226</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="replace cards">
+      <created>1670210896230</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1670210896231</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -321,7 +330,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Small changes&#10;Changed icon for app to be a cute joker card&#10;Changed some comments for various classes&#10;Made a controller folder to keep things more organized" />
     <MESSAGE value="Uploaded files&#10;uploaded a background, have not been able to add it to the menu yet&#10;Created a .css folder to use to set background if able to make it work&#10;Added some enums to card class" />
     <MESSAGE value="Menu Background&#10;Added a background to the main menu&#10;(If someone finds a better one, you can easily change it or ask me and I'll change it)" />
     <MESSAGE value="Menu&#10;Changed layout of menu" />
@@ -346,6 +354,7 @@
     <MESSAGE value="Created new PokerGame function saveStatistics&#10;Worked on statistics button event in poker menu, will give system out messages if file exists or not" />
     <MESSAGE value="Created new Statistics window&#10;Game now saves statistics file when folding (will be when game ends when that is finished)&#10;Menu will open Statistics window that will show statistics info from text file" />
     <MESSAGE value="single player updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="single player updates" />
+    <MESSAGE value="replace cards" />
+    <option name="LAST_COMMIT_MESSAGE" value="replace cards" />
   </component>
 </project>
