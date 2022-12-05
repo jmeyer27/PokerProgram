@@ -8,49 +8,83 @@
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #2e8545;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokerprogram.controllers.PokerGameController">
    <children>
       <Button id="returnToMenuButton" layoutX="150.0" layoutY="27.0" mnemonicParsing="false" onAction="#returnToMenuAction" prefHeight="41.0" prefWidth="202.0" text="Return to Menu" />
-      <ImageView fx:id="imageView_Hand1" fitHeight="177.0" fitWidth="119.0" layoutX="192.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
-      <image>
-         <Image url="@images/pokerCardImages/Bicycle_Playing_Cards_red.jpg" />
-      </image>
+      <ImageView fx:id="imageView_Hand1" fitHeight="177.0" fitWidth="119.0" layoutX="100.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/pokerCardImages/Bicycle_Playing_Cards_red.jpg" />
+         </image>
       </ImageView>
-      <ImageView fx:id="imageView_Hand2" fitHeight="196.0" fitWidth="119.0" layoutX="352.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imageView_Hand2" fitHeight="196.0" fitWidth="119.0" layoutX="200.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/pokerCardImages/Bicycle_Playing_Cards_red.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageView_Hand3" fitHeight="177.0" fitWidth="119.0" layoutX="300.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/pokerCardImages/Bicycle_Playing_Cards_red.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageView_Hand4" fitHeight="177.0" fitWidth="119.0" layoutX="400.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/pokerCardImages/Bicycle_Playing_Cards_red.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageView_Hand5" fitHeight="177.0" fitWidth="119.0" layoutX="500.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/pokerCardImages/Bicycle_Playing_Cards_red.jpg" />
          </image>
       </ImageView>
       <Button id="bNewGame" fx:id="bNewGame" layoutX="391.0" layoutY="35.0" mnemonicParsing="false" onAction="#startGame" text="New Game" />
-      <ImageView fx:id="imageView_Dealer1" fitHeight="159.0" fitWidth="99.0" layoutX="101.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="replaceCard1" fitHeight="200.0" fitWidth="50.0" layoutX="700.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/pokerCardImages/Bicycle_Playing_Cards_red.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="imageView_Dealer2" fitHeight="159.0" fitWidth="99.0" layoutX="223.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="replaceCard2" fitHeight="200.0" fitWidth="50.0" layoutX="760.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/pokerCardImages/Bicycle_Playing_Cards_red.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="bFold" layoutX="821.0" layoutY="314.0" mnemonicParsing="false" onAction="#fold" prefHeight="54.0" prefWidth="67.0" text="Fold" visible="false" />
+      <ImageView fx:id="replaceCard3" fitHeight="200.0" fitWidth="50.0" layoutX="820.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/pokerCardImages/Bicycle_Playing_Cards_red.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="replaceCard4" fitHeight="200.0" fitWidth="50.0" layoutX="730.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/pokerCardImages/Bicycle_Playing_Cards_red.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="replaceCard5" fitHeight="200.0" fitWidth="50.0" layoutX="790.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/pokerCardImages/Bicycle_Playing_Cards_red.jpg" />
+         </image>
+      </ImageView>
       <Button fx:id="bHowToPlay" layoutX="41.0" layoutY="35.0" mnemonicParsing="false" onAction="#getHowToPLay" text="How to Play" />
+      <Button fx:id="bReplaceCardConfirm" layoutX="740.0" layoutY="480.0" mnemonicParsing="false" onAction="#replaceConfirm" text="Replace Cards" />
       <Label fx:id="gameText" layoutX="610.0" layoutY="61.0" prefHeight="121.0" prefWidth="359.0" text="Start a new game" textFill="#f2e9e9">
          <font>
             <Font name="Cambria Bold" size="24.0" />
          </font></Label>
-      <Button fx:id="bBet" layoutX="780.0" layoutY="382.0" mnemonicParsing="false" onAction="#bet" prefHeight="54.0" prefWidth="67.0" text="Bet" visible="false" />
-      <Button fx:id="bCall" layoutX="865.0" layoutY="458.0" mnemonicParsing="false" onAction="#call" prefHeight="53.0" prefWidth="67.0" text="Call" visible="false" />
-      <Button fx:id="bCheck" layoutX="865.0" layoutY="382.0" mnemonicParsing="false" onAction="#check" prefHeight="54.0" prefWidth="67.0" text="Check" visible="false" />
-      <Button fx:id="bRaise" layoutX="780.0" layoutY="457.0" mnemonicParsing="false" onAction="#raise" prefHeight="54.0" prefWidth="67.0" text="Raise" visible="false" />
+      <Button fx:id="bReplace" layoutX="700.0" layoutY="382.0" mnemonicParsing="false" onAction="#replace" prefHeight="54.0" prefWidth="67.0" text="Replace" visible="false" />
+      <Button fx:id="bReplaceNothing" layoutX="780.0" layoutY="382.0" mnemonicParsing="false" onAction="#noReplace" prefHeight="54.0" prefWidth="80.0" text="Play Hand" visible="false" />
       <CheckBox fx:id="toggleMusic" layoutX="675.0" layoutY="27.0" mnemonicParsing="false" onAction="#toggleMusic" text="♫ Music" textFill="#dfd7d7">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></CheckBox>
-      <Label fx:id="playerBalance" layoutX="22.0" layoutY="357.0" text="Player Balance:" textFill="#d4d0d0">
+      <CheckBox fx:id="checkReplaceCard1" layoutX="715.0" layoutY="325.0" mnemonicParsing="false" onAction="#checkSelectedCard1" text=" " textFill="#dfd7d7">
+      </CheckBox>
+      <CheckBox fx:id="checkReplaceCard2" layoutX="775.0" layoutY="325.0" mnemonicParsing="false" onAction="#checkSelectedCard2" text=" " textFill="#dfd7d7">
+      </CheckBox>
+      <CheckBox fx:id="checkReplaceCard3" layoutX="835.0" layoutY="325.0" mnemonicParsing="false" onAction="#checkSelectedCard3" text=" " textFill="#dfd7d7">
+      </CheckBox>
+      <CheckBox fx:id="checkReplaceCard4" layoutX="745.0" layoutY="425.0" mnemonicParsing="false" onAction="#checkSelectedCard4" text=" " textFill="#dfd7d7">
+      </CheckBox>
+      <CheckBox fx:id="checkReplaceCard5" layoutX="805.0" layoutY="425.0" mnemonicParsing="false" onAction="#checkSelectedCard5" text=" " textFill="#dfd7d7">
+      </CheckBox>
+      <Label fx:id="playerName" layoutX="22.0" layoutY="357.0" text="Cards: " textFill="#d4d0d0">
          <font>
             <Font name="Cambria Bold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="potBalance" layoutX="192.0" layoutY="110.0" text="Pot Balance:" textFill="#d7c5c5">
-         <font>
-            <Font name="Cambria Bold" size="18.0" />
-         </font></Label>
    </children>
 </AnchorPane>

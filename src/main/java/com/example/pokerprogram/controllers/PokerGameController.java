@@ -28,35 +28,79 @@ import java.util.Scanner;
 public class PokerGameController implements Initializable {
     Player player1;//player
     String name; //players name
+    String betAmount; //initial bet
+
+    int count = 0;
 
 
     @FXML
     public CheckBox toggleMusic;
+
     @FXML
-    public Label playerBalance;
+    public CheckBox checkReplaceCard1;
+
+    @FXML
+    public CheckBox checkReplaceCard2;
+
+    @FXML
+    public CheckBox checkReplaceCard3;
+
+    @FXML
+    public CheckBox checkReplaceCard4;
+
+    @FXML
+    public CheckBox checkReplaceCard5;
+    @FXML
+    public Label playerName;
     @FXML
     public Label potBalance;
 
     public ImageView imageView_Dealer1;
     public ImageView imageView_Dealer2;
-    public Button bFold;
+
     public Button bHowToPlay;
     @FXML
     public Label gameText;
-    public Button bBet;
-    public Button bCall;
-    public Button bCheck;
-    public Button bRaise;
+    public Button bReplace;
+
+    public Button bReplaceNothing;
+
+    public Button bReplaceCardConfirm;
+
+    @FXML
+    private ImageView replaceCard1;
+
+    @FXML
+    private ImageView replaceCard2;
+
+    @FXML
+    private ImageView replaceCard3;
+
+    @FXML
+    private ImageView replaceCard4;
+
+    @FXML
+    private ImageView replaceCard5;
     private Deck deck;
     @FXML
-    private ImageView imageView_Hand2;
-    @FXML
     private ImageView imageView_Hand1;
+    @FXML
+    private ImageView imageView_Hand2;
 
+    @FXML
+    private ImageView imageView_Hand3;
+
+    @FXML
+    private ImageView imageView_Hand4;
+
+    @FXML
+    private ImageView imageView_Hand5;
+
+    public Button bStartGame;
     //betting pot for game, this is where bets go
     private Integer bettingPot;
 
-
+    boolean fold = false;
 
 
     //This is all for the menu music. Gets path and sets up media player.
@@ -156,35 +200,54 @@ public class PokerGameController implements Initializable {
         //get new deck and shuffle deck
         deck = new Deck();
         deck.shuffle();
-        //make new player, give them a name, and give player 2 cards to their hand
+        //new player and give player 2 cards to their hand
         player1 = new Player();
+        //todo set player name (below)
         player1.setUsername(name);
         player1.addCard(deck.dealTopCard()); //add card 1
         player1.addCard(deck.dealTopCard()); //add card 2
+        player1.addCard(deck.dealTopCard()); //add card 3
+        player1.addCard(deck.dealTopCard()); //add card 4
+        player1.addCard(deck.dealTopCard()); //add card 5
+
+        TextInputDialog betDialog = new TextInputDialog();
+        betDialog.setTitle("Enter Bet Amount");
+        Optional<String> result = betDialog.showAndWait();
+        result.ifPresent(string -> betAmount = string);
+
+        //check for null first (user clicks cancel or the x button)
+        if(betAmount == null){
+            betAmount = "0";
+        }
+        //then check if user didn't put anything in the textbox but clicked confirm
+        if(betAmount.equals("") || betAmount.isEmpty() ){
+            betAmount = "0";
+        }
 
         //the two player cards are set out in front of them
         imageView_Hand1.setImage(player1.getHand(0).getCardImage());
         imageView_Hand2.setImage(player1.getHand(1).getCardImage());
+        imageView_Hand3.setImage(player1.getHand(2).getCardImage());
+        imageView_Hand4.setImage(player1.getHand(3).getCardImage());
+        imageView_Hand5.setImage(player1.getHand(4).getCardImage());
 
         //todo: place these cards in a dealer/table arraylist? Need to keep track of cards on table.
-        imageView_Dealer1.setImage(deck.dealTopCard().getCardImage());
-        imageView_Dealer2.setImage(deck.dealTopCard().getCardImage());
+        //imageView_Dealer1.setImage(deck.dealTopCard().getCardImage());
+        //imageView_Dealer2.setImage(deck.dealTopCard().getCardImage());
+
 
         //set text in game text field
         gameText.setText("Poker game begins!");
         //change bettingPot and user/player balance text
-        potBalance.setText("Pot balance: "+bettingPot);
-        playerBalance.setText(player1.getUsername() +"'s balance: "+player1.getBalance());
+        //potBalance.setText("Pot balance: "+bettingPot);
+        playerName.setText(player1.getUsername() +"'s cards: ");
 
-        //Raise and Call cannot be used before a bet has been wagered
-        bBet.setVisible(true);
-        bFold.setVisible(true);
-        bCheck.setVisible(true);
-        //sets bet to be not disabled in the event that the last round had a bet
-        bBet.setDisable(false);
-        //sets raise and call to be disabled
-        bRaise.setVisible(false);
-        bCall.setVisible(false);
+        bReplace.setVisible(true);
+        bReplaceNothing.setVisible(true);
+        bReplaceCardConfirm.setVisible(false);
+        setCardsInvisble();
+
+
     }
 
     /**
@@ -227,13 +290,6 @@ public class PokerGameController implements Initializable {
         // add bet to pot (bettingPot)
         //change bettingPot and user/player balance text
         potBalance.setText("Pot balance: "+bettingPot);
-        playerBalance.setText(player1.getUsername() +"'s balance: "+player1.getBalance());
-
-        //make raise and call buttons no longer invisible for next round
-        bRaise.setVisible(true);
-        bCall.setVisible(true);
-        //set bet to now be disabled
-        bBet.setDisable(true);
 
     }
 
@@ -301,18 +357,250 @@ public class PokerGameController implements Initializable {
         // turn should go to next player (round if single player)
         //change bettingPot and user/player balance text
         potBalance.setText("Pot balance: "+bettingPot);
-        playerBalance.setText(player1.getUsername() +"'s balance: "+player1.getBalance());
+    }
+
+    /**
+     * Call functions when replace button in clicked on
+     */
+    public void replace(ActionEvent actionEvent) {
+        //set text in game text field
+        gameText.setText("Select up to three cards to replace.");
+        //fold hand
+
+        //game cannot be used so are turned invisible
+        //setVisibleButtons();
+
+        setCardsVisble();
+        bReplaceCardConfirm.setVisible(true);
+        showCards();
+        //saveStatistics();//save stats
+        setInvisibleButtons();
+    }
+
+    public void noReplace(ActionEvent actionEvent)
+    {
+        System.out.println("At do not replace any cards.");
+    }
+
+    /**
+     * Call functions when the 2nd confirm replace button in clicked on
+     */
+    public void replaceConfirm()
+    {
+        disableChecks();
+        System.out.println("Replace Confirm");
+        numCardsSelected();
+        replaceCards();
+        count = 0;
+
+    }
+
+
+    /**
+     * Check that user only selects 3 cards max to replace
+     */
+    public void numCardsSelected()
+    {
+        if(count > 3)
+        {
+            Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+            errorAlert.setHeaderText("Number of Cards Selected Invalid");
+            errorAlert.setContentText("Please select a max of 3 cards to replace");
+            errorAlert.showAndWait();
+            enableChecks();
+            //debugging
+            //System.out.println("Total is over 3");
+        }
+    }
+
+    /**
+     * Show player cards that they can replace
+     */
+    public void showCards()
+    {
+        replaceCard1.setImage(player1.getHand(0).getCardImage());
+        replaceCard2.setImage(player1.getHand(1).getCardImage());
+        replaceCard3.setImage(player1.getHand(2).getCardImage());
+        replaceCard4.setImage(player1.getHand(3).getCardImage());
+        replaceCard5.setImage(player1.getHand(4).getCardImage());
+
+    }
+
+    /**
+     * Set mini cards and checkboxes to invisible
+     */
+    public void setCardsInvisble()
+    {
+        replaceCard1.setVisible(false);
+        replaceCard2.setVisible(false);
+        replaceCard3.setVisible(false);
+        replaceCard4.setVisible(false);
+        replaceCard5.setVisible(false);
+        checkReplaceCard1.setVisible(false);
+        checkReplaceCard2.setVisible(false);
+        checkReplaceCard3.setVisible(false);
+        checkReplaceCard4.setVisible(false);
+        checkReplaceCard5.setVisible(false);
+
+    }
+
+    /**
+     * Set mini cards and checkboxes to visible
+     */
+    public void setCardsVisble()
+    {
+        replaceCard1.setVisible(true);
+        replaceCard2.setVisible(true);
+        replaceCard3.setVisible(true);
+        replaceCard4.setVisible(true);
+        replaceCard5.setVisible(true);
+        checkReplaceCard1.setVisible(true);
+        checkReplaceCard2.setVisible(true);
+        checkReplaceCard3.setVisible(true);
+        checkReplaceCard4.setVisible(true);
+        checkReplaceCard5.setVisible(true);
+
     }
 
     /**
      * Set all game buttons invisible so that the user is not able to click them when the game is not in session
      */
     public void setInvisibleButtons(){
-        bRaise.setVisible(false);
-        bCall.setVisible(false);
-        bFold.setVisible(false);
-        bCheck.setVisible(false);
-        bBet.setVisible(false);
+        bReplace.setVisible(false);
+        bReplaceNothing.setVisible(false);
+
+    }
+
+    /**
+     * Check if checkbox for first card is selected
+     */
+    public void checkSelectedCard1()
+    {
+        if(checkReplaceCard1.isSelected())
+        {
+            count++;
+        }
+    }
+
+    /**
+     * Check if checkbox for second card is selected
+     */
+    public void checkSelectedCard2()
+    {
+        if(checkReplaceCard2.isSelected())
+        {
+            count++;
+        }
+    }
+
+    /**
+     * Check if checkbox for third card is selected
+     */
+    public void checkSelectedCard3()
+    {
+        if(checkReplaceCard3.isSelected())
+        {
+            count++;
+        }
+    }
+
+    /**
+     * Check if checkbox for fourth card is selected
+     */
+    public void checkSelectedCard4()
+    {
+        if(checkReplaceCard4.isSelected())
+        {
+            count++;
+        }
+    }
+
+    /**
+     * Check if checkbox for fifth card is selected
+     */
+    public void checkSelectedCard5()
+    {
+        if(checkReplaceCard5.isSelected())
+        {
+            count++;
+        }
+    }
+
+    /**
+     * Replace the cards that the users desires
+     */
+    public void replaceCards()
+    {
+        if(checkReplaceCard1.isSelected())
+        {
+            System.out.println("HERE 1");
+            player1.replaceFirstCard();
+            imageView_Hand1.setImage(player1.getHand(0).getCardImage());
+
+        }
+    }
+
+    /**
+     * Disables the replace card checkboxes
+     */
+    public void disableChecks()
+    {
+        checkReplaceCard1.setDisable(true);
+        checkReplaceCard2.setDisable(true);
+        checkReplaceCard3.setDisable(true);
+        checkReplaceCard4.setDisable(true);
+        checkReplaceCard5.setDisable(true);
+
+    }
+
+    /**
+     * Enbles the replace card checkboxes
+     */
+    public void enableChecks()
+    {
+        checkReplaceCard1.setDisable(false);
+        checkReplaceCard2.setDisable(false);
+        checkReplaceCard3.setDisable(false);
+        checkReplaceCard4.setDisable(false);
+        checkReplaceCard5.setDisable(false);
+
+    }
+
+    public String evaluate()
+    {
+        String eval = "";
+
+        if(player1.onePair() == true)
+        {
+            eval = "One Pair";
+            return eval;
+        }
+        if(player1.twoPair() == true)
+        {
+            eval = "Two Pair";
+            return eval;
+        }
+        if(player1.threeOfAKind() == true)
+        {
+            eval = "Three Of A Kind";
+            return eval;
+        }
+        if(player1.fourOfAKind() == true)
+        {
+            eval = "Four Of A Pair";
+            return eval;
+        }
+        if(player1.flush() == true)
+        {
+            eval = "Flush";
+            return eval;
+        }
+        if(player1.onePair() == true)
+        {
+            eval = "One Pair";
+            return eval;
+        }
+        return eval;
     }
 
 
