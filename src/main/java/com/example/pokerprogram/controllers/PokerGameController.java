@@ -409,7 +409,7 @@ public class PokerGameController implements Initializable {
      */
     public void checkSelectedCard1()
     {
-        if(checkReplaceCard1.isSelected() && replaceConfirmClick == true)
+        if(checkReplaceCard1.isSelected() && replaceConfirmClick)
         {
             count++;
         }
@@ -420,7 +420,7 @@ public class PokerGameController implements Initializable {
      */
     public void checkSelectedCard2()
     {
-        if(checkReplaceCard2.isSelected() && replaceConfirmClick == true)
+        if(checkReplaceCard2.isSelected() && replaceConfirmClick)
         {
             count++;
         }
@@ -431,7 +431,7 @@ public class PokerGameController implements Initializable {
      */
     public void checkSelectedCard3()
     {
-        if(checkReplaceCard3.isSelected() && replaceConfirmClick == true)
+        if(checkReplaceCard3.isSelected() && replaceConfirmClick)
         {
             count++;
         }
@@ -453,7 +453,7 @@ public class PokerGameController implements Initializable {
      */
     public void checkSelectedCard5()
     {
-        if(checkReplaceCard5.isSelected() && replaceConfirmClick == true)
+        if(checkReplaceCard5.isSelected() && replaceConfirmClick)
         {
             count++;
         }
@@ -466,31 +466,31 @@ public class PokerGameController implements Initializable {
     {
         if(checkReplaceCard1.isSelected())
         {
-            System.out.println("HERE 1");
-            player1.replaceFirstCard();
+            //System.out.println("HERE 1");
+            player1.replaceCard(0, deck.dealTopCard());
             imageView_Hand1.setImage(player1.getHand(0).getCardImage());
 
         }
         if(checkReplaceCard2.isSelected())
         {
-            player1.replaceSecondCard();
+            player1.replaceCard(1, deck.dealTopCard());
             imageView_Hand2.setImage(player1.getHand(1).getCardImage());
 
         }
         if(checkReplaceCard3.isSelected())
         {
-            player1.replaceThirdCard();
+            player1.replaceCard(2, deck.dealTopCard());
             imageView_Hand3.setImage(player1.getHand(2).getCardImage());
         }
         if(checkReplaceCard4.isSelected())
         {
-            player1.replaceFourthCard();
+            player1.replaceCard(3, deck.dealTopCard());
             imageView_Hand4.setImage(player1.getHand(3).getCardImage());
 
         }
         if(checkReplaceCard5.isSelected())
         {
-            player1.replaceFifthCard();
+            player1.replaceCard(4, deck.dealTopCard());
             imageView_Hand5.setImage(player1.getHand(4).getCardImage());
 
         }

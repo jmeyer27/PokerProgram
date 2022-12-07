@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="statistics function in poker game now can correctly update numbers to text file">
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="removed functions that will not be used in poker game anymore&#10;RIP Choose Game stage. Since we won't be using multiplayer I've decided to retire this beautiful window. :(">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -312,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670210896231</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="removed functions that will not be used in poker game anymore&#10;RIP Choose Game stage. Since we won't be using multiplayer I've decided to retire this beautiful window. :(">
+      <created>1670446836214</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1670446836214</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -327,7 +335,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Uploaded files&#10;uploaded a background, have not been able to add it to the menu yet&#10;Created a .css folder to use to set background if able to make it work&#10;Added some enums to card class" />
     <MESSAGE value="Menu Background&#10;Added a background to the main menu&#10;(If someone finds a better one, you can easily change it or ask me and I'll change it)" />
     <MESSAGE value="Menu&#10;Changed layout of menu" />
     <MESSAGE value="Uploaded card images&#10;Also tested out card images in Poker Game" />
@@ -352,6 +359,7 @@
     <MESSAGE value="Created new Statistics window&#10;Game now saves statistics file when folding (will be when game ends when that is finished)&#10;Menu will open Statistics window that will show statistics info from text file" />
     <MESSAGE value="single player updates" />
     <MESSAGE value="replace cards" />
-    <option name="LAST_COMMIT_MESSAGE" value="replace cards" />
+    <MESSAGE value="removed functions that will not be used in poker game anymore&#10;RIP Choose Game stage. Since we won't be using multiplayer I've decided to retire this beautiful window. :(" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed functions that will not be used in poker game anymore&#10;RIP Choose Game stage. Since we won't be using multiplayer I've decided to retire this beautiful window. :(" />
   </component>
 </project>
