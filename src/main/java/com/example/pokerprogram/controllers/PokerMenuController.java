@@ -58,16 +58,17 @@ public class PokerMenuController {
         mediaPlayer.pause();
         toggleMusic.setSelected(false);
 
-        Stage chooseGameStage = new Stage();
-        chooseGameStage.setResizable(false);
-
-        //this makes the choose game type a new window which wasnt very good v.v
-        FXMLLoader choosefxmlLoader = new FXMLLoader(ThePokerGame.class.getResource("chooseGame-view.fxml"));
-        Scene choosescene = new Scene(choosefxmlLoader.load());
-        ChooseGameController choosecontroller = choosefxmlLoader.getController();
-        chooseGameStage.setTitle("Chose your game type!");
-        chooseGameStage.setScene(choosescene);
-        chooseGameStage.showAndWait();
+        //RIP choose Game type Stage. You were ambitious.
+//        Stage chooseGameStage = new Stage();
+//        chooseGameStage.setResizable(false);
+//
+//        //this makes the choose game type a new window which wasnt very good v.v
+//        FXMLLoader choosefxmlLoader = new FXMLLoader(ThePokerGame.class.getResource("chooseGame-view.fxml"));
+//        Scene choosescene = new Scene(choosefxmlLoader.load());
+//        ChooseGameController choosecontroller = choosefxmlLoader.getController();
+//        chooseGameStage.setTitle("Chose your game type!");
+//        chooseGameStage.setScene(choosescene);
+//        chooseGameStage.showAndWait();
 
 
         //This loads the single player poker game without any intermediary window

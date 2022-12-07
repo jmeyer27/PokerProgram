@@ -53,11 +53,6 @@ public class PokerGameController implements Initializable {
     public CheckBox checkReplaceCard5;
     @FXML
     public Label playerName;
-    @FXML
-    public Label potBalance;
-
-    public ImageView imageView_Dealer1;
-    public ImageView imageView_Dealer2;
 
     public Button bHowToPlay;
     @FXML
@@ -101,7 +96,6 @@ public class PokerGameController implements Initializable {
     //betting pot for game, this is where bets go
     private Integer bettingPot;
 
-    boolean fold = false;
 
 
     //This is all for the menu music. Gets path and sets up media player.
@@ -238,10 +232,6 @@ public class PokerGameController implements Initializable {
         imageView_Hand4.setImage(player1.getHand(3).getCardImage());
         imageView_Hand5.setImage(player1.getHand(4).getCardImage());
 
-        //todo: place these cards in a dealer/table arraylist? Need to keep track of cards on table.
-        //imageView_Dealer1.setImage(deck.dealTopCard().getCardImage());
-        //imageView_Dealer2.setImage(deck.dealTopCard().getCardImage());
-
 
         //set text in game text field
         gameText.setText("Poker game begins!");
@@ -285,89 +275,7 @@ public class PokerGameController implements Initializable {
         howToPlayStage.show();
     }
 
-    /**
-     * Action for the user to bet
-     * @param actionEvent the bBet button is clicked
-     */
-    public void bet(ActionEvent actionEvent) {
-        //set text in game text field
-        gameText.setText(player1.getUsername() +" has chosen to make a bet."); //maybe add text to how much they chose to bet also :)
 
-        //Todo bet function
-        // prompt user how much they wish to bet
-        // make sure the bet amount is within their currency range
-        // subtract bet from currency
-        // add bet to pot (bettingPot)
-        //change bettingPot and user/player balance text
-        potBalance.setText("Pot balance: "+bettingPot);
-
-    }
-
-    /**
-     * Action for the user to fold their cards in the Poker Game
-     * Sets card images to the back of the cards
-     * Disables button clicks for the rest of the game
-     * @param actionEvent the bFold button is clicked
-     */
-    public void fold(ActionEvent actionEvent) throws IOException {
-        //set text in game text field
-        gameText.setText(player1.getUsername() +" has chosen to fold.");
-        //fold hand
-        imageView_Hand1.setImage(player1.getHand(0).getBackOfCard());
-        imageView_Hand2.setImage(player1.getHand(1).getBackOfCard());
-
-        //game cannot be used so are turned invisible
-        setInvisibleButtons();
-
-        //fold function:
-        // turn should go to next player if multiplayer
-        //When the player folds they no longer are able to make other moves
-        //Can only start new game in single player
-        //If we can make multiplayer then they would be unable to have a turn for the rest of the game
-        //would have to make the buttons visible for each player and not attached to the game? idk trickyy
-
-        //todo move this to wherever the end of the game is l8r
-        saveStatistics();
-    }
-
-    /**
-     * Action for the user to call their bet in the Poker Game
-     * @param actionEvent the bCall button is clicked
-     */
-    public void call(ActionEvent actionEvent) {
-        //set text in game text field
-        gameText.setText(player1.getUsername() +" has chosen to call.");
-        //Todo call function
-        // check if enough balance
-        // add bet to pot (bettingPot)
-        // turn should go to next player (round if single player?)
-    }
-
-    /**
-     * Action for the user to check their bet in the Poker Game
-     * @param actionEvent the bCheck button is clicked
-     */
-    public void check(ActionEvent actionEvent) {
-        //set text in game text field
-        gameText.setText(player1.getUsername() +" has chosen to check.");
-        //todo turn should go to next player (round if single player)
-    }
-
-    /**
-     * Action for the user to raise their bet in the Poker Game
-     * @param actionEvent the bRaise button is clicked
-     */
-    public void raise(ActionEvent actionEvent) {
-        //set text in game text field
-        gameText.setText(player1.getUsername() +" has chosen to raise.");
-        //Todo raise function
-        // check if enough balance
-        // prompt player for raise amount
-        // add amount to pot (bettingPot)
-        // turn should go to next player (round if single player)
-        //change bettingPot and user/player balance text
-        potBalance.setText("Pot balance: "+bettingPot);
-    }
 
     /**
      * Call functions when replace button in clicked on
@@ -387,8 +295,7 @@ public class PokerGameController implements Initializable {
         setInvisibleButtons();
     }
 
-    public void noReplace(ActionEvent actionEvent)
-    {
+    public void noReplace(ActionEvent actionEvent) throws IOException {
         System.out.println(evaluate());
         Alert infoAlert = new Alert(Alert.AlertType.INFORMATION);
         infoAlert.setHeaderText("Game Results");
@@ -399,12 +306,11 @@ public class PokerGameController implements Initializable {
     /**
      * Call functions when the 2nd confirm replace button in clicked on
      */
-    public void replaceConfirm()
-    {
+    public void replaceConfirm() throws IOException {
         replaceConfirmClick = true;
         disableChecks();
         System.out.println("Replace Confirm");
-        if(numCardsSelected() == true)
+        if(numCardsSelected())
         {
             replaceCards();
             System.out.println(evaluate());
@@ -536,7 +442,7 @@ public class PokerGameController implements Initializable {
      */
     public void checkSelectedCard4()
     {
-        if(checkReplaceCard4.isSelected() && replaceConfirmClick == true)
+        if(checkReplaceCard4.isSelected() && replaceConfirmClick)
         {
             count++;
         }
@@ -626,8 +532,7 @@ public class PokerGameController implements Initializable {
 
     }
 
-    public String evaluate()
-    {
+    public String evaluate() throws IOException {
 
         String eval = "";
 
@@ -681,6 +586,8 @@ public class PokerGameController implements Initializable {
             eval = "No Pair";
             return eval;
         }
+        //save stats here before returning eval to user
+        saveStatistics();
         return eval;
     }
 
