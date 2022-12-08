@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Fixed Tests file structure&#10;Did a sample test on OnePair() function">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/pokerprogram/TestPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/pokerprogram/TestPlayer.java" afterDir="false" />
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Wrote more tests for Player&#10;toPair_True() test fails because twoPair returns false only.">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +85,7 @@
       <recent name="com.example.pokerprogram" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestPlayer.twoPair_True">
+  <component name="RunManager" selected="JUnit.TestPlayer.twoPair_False">
     <configuration name="TestPlayer.noPair_False" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PokerProgram" />
       <extension name="coverage">
@@ -119,22 +118,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPlayer.onePair_False" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PokerProgram" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.pokerprogram.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.pokerprogram" />
-      <option name="MAIN_CLASS_NAME" value="com.example.pokerprogram.TestPlayer" />
-      <option name="METHOD_NAME" value="onePair_False" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestPlayer.onePair_True" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PokerProgram" />
       <extension name="coverage">
@@ -146,6 +129,22 @@
       <option name="PACKAGE_NAME" value="com.example.pokerprogram" />
       <option name="MAIN_CLASS_NAME" value="com.example.pokerprogram.TestPlayer" />
       <option name="METHOD_NAME" value="onePair_True" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPlayer.twoPair_False" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PokerProgram" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.pokerprogram.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.pokerprogram" />
+      <option name="MAIN_CLASS_NAME" value="com.example.pokerprogram.TestPlayer" />
+      <option name="METHOD_NAME" value="twoPair_False" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -169,11 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestPlayer.twoPair_False" />
         <item itemvalue="JUnit.TestPlayer.twoPair_True" />
         <item itemvalue="JUnit.TestPlayer.noPair_False" />
         <item itemvalue="JUnit.TestPlayer.onePair_True" />
         <item itemvalue="JUnit.TestPlayer.noPair_True" />
-        <item itemvalue="JUnit.TestPlayer.onePair_False" />
       </list>
     </recent_temporary>
   </component>
@@ -452,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670532903781</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Wrote more tests for Player&#10;toPair_True() test fails because twoPair returns false only.">
+      <created>1670533965539</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1670533965539</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -467,7 +473,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Confirmation Dialog for returning to menu from Poker Game" />
     <MESSAGE value="How to Play window added&#10;Created a new fxml for this new window (howToPlay-view.fxml)&#10;Created a new controller for this new window (HowToPlayController.java)&#10;In various classes fixed comments and javadocs" />
     <MESSAGE value="Created player class&#10;Player class has balance and hand of cards&#10;When game begins deck cards are given now to Players hand" />
     <MESSAGE value="Updated PokerGame-view.fxml&#10;Added image placement for cards used by dealer&#10;Updated background color to howToPlay screen and PokerGame screen" />
@@ -492,6 +497,7 @@
     <MESSAGE value="Commented out twoPair() method in Player&#10;it kept returning true when it was a three of a kind&#10;fixed different error in threeOfAKind() method" />
     <MESSAGE value="Added test class&#10;need tests to find out if Player evaluate methods work correctly" />
     <MESSAGE value="Fixed Tests file structure&#10;Did a sample test on OnePair() function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Tests file structure&#10;Did a sample test on OnePair() function" />
+    <MESSAGE value="Wrote more tests for Player&#10;toPair_True() test fails because twoPair returns false only." />
+    <option name="LAST_COMMIT_MESSAGE" value="Wrote more tests for Player&#10;toPair_True() test fails because twoPair returns false only." />
   </component>
 </project>

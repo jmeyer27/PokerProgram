@@ -129,15 +129,26 @@ public class Player {
      */
     public boolean twoPair()
     {
-//        int firstPair = 0;
-//        int secondPair = 0;
-//        for(int i = 0; i < hand.size(); i++){
-//
-//        }
+        int firstPair = 0;
+        int secondPair = 0;
+        for(int i = 0; i < hand.size(); i++){
+
+            for(int j = 0; j < hand.size(); j++)
+            {
+                if((hand.get(i).getRank().equals(hand.get(j).getRank())) && (i !=j) && (firstPair == 0))
+                {
+                    firstPair = hand.get(i).getRankInteger();
+                }
+                if((hand.get(i).getRank().equals(hand.get(j).getRank())) && (i !=j) && (firstPair != 0)){
+                    secondPair = hand.get(i).getRankInteger();
+                }
+            }
+
+        }
 
 
 
-        return false;
+        return firstPair != 0 && secondPair != firstPair && secondPair != 0;
     }
 
     public boolean threeOfAKind()

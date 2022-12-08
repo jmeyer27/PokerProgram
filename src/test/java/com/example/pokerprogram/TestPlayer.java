@@ -92,6 +92,19 @@ public class TestPlayer {
 
     @Test
     public void twoPair_False() {
+        Player test = new Player();
+        Card card1 = new Card(1, 1);
+        Card card2 = new Card(2, 1);
+        Card card3 = new Card(3, 1);
+        Card card4 = new Card(4, 1);
+        Card card5 = new Card(1, 2);
+        test.addCard(card1);
+        test.addCard(card2);
+        test.addCard(card3);
+        test.addCard(card4);
+        test.addCard(card5);
+
+        assertFalse(test.twoPair());
     }
 
     @Test
