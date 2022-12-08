@@ -63,20 +63,6 @@ public class PokerGameController implements Initializable {
 
     public Button bReplaceCardConfirm;
 
-    @FXML
-    private ImageView replaceCard1;
-
-    @FXML
-    private ImageView replaceCard2;
-
-    @FXML
-    private ImageView replaceCard3;
-
-    @FXML
-    private ImageView replaceCard4;
-
-    @FXML
-    private ImageView replaceCard5;
     private Deck deck;
     @FXML
     private ImageView imageView_Hand1;
@@ -203,7 +189,6 @@ public class PokerGameController implements Initializable {
         deck.shuffle();
         //new player and give player 2 cards to their hand
         player1 = new Player();
-        //todo set player name (below)
         player1.setUsername(name);
         player1.addCard(deck.dealTopCard()); //add card 1
         player1.addCard(deck.dealTopCard()); //add card 2
@@ -283,14 +268,12 @@ public class PokerGameController implements Initializable {
     public void replace(ActionEvent actionEvent) {
         //set text in game text field
         gameText.setText("Select up to three cards to replace.");
-        //fold hand
 
         //game cannot be used so are turned invisible
         //setVisibleButtons();
 
         setCardsVisble();
         bReplaceCardConfirm.setVisible(true);
-        showCards();
         //saveStatistics();//save stats
         setInvisibleButtons();
     }
@@ -346,29 +329,14 @@ public class PokerGameController implements Initializable {
         return true;
     }
 
-    /**
-     * Show player cards that they can replace
-     */
-    public void showCards()
-    {
-        replaceCard1.setImage(player1.getHand(0).getCardImage());
-        replaceCard2.setImage(player1.getHand(1).getCardImage());
-        replaceCard3.setImage(player1.getHand(2).getCardImage());
-        replaceCard4.setImage(player1.getHand(3).getCardImage());
-        replaceCard5.setImage(player1.getHand(4).getCardImage());
 
-    }
 
     /**
      * Set mini cards and checkboxes to invisible
      */
     public void setCardsInvisble()
     {
-        replaceCard1.setVisible(false);
-        replaceCard2.setVisible(false);
-        replaceCard3.setVisible(false);
-        replaceCard4.setVisible(false);
-        replaceCard5.setVisible(false);
+
         checkReplaceCard1.setVisible(false);
         checkReplaceCard2.setVisible(false);
         checkReplaceCard3.setVisible(false);
@@ -382,11 +350,7 @@ public class PokerGameController implements Initializable {
      */
     public void setCardsVisble()
     {
-        replaceCard1.setVisible(true);
-        replaceCard2.setVisible(true);
-        replaceCard3.setVisible(true);
-        replaceCard4.setVisible(true);
-        replaceCard5.setVisible(true);
+
         checkReplaceCard1.setVisible(true);
         checkReplaceCard2.setVisible(true);
         checkReplaceCard3.setVisible(true);
@@ -535,6 +499,9 @@ public class PokerGameController implements Initializable {
     public String evaluate() throws IOException {
 
         String eval = "";
+        setCardsInvisble();
+        bReplaceCardConfirm.setVisible(false);
+        setInvisibleButtons();
 
         /*if(player1.royalFlush() == true)
         {
@@ -590,6 +557,7 @@ public class PokerGameController implements Initializable {
         saveStatistics();
         return eval;
     }
+
 
 
     public void toggleMusic(ActionEvent actionEvent) {
