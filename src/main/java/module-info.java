@@ -5,6 +5,7 @@ module com.example.pokerprogram {
 
     requires org.controlsfx.controls;
     requires org.kordamp.bootstrapfx.core;
+    requires org.testng;
 
     opens com.example.pokerprogram to javafx.fxml;
     exports com.example.pokerprogram;

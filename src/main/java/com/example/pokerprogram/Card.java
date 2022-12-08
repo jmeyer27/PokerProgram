@@ -44,6 +44,15 @@ public class Card implements Comparable<Card> {
     }
 
     /**
+     * This is a get method that will return the integer value of a suit
+     * Useful for comparisons
+     * @return the suit represented as a number
+     */
+    public Integer getSuitInteger(){
+        return suit;
+    }
+
+    /**
      * A get method that determines the correct rank of the card based on the int value of their rank
      * @return return cards rank
      */
@@ -55,6 +64,15 @@ public class Card implements Comparable<Card> {
             case 13 -> "king";
             default -> String.valueOf(this.rank);
         };
+    }
+
+    /**
+     * This is a method to return the integer value of the rank
+     * Useful for comparisons
+     * @return the rank represented as a number
+     */
+    public Integer getRankInteger(){
+        return rank;
     }
 
     /**

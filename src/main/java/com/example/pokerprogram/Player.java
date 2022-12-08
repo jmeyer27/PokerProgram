@@ -129,7 +129,7 @@ public class Player {
      */
     public boolean twoPair()
     {
-
+        //todo plssssssssssssssssssssssssssssssssssssssssssssssssssssss don't forget this!!!
         return false;
     }
 
@@ -187,21 +187,21 @@ public class Player {
         return onePair() && threeOfAKind();
     }
 
+    /**
+     * TODO fix this function, it is not ok
+     *
+     * @return
+     */
     public boolean straight() {
         int count = 0;
         Collections.sort(hand);
         for (int i = 0; i < hand.size()-1; i++) {
-            if ((hand.get(i+1).getRank() == (hand.get(i).getRank() + 1))
-                    || ((hand.get(0).getRank().equals(2)) && (hand.get(1).getRank().equals(3))
-                    && (hand.get(2).getRank().equals(4))
-                    && (hand.get(3).getRank().equals(5)) && (hand.get(4).getRank().equals(12))))
+            if ((hand.get(i+1).getRankInteger() == (hand.get(i).getRankInteger() + 1))){
                 count++;
-        }
-        if (count == 4)
-        {
-            return true;
-        }
-        return false;
+            }
+            }
+
+        return count == 4;
     }
 
     public boolean straightFlush()
@@ -217,6 +217,7 @@ public class Player {
     public boolean royalFlush()
     {
         //both flush, straight, and begin with a 10
+        //if cards are 10, jack, king, queen, and ace with the same suit
         return true;
     }
 }//end Player class

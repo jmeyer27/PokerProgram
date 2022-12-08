@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Fixed count error in PokerGame&#10;Used to let player pick 5 cards to switch&#10;Now count is accurate to number of selected checkboxes&#10;Removed redundant functions in PokerGame">
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Commented out twoPair() method in Player&#10;it kept returning true when it was a three of a kind&#10;fixed different error in threeOfAKind() method">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/PlayerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +22,7 @@
       <list>
         <option value="Class" />
         <option value="FxmlFile" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -39,19 +43,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/jasmi/IdeaProjects/PokerProgram/src/main/java/com/example/pokerprogram&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jasmi/IdeaProjects/PokerProgram/src/main/resources/com/example/pokerprogram/images&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "last_directory_selection": "C:/Users/jasmi/IdeaProjects/PokerProgram/src/main/java/com/example/pokerprogram",
+    "last_opened_file_path": "C:/Users/jasmi/IdeaProjects/PokerProgram/src/main/resources/com/example/pokerprogram/images",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram\images" />
@@ -348,7 +355,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670528782445</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Commented out twoPair() method in Player&#10;it kept returning true when it was a three of a kind&#10;fixed different error in threeOfAKind() method">
+      <created>1670530331132</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1670530331132</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -363,7 +377,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="New Game Button&#10;Fixed some bugs in Card class&#10;Fixed some bugs in Deck class&#10;Created a 'New Game' button in pokerGame-view and it so far it only creates a new deck and shuffles it." />
     <MESSAGE value="Minor bug fixes&#10;In Deck class swapped added values to new cards (rank and suit were switched)&#10;In Card class added rank 1 is Ace instead of leaving it as 1" />
     <MESSAGE value="Cards now are correctly referenced in Poker Game&#10;Fixed file path to card images in Card&#10;Deck now deals top card after shuffling&#10;Card now has getCardImage() method" />
     <MESSAGE value="Confirmation Dialog for returning to menu from Poker Game" />
@@ -388,6 +401,7 @@
     <MESSAGE value="Simplified UI of Poker Game" />
     <MESSAGE value="Changed button availability in Poker Game&#10;stops the player from being able to play infinitely when game is over" />
     <MESSAGE value="Fixed count error in PokerGame&#10;Used to let player pick 5 cards to switch&#10;Now count is accurate to number of selected checkboxes&#10;Removed redundant functions in PokerGame" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed count error in PokerGame&#10;Used to let player pick 5 cards to switch&#10;Now count is accurate to number of selected checkboxes&#10;Removed redundant functions in PokerGame" />
+    <MESSAGE value="Commented out twoPair() method in Player&#10;it kept returning true when it was a three of a kind&#10;fixed different error in threeOfAKind() method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commented out twoPair() method in Player&#10;it kept returning true when it was a three of a kind&#10;fixed different error in threeOfAKind() method" />
   </component>
 </project>
