@@ -31,7 +31,7 @@ public class PokerGameController implements Initializable {
     String betAmount; //initial bet
 
     int count = 0;
-    boolean replaceConfirmClick = false;
+
 
 
     @FXML
@@ -227,8 +227,7 @@ public class PokerGameController implements Initializable {
         bReplace.setVisible(true);
         bReplaceNothing.setVisible(true);
         bReplaceCardConfirm.setVisible(false);
-        replaceConfirmClick = false;
-        //enableChecks();
+
         clearFields();
         setCheckboxes(false);
 
@@ -269,12 +268,9 @@ public class PokerGameController implements Initializable {
         //set text in game text field
         gameText.setText("Select up to three cards to replace.");
 
-        //game cannot be used so are turned invisible
-        //setVisibleButtons();
 
         setCheckboxes(true);
         bReplaceCardConfirm.setVisible(true);
-        //saveStatistics();//save stats
         setInvisibleButtons();
     }
 
@@ -290,7 +286,6 @@ public class PokerGameController implements Initializable {
      * Call functions when the 2nd confirm replace button in clicked on
      */
     public void replaceConfirm() throws IOException {
-        replaceConfirmClick = true;
         System.out.println("Replace Confirm, count is: " +count);
 
         if(numCardsSelected())
@@ -321,10 +316,6 @@ public class PokerGameController implements Initializable {
             errorAlert.setHeaderText("Number of Cards Selected Invalid");
             errorAlert.setContentText("Please select a max of 3 cards to replace");
             errorAlert.showAndWait();
-            //enableChecks();
-            replaceConfirmClick = false;
-            //debugging
-            //System.out.println("Total is over 3");
             return false;
         }
         return true;
@@ -421,7 +412,6 @@ public class PokerGameController implements Initializable {
      */
     public void replaceCards()
     {
-        System.out.println("count was: " +count +"in replaceCards()");
         if(checkReplaceCard1.isSelected())
         {
             //System.out.println("HERE 1");
@@ -482,42 +472,42 @@ public class PokerGameController implements Initializable {
         {
             eval = "Straight Flush";
             return eval;
-        }
+        }else
         if(player1.fourOfAKind() == true)
         {
             eval = "Four Of A Kind";
             return eval;
-        }
+        }else
         if(player1.fullHouse() == true)
         {
             eval = "Full House";
             return eval;
-        }
+        }else
         if(player1.flush() == true)
         {
             eval = "Flush";
             return eval;
-        }
+        }else
         if(player1.straight() == true)
         {
             eval = "Straight";
             return eval;
-        }
+        }else
         if(player1.threeOfAKind() == true)
         {
             eval = "Three Of A Kind";
             return eval;
-        }
+        }else
         if(player1.twoPair() == true)
         {
             eval = "Two Pairs";
             return eval;
-        }
+        }else
         if(player1.onePair() == true)
         {
             eval = "One Pair";
             return eval;
-        }
+        }else
         if(player1.noPair() == true)
         {
             eval = "No Pair";

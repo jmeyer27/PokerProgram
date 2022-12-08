@@ -123,20 +123,13 @@ public class Player {
         return true;
     }
 
+    /**
+     * This method is killing me lol
+     * @return boolean if there are two different pairs of cards in the deck
+     */
     public boolean twoPair()
     {
-        int count = 0;
-        for(int i = 0; i < hand.size()-1; i++)
-        {
-            if(hand.get(i).getRank().equals(hand.get(i + 1).getRank()))
-            {
-                count++;
-            }
-        }
-        if(count == 2)
-        {
-            return true;
-        }
+
         return false;
     }
 
@@ -146,7 +139,6 @@ public class Player {
 
         for(int i = 0; i < hand.size(); i++)
         {
-            count = 0;
             for(int j = 0; j < hand.size(); j++)
             {
                 if((hand.get(i).getRank().equals(hand.get(j).getRank())) && (i !=j))
@@ -155,11 +147,7 @@ public class Player {
                 }
             }
         }
-       if(count == 3)
-       {
-           return true;
-       }
-       return false;
+       return count == 3;
     }
 
     public boolean fourOfAKind()
