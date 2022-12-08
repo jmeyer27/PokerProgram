@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Commented out twoPair() method in Player&#10;it kept returning true when it was a three of a kind&#10;fixed different error in threeOfAKind() method">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/PlayerTest.java" afterDir="false" />
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Added test class&#10;need tests to find out if Player evaluate methods work correctly">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlayerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +20,7 @@
         <option value="Class" />
         <option value="FxmlFile" />
         <option value="JUnit5 Test Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -48,7 +46,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
     "last_directory_selection": "C:/Users/jasmi/IdeaProjects/PokerProgram/src/main/java/com/example/pokerprogram",
@@ -74,14 +73,21 @@
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram\images" />
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram\music" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.example.pokerprogram.controllers" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="com.example.pokerprogram" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
       <recent name="com.example.pokerprogram" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.TestPlayer.onePair">
     <configuration name="ThePokerGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.pokerprogram.ThePokerGame" />
       <module name="PokerProgram" />
@@ -95,8 +101,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in PokerProgram" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PokerProgram" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPlayer.onePair" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PokerProgram" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.pokerprogram.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.pokerprogram" />
+      <option name="MAIN_CLASS_NAME" value="com.example.pokerprogram.TestPlayer" />
+      <option name="METHOD_NAME" value="onePair" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestPlayer.onePair" />
+        <item itemvalue="JUnit.All in PokerProgram" />
         <item itemvalue="Application.ThePokerGame" />
       </list>
     </recent_temporary>
@@ -362,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670530331132</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Added test class&#10;need tests to find out if Player evaluate methods work correctly">
+      <created>1670531615136</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1670531615136</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -377,7 +416,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Minor bug fixes&#10;In Deck class swapped added values to new cards (rank and suit were switched)&#10;In Card class added rank 1 is Ace instead of leaving it as 1" />
     <MESSAGE value="Cards now are correctly referenced in Poker Game&#10;Fixed file path to card images in Card&#10;Deck now deals top card after shuffling&#10;Card now has getCardImage() method" />
     <MESSAGE value="Confirmation Dialog for returning to menu from Poker Game" />
     <MESSAGE value="How to Play window added&#10;Created a new fxml for this new window (howToPlay-view.fxml)&#10;Created a new controller for this new window (HowToPlayController.java)&#10;In various classes fixed comments and javadocs" />
@@ -402,6 +440,7 @@
     <MESSAGE value="Changed button availability in Poker Game&#10;stops the player from being able to play infinitely when game is over" />
     <MESSAGE value="Fixed count error in PokerGame&#10;Used to let player pick 5 cards to switch&#10;Now count is accurate to number of selected checkboxes&#10;Removed redundant functions in PokerGame" />
     <MESSAGE value="Commented out twoPair() method in Player&#10;it kept returning true when it was a three of a kind&#10;fixed different error in threeOfAKind() method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commented out twoPair() method in Player&#10;it kept returning true when it was a three of a kind&#10;fixed different error in threeOfAKind() method" />
+    <MESSAGE value="Added test class&#10;need tests to find out if Player evaluate methods work correctly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added test class&#10;need tests to find out if Player evaluate methods work correctly" />
   </component>
 </project>
