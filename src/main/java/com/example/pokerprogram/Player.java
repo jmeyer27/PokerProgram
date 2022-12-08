@@ -129,7 +129,14 @@ public class Player {
      */
     public boolean twoPair()
     {
-        //todo plssssssssssssssssssssssssssssssssssssssssssssssssssssss don't forget this!!!
+//        int firstPair = 0;
+//        int secondPair = 0;
+//        for(int i = 0; i < hand.size(); i++){
+//
+//        }
+
+
+
         return false;
     }
 

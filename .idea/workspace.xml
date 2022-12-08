@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Added test class&#10;need tests to find out if Player evaluate methods work correctly">
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Fixed Tests file structure&#10;Did a sample test on OnePair() function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlayerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/pokerprogram/TestPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/pokerprogram/TestPlayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,29 +86,8 @@
       <recent name="com.example.pokerprogram" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestPlayer.onePair">
-    <configuration name="ThePokerGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.pokerprogram.ThePokerGame" />
-      <module name="PokerProgram" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.pokerprogram.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in PokerProgram" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PokerProgram" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestPlayer.onePair" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestPlayer.twoPair_True">
+    <configuration name="TestPlayer.noPair_False" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PokerProgram" />
       <extension name="coverage">
         <pattern>
@@ -119,7 +97,71 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.pokerprogram" />
       <option name="MAIN_CLASS_NAME" value="com.example.pokerprogram.TestPlayer" />
-      <option name="METHOD_NAME" value="onePair" />
+      <option name="METHOD_NAME" value="noPair_False" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPlayer.noPair_True" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PokerProgram" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.pokerprogram.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.pokerprogram" />
+      <option name="MAIN_CLASS_NAME" value="com.example.pokerprogram.TestPlayer" />
+      <option name="METHOD_NAME" value="noPair_True" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPlayer.onePair_False" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PokerProgram" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.pokerprogram.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.pokerprogram" />
+      <option name="MAIN_CLASS_NAME" value="com.example.pokerprogram.TestPlayer" />
+      <option name="METHOD_NAME" value="onePair_False" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPlayer.onePair_True" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PokerProgram" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.pokerprogram.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.pokerprogram" />
+      <option name="MAIN_CLASS_NAME" value="com.example.pokerprogram.TestPlayer" />
+      <option name="METHOD_NAME" value="onePair_True" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPlayer.twoPair_True" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PokerProgram" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.pokerprogram.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.pokerprogram" />
+      <option name="MAIN_CLASS_NAME" value="com.example.pokerprogram.TestPlayer" />
+      <option name="METHOD_NAME" value="twoPair_True" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -127,9 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestPlayer.onePair" />
-        <item itemvalue="JUnit.All in PokerProgram" />
-        <item itemvalue="Application.ThePokerGame" />
+        <item itemvalue="JUnit.TestPlayer.twoPair_True" />
+        <item itemvalue="JUnit.TestPlayer.noPair_False" />
+        <item itemvalue="JUnit.TestPlayer.onePair_True" />
+        <item itemvalue="JUnit.TestPlayer.noPair_True" />
+        <item itemvalue="JUnit.TestPlayer.onePair_False" />
       </list>
     </recent_temporary>
   </component>
@@ -401,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670531615136</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Fixed Tests file structure&#10;Did a sample test on OnePair() function">
+      <created>1670532903781</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1670532903781</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -416,7 +467,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Cards now are correctly referenced in Poker Game&#10;Fixed file path to card images in Card&#10;Deck now deals top card after shuffling&#10;Card now has getCardImage() method" />
     <MESSAGE value="Confirmation Dialog for returning to menu from Poker Game" />
     <MESSAGE value="How to Play window added&#10;Created a new fxml for this new window (howToPlay-view.fxml)&#10;Created a new controller for this new window (HowToPlayController.java)&#10;In various classes fixed comments and javadocs" />
     <MESSAGE value="Created player class&#10;Player class has balance and hand of cards&#10;When game begins deck cards are given now to Players hand" />
@@ -441,6 +491,7 @@
     <MESSAGE value="Fixed count error in PokerGame&#10;Used to let player pick 5 cards to switch&#10;Now count is accurate to number of selected checkboxes&#10;Removed redundant functions in PokerGame" />
     <MESSAGE value="Commented out twoPair() method in Player&#10;it kept returning true when it was a three of a kind&#10;fixed different error in threeOfAKind() method" />
     <MESSAGE value="Added test class&#10;need tests to find out if Player evaluate methods work correctly" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added test class&#10;need tests to find out if Player evaluate methods work correctly" />
+    <MESSAGE value="Fixed Tests file structure&#10;Did a sample test on OnePair() function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Tests file structure&#10;Did a sample test on OnePair() function" />
   </component>
 </project>
