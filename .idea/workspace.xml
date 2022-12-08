@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="removed functions that will not be used in poker game anymore&#10;RIP Choose Game stage. Since we won't be using multiplayer I've decided to retire this beautiful window. :(">
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerGame-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerGame-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -320,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670446836214</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Fixed switch cards error&#10;Cards given from switch cards function were not shuffled&#10;Changed it so that these cards are given to player from deck so it is already shuffled and there are no chance of duplicate cards&#10;also removed redundant functions in Player class by creating a function with 2 parameters">
+      <created>1670451084870</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1670451084870</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -335,7 +341,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Menu Background&#10;Added a background to the main menu&#10;(If someone finds a better one, you can easily change it or ask me and I'll change it)" />
     <MESSAGE value="Menu&#10;Changed layout of menu" />
     <MESSAGE value="Uploaded card images&#10;Also tested out card images in Poker Game" />
     <MESSAGE value="Added a few get methods to Card class" />
@@ -360,6 +365,7 @@
     <MESSAGE value="single player updates" />
     <MESSAGE value="replace cards" />
     <MESSAGE value="removed functions that will not be used in poker game anymore&#10;RIP Choose Game stage. Since we won't be using multiplayer I've decided to retire this beautiful window. :(" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed functions that will not be used in poker game anymore&#10;RIP Choose Game stage. Since we won't be using multiplayer I've decided to retire this beautiful window. :(" />
+    <MESSAGE value="Fixed switch cards error&#10;Cards given from switch cards function were not shuffled&#10;Changed it so that these cards are given to player from deck so it is already shuffled and there are no chance of duplicate cards&#10;also removed redundant functions in Player class by creating a function with 2 parameters" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed switch cards error&#10;Cards given from switch cards function were not shuffled&#10;Changed it so that these cards are given to player from deck so it is already shuffled and there are no chance of duplicate cards&#10;also removed redundant functions in Player class by creating a function with 2 parameters" />
   </component>
 </project>
