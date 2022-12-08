@@ -19,47 +19,18 @@ public class Player {
      * Constructor for player class
      */
 
-    //private Deck deckOfCards;
 
     public Player(){
         balance = 1000;
         hand = new ArrayList<Card>(5);
 
-
-        //this deck is not the same that the player gets in the beginning of the game, so there could be duplicates
-        //it also isnt shuffled so it only gives out A<3 2<3 3<3 4<4 5<3
-        //deckOfCards = new Deck();
     }
 
     public void replaceCard(int place, Card card){
         hand.set(place, card);
     }
 
-    //redundant code, replaced with replaceCard(int place, Card card)
-//    public void replaceFirstCard(Card card)
-//    {
-//        hand.set(0, card);
-//    }
-//
-//    public void replaceSecondCard(Card card)
-//    {
-//        hand.set(1, card);
-//    }
-//
-//    public void replaceThirdCard(Card card)
-//    {
-//        hand.set(2, card);
-//    }
-//
-//    public void replaceFourthCard(Card card)
-//    {
-//        hand.set(3, card);
-//    }
-//
-//    public void replaceFifthCard(Card card)
-//    {
-//        hand.set(4, card);
-//    }
+
 
     /**
      * Get method for player class

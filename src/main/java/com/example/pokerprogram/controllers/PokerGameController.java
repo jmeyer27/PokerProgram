@@ -228,9 +228,9 @@ public class PokerGameController implements Initializable {
         bReplaceNothing.setVisible(true);
         bReplaceCardConfirm.setVisible(false);
         replaceConfirmClick = false;
-        enableChecks();
+        //enableChecks();
         clearFields();
-        setCardsInvisble();
+        setCheckboxes(false);
 
 
     }
@@ -272,7 +272,7 @@ public class PokerGameController implements Initializable {
         //game cannot be used so are turned invisible
         //setVisibleButtons();
 
-        setCardsVisble();
+        setCheckboxes(true);
         bReplaceCardConfirm.setVisible(true);
         //saveStatistics();//save stats
         setInvisibleButtons();
@@ -291,8 +291,8 @@ public class PokerGameController implements Initializable {
      */
     public void replaceConfirm() throws IOException {
         replaceConfirmClick = true;
-        disableChecks();
-        System.out.println("Replace Confirm");
+        System.out.println("Replace Confirm, count is: " +count);
+
         if(numCardsSelected())
         {
             replaceCards();
@@ -303,7 +303,7 @@ public class PokerGameController implements Initializable {
             infoAlert.showAndWait();
             count = 0;
         }
-        count = 0;
+        //count = 0;
 
 
     }
@@ -314,13 +314,14 @@ public class PokerGameController implements Initializable {
      */
     public boolean numCardsSelected()
     {
+        System.out.println("count was: " +count +"in numCardsSelected()");
         if(count > 3)
         {
             Alert errorAlert = new Alert(Alert.AlertType.ERROR);
             errorAlert.setHeaderText("Number of Cards Selected Invalid");
             errorAlert.setContentText("Please select a max of 3 cards to replace");
             errorAlert.showAndWait();
-            enableChecks();
+            //enableChecks();
             replaceConfirmClick = false;
             //debugging
             //System.out.println("Total is over 3");
@@ -332,32 +333,20 @@ public class PokerGameController implements Initializable {
 
 
     /**
-     * Set mini cards and checkboxes to invisible
+     * Set visibility on checkboxes
      */
-    public void setCardsInvisble()
+    public void setCheckboxes(boolean state)
     {
 
-        checkReplaceCard1.setVisible(false);
-        checkReplaceCard2.setVisible(false);
-        checkReplaceCard3.setVisible(false);
-        checkReplaceCard4.setVisible(false);
-        checkReplaceCard5.setVisible(false);
+        checkReplaceCard1.setVisible(state);
+        checkReplaceCard2.setVisible(state);
+        checkReplaceCard3.setVisible(state);
+        checkReplaceCard4.setVisible(state);
+        checkReplaceCard5.setVisible(state);
 
     }
 
-    /**
-     * Set mini cards and checkboxes to visible
-     */
-    public void setCardsVisble()
-    {
 
-        checkReplaceCard1.setVisible(true);
-        checkReplaceCard2.setVisible(true);
-        checkReplaceCard3.setVisible(true);
-        checkReplaceCard4.setVisible(true);
-        checkReplaceCard5.setVisible(true);
-
-    }
 
     /**
      * Set all game buttons invisible so that the user is not able to click them when the game is not in session
@@ -373,31 +362,33 @@ public class PokerGameController implements Initializable {
      */
     public void checkSelectedCard1()
     {
-        if(checkReplaceCard1.isSelected() && replaceConfirmClick)
-        {
+        if(checkReplaceCard1.isSelected()) {
             count++;
+        } else{
+            count--;
         }
+
     }
 
     /**
      * Check if checkbox for second card is selected
      */
-    public void checkSelectedCard2()
-    {
-        if(checkReplaceCard2.isSelected() && replaceConfirmClick)
-        {
+    public void checkSelectedCard2() {
+        if (checkReplaceCard2.isSelected()) {
             count++;
+        } else {
+            count--;
         }
     }
 
     /**
      * Check if checkbox for third card is selected
      */
-    public void checkSelectedCard3()
-    {
-        if(checkReplaceCard3.isSelected() && replaceConfirmClick)
-        {
+    public void checkSelectedCard3(){
+        if(checkReplaceCard3.isSelected()) {
             count++;
+        } else{
+            count--;
         }
     }
 
@@ -406,9 +397,10 @@ public class PokerGameController implements Initializable {
      */
     public void checkSelectedCard4()
     {
-        if(checkReplaceCard4.isSelected() && replaceConfirmClick)
-        {
+        if(checkReplaceCard4.isSelected()) {
             count++;
+        } else{
+            count--;
         }
     }
 
@@ -417,9 +409,10 @@ public class PokerGameController implements Initializable {
      */
     public void checkSelectedCard5()
     {
-        if(checkReplaceCard5.isSelected() && replaceConfirmClick)
-        {
+        if(checkReplaceCard5.isSelected()) {
             count++;
+        } else{
+            count--;
         }
     }
 
@@ -428,6 +421,7 @@ public class PokerGameController implements Initializable {
      */
     public void replaceCards()
     {
+        System.out.println("count was: " +count +"in replaceCards()");
         if(checkReplaceCard1.isSelected())
         {
             //System.out.println("HERE 1");
@@ -460,31 +454,7 @@ public class PokerGameController implements Initializable {
         }
     }
 
-    /**
-     * Disables the replace card checkboxes
-     */
-    public void disableChecks()
-    {
-        checkReplaceCard1.setDisable(true);
-        checkReplaceCard2.setDisable(true);
-        checkReplaceCard3.setDisable(true);
-        checkReplaceCard4.setDisable(true);
-        checkReplaceCard5.setDisable(true);
 
-    }
-
-    /**
-     * Enbles the replace card checkboxes
-     */
-    public void enableChecks()
-    {
-        checkReplaceCard1.setDisable(false);
-        checkReplaceCard2.setDisable(false);
-        checkReplaceCard3.setDisable(false);
-        checkReplaceCard4.setDisable(false);
-        checkReplaceCard5.setDisable(false);
-
-    }
 
     public void clearFields(){
 
@@ -499,7 +469,7 @@ public class PokerGameController implements Initializable {
     public String evaluate() throws IOException {
 
         String eval = "";
-        setCardsInvisble();
+        setCheckboxes(false);
         bReplaceCardConfirm.setVisible(false);
         setInvisibleButtons();
 
