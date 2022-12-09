@@ -234,35 +234,39 @@ public class Player {
         int count = 0;
         Collections.sort(hand);
         for (int i = 0; i < hand.size()-1; i++) {
+            //if the ace is first
+            if(hand.get(i).getRankInteger() == 14){
+                //if the next one is 10
+                if((hand.get(i+1).getRankInteger() == 10)){
+                    //add to the count
+                    count++;
+                }
+            }//end if the first card is an ace, which is a weird scenario
             if ((hand.get(i+1).getRankInteger() == (hand.get(i).getRankInteger() + 1))){
                 count++;
             }
             }
-
         return count == 4;
     }
 
-    //todo: requires cards to be in order in the first place. find a way around this (I think that's what's happening?)
+
     public boolean straightFlush()
     {
         //both a straight and a flush
         return straight() && flush();
     }
 
-    //todo this won't work because 1: doesn't recognize cards in any order
-    // because 2: requires cards to be in order in the first place ( I think?)
     public boolean royalFlush()
     {
         //both flush, straight, and begin with a 10
         //if cards are 10, jack, king, queen, and ace with the same suit
         if(straightFlush()){
-            System.out.println("Was a straight flush");
             Collections.sort(hand);
-            if((hand.get(0).getRankInteger() == 10)){
+
+            if((hand.get(0).getRankInteger() == 14)){
                 return true;
             }
         }
-
         return false;
     }
 }//end Player class

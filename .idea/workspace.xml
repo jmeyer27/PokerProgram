@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Fixed TwoPair function&#10;wrote tests to confirm">
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Finished writing tests&#10;Last todo's for card is straightFlush and royalFlush">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Player.java" afterDir="false" />
@@ -88,8 +88,8 @@
       <recent name="com.example.pokerprogram" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestPlayer.straightFlush">
-    <configuration name="TestPlayer.royalFlush" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestPlayer">
+    <configuration name="TestPlayer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PokerProgram" />
       <extension name="coverage">
         <pattern>
@@ -99,8 +99,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.pokerprogram" />
       <option name="MAIN_CLASS_NAME" value="com.example.pokerprogram.TestPlayer" />
-      <option name="METHOD_NAME" value="royalFlush" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -121,6 +120,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestPlayer.royalFlush_unOrderedTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PokerProgram" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.pokerprogram.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.pokerprogram" />
+      <option name="MAIN_CLASS_NAME" value="com.example.pokerprogram.TestPlayer" />
+      <option name="METHOD_NAME" value="royalFlush_unOrderedTrue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestPlayer.straightFlush" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PokerProgram" />
       <extension name="coverage">
@@ -132,22 +147,6 @@
       <option name="PACKAGE_NAME" value="com.example.pokerprogram" />
       <option name="MAIN_CLASS_NAME" value="com.example.pokerprogram.TestPlayer" />
       <option name="METHOD_NAME" value="straightFlush" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestPlayer.straightFlush_unOrderedTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PokerProgram" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.pokerprogram.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.pokerprogram" />
-      <option name="MAIN_CLASS_NAME" value="com.example.pokerprogram.TestPlayer" />
-      <option name="METHOD_NAME" value="straightFlush_unOrderedTrue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -171,10 +170,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestPlayer.straightFlush" />
+        <item itemvalue="JUnit.TestPlayer" />
+        <item itemvalue="JUnit.TestPlayer.royalFlush_unOrderedTrue" />
         <item itemvalue="JUnit.TestPlayer.royalFlush_orderedTrue" />
-        <item itemvalue="JUnit.TestPlayer.straightFlush_unOrderedTrue" />
-        <item itemvalue="JUnit.TestPlayer.royalFlush" />
+        <item itemvalue="JUnit.TestPlayer.straightFlush" />
         <item itemvalue="JUnit.TestPlayer.straight_unOrdered" />
       </list>
     </recent_temporary>
@@ -468,7 +467,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670542268908</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Finished writing tests&#10;Last todo's for card is straightFlush and royalFlush">
+      <created>1670547195796</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1670547195796</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -483,7 +489,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created player class&#10;Player class has balance and hand of cards&#10;When game begins deck cards are given now to Players hand" />
     <MESSAGE value="Updated PokerGame-view.fxml&#10;Added image placement for cards used by dealer&#10;Updated background color to howToPlay screen and PokerGame screen" />
     <MESSAGE value="Updated Poker Game with buttons&#10;Added buttons for bet, check, raise, call&#10;Created empty functions for these buttons&#10;Created text field called gameText where user actions are updated based on button clicks" />
     <MESSAGE value="Back of card image added&#10;Referenced in Card class to each card obj&#10;Fold function in poker game now folds players hand face down&#10;Buttons now are invisible before the game begins&#10;Visibility of buttons is different depending on game progress" />
@@ -508,6 +513,7 @@
     <MESSAGE value="Fixed Tests file structure&#10;Did a sample test on OnePair() function" />
     <MESSAGE value="Wrote more tests for Player&#10;toPair_True() test fails because twoPair returns false only." />
     <MESSAGE value="Fixed TwoPair function&#10;wrote tests to confirm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed TwoPair function&#10;wrote tests to confirm" />
+    <MESSAGE value="Finished writing tests&#10;Last todo's for card is straightFlush and royalFlush" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished writing tests&#10;Last todo's for card is straightFlush and royalFlush" />
   </component>
 </project>

@@ -278,11 +278,11 @@ public class TestPlayer {
     @Test
     public void straight() {
         Player test = new Player();
-        Card card1 = new Card(1, 1);
-        Card card2 = new Card(2, 1);
-        Card card3 = new Card(3, 4);
-        Card card4 = new Card(4, 3);
-        Card card5 = new Card(5, 2);
+        Card card1 = new Card(2, 1);
+        Card card2 = new Card(3, 1);
+        Card card3 = new Card(4, 4);
+        Card card4 = new Card(5, 3);
+        Card card5 = new Card(6, 2);
         test.addCard(card1);
         test.addCard(card2);
         test.addCard(card3);
@@ -326,22 +326,6 @@ public class TestPlayer {
         assertTrue(test.straightFlush());
     }
 
-    @Test
-    public void straightFlush_unOrderedTrue() {
-        Player test = new Player();
-        Card card1 = new Card(13, 1);
-        Card card2 = new Card(10, 1);
-        Card card3 = new Card(11, 1);
-        Card card4 = new Card(9, 1);
-        Card card5 = new Card(13, 1);
-        test.addCard(card1);
-        test.addCard(card2);
-        test.addCard(card3);
-        test.addCard(card4);
-        test.addCard(card5);
-
-        assertTrue(test.straightFlush());
-    }
 
     @Test
     public void royalFlush_orderedTrue() {
@@ -363,11 +347,11 @@ public class TestPlayer {
     @Test
     public void royalFlush_unOrderedTrue() {
         Player test = new Player();
-        Card card1 = new Card(1, 1);
+        Card card1 = new Card(13, 1);
         Card card2 = new Card(10, 1);
         Card card3 = new Card(11, 1);
-        Card card4 = new Card(12, 1);
-        Card card5 = new Card(13, 1);
+        Card card4 = new Card(1, 1);
+        Card card5 = new Card(12, 1);
         test.addCard(card1);
         test.addCard(card2);
         test.addCard(card3);
