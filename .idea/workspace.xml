@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Wrote more tests for Player&#10;toPair_True() test fails because twoPair returns false only.">
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Fixed TwoPair function&#10;wrote tests to confirm">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/pokerprogram/TestPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/pokerprogram/TestPlayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,8 +88,8 @@
       <recent name="com.example.pokerprogram" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestPlayer.twoPair_False">
-    <configuration name="TestPlayer.noPair_False" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestPlayer.straightFlush">
+    <configuration name="TestPlayer.royalFlush" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PokerProgram" />
       <extension name="coverage">
         <pattern>
@@ -96,13 +99,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.pokerprogram" />
       <option name="MAIN_CLASS_NAME" value="com.example.pokerprogram.TestPlayer" />
-      <option name="METHOD_NAME" value="noPair_False" />
+      <option name="METHOD_NAME" value="royalFlush" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPlayer.noPair_True" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestPlayer.royalFlush_orderedTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PokerProgram" />
       <extension name="coverage">
         <pattern>
@@ -112,13 +115,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.pokerprogram" />
       <option name="MAIN_CLASS_NAME" value="com.example.pokerprogram.TestPlayer" />
-      <option name="METHOD_NAME" value="noPair_True" />
+      <option name="METHOD_NAME" value="royalFlush_orderedTrue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPlayer.onePair_True" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestPlayer.straightFlush" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PokerProgram" />
       <extension name="coverage">
         <pattern>
@@ -128,13 +131,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.pokerprogram" />
       <option name="MAIN_CLASS_NAME" value="com.example.pokerprogram.TestPlayer" />
-      <option name="METHOD_NAME" value="onePair_True" />
+      <option name="METHOD_NAME" value="straightFlush" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPlayer.twoPair_False" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestPlayer.straightFlush_unOrderedTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PokerProgram" />
       <extension name="coverage">
         <pattern>
@@ -144,13 +147,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.pokerprogram" />
       <option name="MAIN_CLASS_NAME" value="com.example.pokerprogram.TestPlayer" />
-      <option name="METHOD_NAME" value="twoPair_False" />
+      <option name="METHOD_NAME" value="straightFlush_unOrderedTrue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPlayer.twoPair_True" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestPlayer.straight_unOrdered" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PokerProgram" />
       <extension name="coverage">
         <pattern>
@@ -160,7 +163,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.pokerprogram" />
       <option name="MAIN_CLASS_NAME" value="com.example.pokerprogram.TestPlayer" />
-      <option name="METHOD_NAME" value="twoPair_True" />
+      <option name="METHOD_NAME" value="straight_unOrdered" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -168,11 +171,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestPlayer.twoPair_False" />
-        <item itemvalue="JUnit.TestPlayer.twoPair_True" />
-        <item itemvalue="JUnit.TestPlayer.noPair_False" />
-        <item itemvalue="JUnit.TestPlayer.onePair_True" />
-        <item itemvalue="JUnit.TestPlayer.noPair_True" />
+        <item itemvalue="JUnit.TestPlayer.straightFlush" />
+        <item itemvalue="JUnit.TestPlayer.royalFlush_orderedTrue" />
+        <item itemvalue="JUnit.TestPlayer.straightFlush_unOrderedTrue" />
+        <item itemvalue="JUnit.TestPlayer.royalFlush" />
+        <item itemvalue="JUnit.TestPlayer.straight_unOrdered" />
       </list>
     </recent_temporary>
   </component>
@@ -458,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670533965539</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Fixed TwoPair function&#10;wrote tests to confirm">
+      <created>1670542268908</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1670542268908</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -473,7 +483,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="How to Play window added&#10;Created a new fxml for this new window (howToPlay-view.fxml)&#10;Created a new controller for this new window (HowToPlayController.java)&#10;In various classes fixed comments and javadocs" />
     <MESSAGE value="Created player class&#10;Player class has balance and hand of cards&#10;When game begins deck cards are given now to Players hand" />
     <MESSAGE value="Updated PokerGame-view.fxml&#10;Added image placement for cards used by dealer&#10;Updated background color to howToPlay screen and PokerGame screen" />
     <MESSAGE value="Updated Poker Game with buttons&#10;Added buttons for bet, check, raise, call&#10;Created empty functions for these buttons&#10;Created text field called gameText where user actions are updated based on button clicks" />
@@ -498,6 +507,7 @@
     <MESSAGE value="Added test class&#10;need tests to find out if Player evaluate methods work correctly" />
     <MESSAGE value="Fixed Tests file structure&#10;Did a sample test on OnePair() function" />
     <MESSAGE value="Wrote more tests for Player&#10;toPair_True() test fails because twoPair returns false only." />
-    <option name="LAST_COMMIT_MESSAGE" value="Wrote more tests for Player&#10;toPair_True() test fails because twoPair returns false only." />
+    <MESSAGE value="Fixed TwoPair function&#10;wrote tests to confirm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed TwoPair function&#10;wrote tests to confirm" />
   </component>
 </project>

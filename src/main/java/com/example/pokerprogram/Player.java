@@ -82,6 +82,10 @@ public class Player {
     }
 
 
+    /**
+     * This method will look for at least 2 matching cards
+     * @return true of there were 2 matching cards
+     */
     public boolean onePair()
     {
         int count = 0;
@@ -92,9 +96,12 @@ public class Player {
                 if (hand.get(i).getRank().equals(hand.get(j).getRank()) && (i != j))
                     count++;
             }
+            if(count == 1){
+                return true;
+            }
 
         }
-        return count == 1;
+        return false;
     }
 
     /**
@@ -124,8 +131,8 @@ public class Player {
     }
 
     /**
-     * This method is killing me lol
-     * @return boolean if there are two different pairs of cards in the deck
+     * This method will see if there are two different pairs of cards in the players hand
+     * @return true if there are two different pairs of cards in the deck
      */
     public boolean twoPair()
     {
@@ -135,10 +142,12 @@ public class Player {
 
             for(int j = 0; j < hand.size(); j++)
             {
+                //if first pair has not been found yet and two cards are the same rank then set it to the first pair
                 if((hand.get(i).getRank().equals(hand.get(j).getRank())) && (i !=j) && (firstPair == 0))
                 {
                     firstPair = hand.get(i).getRankInteger();
                 }
+                //if the first pair has been found and there are two cards with the same rank then set it to the second pair
                 if((hand.get(i).getRank().equals(hand.get(j).getRank())) && (i !=j) && (firstPair != 0)){
                     secondPair = hand.get(i).getRankInteger();
                 }
@@ -146,26 +155,37 @@ public class Player {
 
         }
 
-
-
+        //if the first pair has been found and the second pair was found
+        //AND the second pair was not the same as the first pair
+        //return true if there are two different pairs in the deck
+        //return false if something was not true (1 pair, 3 of a kind, etc)
         return firstPair != 0 && secondPair != firstPair && secondPair != 0;
     }
 
+    /**
+     * This method will search for three cards that are the same rank in a players hand
+     * KNOWN ISSUE: Will return true if it is a 4 of a kind. Pls be mindful
+     * @return true if 3 cards are found to be the same rank
+     */
     public boolean threeOfAKind()
     {
         int count = 0;
 
         for(int i = 0; i < hand.size(); i++)
         {
+            count = 0;
             for(int j = 0; j < hand.size(); j++)
             {
                 if((hand.get(i).getRank().equals(hand.get(j).getRank())) && (i !=j))
                 {
                     count++;
                 }
+                if(count == 2){
+                    return true;
+                }
             }
         }
-       return count == 3;
+       return false;
     }
 
     public boolean fourOfAKind()
@@ -181,8 +201,11 @@ public class Player {
                     count++;
                 }
             }
+            if(count == 3){
+                return true;
+            }
         }
-        return count == 3;
+        return false;
     }
 
 
@@ -201,15 +224,12 @@ public class Player {
 
     public boolean fullHouse()
     {
+
         //has both a pair and a triple
         return onePair() && threeOfAKind();
     }
 
-    /**
-     * TODO fix this function, it is not ok
-     *
-     * @return
-     */
+
     public boolean straight() {
         int count = 0;
         Collections.sort(hand);
@@ -222,20 +242,27 @@ public class Player {
         return count == 4;
     }
 
+    //todo: requires cards to be in order in the first place. find a way around this (I think that's what's happening?)
     public boolean straightFlush()
     {
         //both a straight and a flush
-        if(straight() == true && flush() == true)
-        {
-            return true;
-        }
-        return false;
+        return straight() && flush();
     }
 
+    //todo this won't work because 1: doesn't recognize cards in any order
+    // because 2: requires cards to be in order in the first place ( I think?)
     public boolean royalFlush()
     {
         //both flush, straight, and begin with a 10
         //if cards are 10, jack, king, queen, and ace with the same suit
-        return true;
+        if(straightFlush()){
+            System.out.println("Was a straight flush");
+            Collections.sort(hand);
+            if((hand.get(0).getRankInteger() == 10)){
+                return true;
+            }
+        }
+
+        return false;
     }
 }//end Player class

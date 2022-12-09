@@ -72,6 +72,10 @@ public class Card implements Comparable<Card> {
      * @return the rank represented as a number
      */
     public Integer getRankInteger(){
+        //Ace is rank 1 BUT FOR COMPARISON PURPOSES IT'S 13 :)
+        if(rank == 1){
+            return 14;
+        }
         return rank;
     }
 
