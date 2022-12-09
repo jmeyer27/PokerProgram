@@ -194,6 +194,7 @@ public class Player {
 
         for(int i = 0; i < hand.size(); i++)
         {
+            count = 0;
             for(int j = 0; j < hand.size(); j++)
             {
                 if((hand.get(i).getRank().equals(hand.get(j).getRank())) && (i != j))

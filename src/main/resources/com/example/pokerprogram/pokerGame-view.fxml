@@ -35,7 +35,7 @@
       </ImageView>
       <Button id="bNewGame" fx:id="bNewGame" layoutX="391.0" layoutY="35.0" mnemonicParsing="false" onAction="#startGame" text="New Game" />
       <Button fx:id="bHowToPlay" layoutX="41.0" layoutY="35.0" mnemonicParsing="false" onAction="#getHowToPLay" text="How to Play" />
-      <Button fx:id="bReplaceCardConfirm" layoutX="382.0" layoutY="496.0" mnemonicParsing="false" onAction="#replaceConfirm" text="Replace Cards" visible="false"/>
+      <Button fx:id="bReplaceCardConfirm" layoutX="382.0" layoutY="496.0" mnemonicParsing="false" onAction="#replaceConfirm" text="Replace Cards" visible="false" />
       <Label fx:id="gameText" layoutX="320.0" layoutY="86.0" prefHeight="122.0" prefWidth="644.0" text="Start a new game" textFill="#f2e9e9">
          <font>
             <Font name="Cambria Bold" size="24.0" />
@@ -59,6 +59,16 @@
       <Label fx:id="playerName" layoutX="59.0" layoutY="197.0" text="Cards: " textFill="#d4d0d0">
          <font>
             <Font name="Cambria Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelBet" layoutX="59.0" layoutY="95.0" text="Bet: " textFill="#dfd7d7">
+         <font>
+            <Font name="Georgia Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelBalance" layoutX="259.0" layoutY="537.0" text="Balance:" textFill="#efeded">
+         <font>
+            <Font name="Georgia Bold" size="18.0" />
          </font>
       </Label>
    </children>

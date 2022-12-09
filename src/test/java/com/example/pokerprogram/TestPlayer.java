@@ -206,6 +206,22 @@ public class TestPlayer {
 
         assertFalse(test.fourOfAKind());
     }
+    @Test
+    public void fourOfAKind_False_TwoPairs() {
+        Player test = new Player();
+        Card card1 = new Card(1, 1);
+        Card card2 = new Card(2, 1);
+        Card card3 = new Card(6, 4);
+        Card card4 = new Card(6, 3);
+        Card card5 = new Card(1, 2);
+        test.addCard(card1);
+        test.addCard(card2);
+        test.addCard(card3);
+        test.addCard(card4);
+        test.addCard(card5);
+
+        assertFalse(test.fourOfAKind());
+    }
 
     @Test
     public void flush_True() {

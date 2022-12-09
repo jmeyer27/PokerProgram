@@ -26,6 +26,8 @@ import java.util.Scanner;
 
 //this class will handle the events from the pokerGame-view.xml file
 public class PokerGameController implements Initializable {
+    public Label labelBalance;
+    public Label labelBet;
     Player player1;//player
     String name; //players name
     String betAmount; //initial bet
@@ -80,7 +82,6 @@ public class PokerGameController implements Initializable {
 
     public Button bStartGame;
     //betting pot for game, this is where bets go
-    private Integer bettingPot;
 
 
 
@@ -178,8 +179,6 @@ public class PokerGameController implements Initializable {
      * @param actionEvent user clicks Start Game button
      */
     public void startGame(ActionEvent actionEvent) {
-        //set pot to 0
-        bettingPot = 0;
 
         //set count to 0
         count = 0;
@@ -223,6 +222,8 @@ public class PokerGameController implements Initializable {
         //change bettingPot and user/player balance text
         //potBalance.setText("Pot balance: "+bettingPot);
         playerName.setText(player1.getUsername() +"'s cards: ");
+        labelBalance.setText(player1.getUsername() +"'s balance: " + player1.getBalance());
+        labelBet.setText("Bet: " + betAmount);
 
         bReplace.setVisible(true);
         bReplaceNothing.setVisible(true);
@@ -286,7 +287,7 @@ public class PokerGameController implements Initializable {
      * Call functions when the 2nd confirm replace button in clicked on
      */
     public void replaceConfirm() throws IOException {
-        System.out.println("Replace Confirm, count is: " +count);
+        //System.out.println("Replace Confirm, count is: " +count);
 
         if(numCardsSelected())
         {
@@ -309,7 +310,7 @@ public class PokerGameController implements Initializable {
      */
     public boolean numCardsSelected()
     {
-        System.out.println("count was: " +count +"in numCardsSelected()");
+        //System.out.println("count was: " +count +"in numCardsSelected()");
         if(count > 3)
         {
             Alert errorAlert = new Alert(Alert.AlertType.ERROR);
@@ -468,47 +469,47 @@ public class PokerGameController implements Initializable {
             eval = "Royal Flush";
             return eval;
         }*/
-        if(player1.straightFlush() == true)
+        if(player1.straightFlush())
         {
             eval = "Straight Flush";
             return eval;
         }else
-        if(player1.fourOfAKind() == true)
+        if(player1.fourOfAKind())
         {
             eval = "Four Of A Kind";
             return eval;
         }else
-        if(player1.fullHouse() == true)
+        if(player1.fullHouse())
         {
             eval = "Full House";
             return eval;
         }else
-        if(player1.flush() == true)
+        if(player1.flush())
         {
             eval = "Flush";
             return eval;
         }else
-        if(player1.straight() == true)
+        if(player1.straight())
         {
             eval = "Straight";
             return eval;
         }else
-        if(player1.threeOfAKind() == true)
+        if(player1.threeOfAKind())
         {
             eval = "Three Of A Kind";
             return eval;
         }else
-        if(player1.twoPair() == true)
+        if(player1.twoPair())
         {
             eval = "Two Pairs";
             return eval;
         }else
-        if(player1.onePair() == true)
+        if(player1.onePair())
         {
             eval = "One Pair";
             return eval;
         }else
-        if(player1.noPair() == true)
+        if(player1.noPair())
         {
             eval = "No Pair";
             return eval;
