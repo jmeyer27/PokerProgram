@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Created labels for player bet and player balance&#10;Fixed FourOfAKind error">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/GetBetController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/getBet-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Created official window to ask user about bet&#10;WIll only allow integer bet values">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/StatisticsController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -486,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670622335811</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Created official window to ask user about bet&#10;WIll only allow integer bet values">
+      <created>1670637466407</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1670637466407</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -501,7 +504,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Back of card image added&#10;Referenced in Card class to each card obj&#10;Fold function in poker game now folds players hand face down&#10;Buttons now are invisible before the game begins&#10;Visibility of buttons is different depending on game progress" />
     <MESSAGE value="Updated UI of Poker Game" />
     <MESSAGE value="Updated UI and added Music&#10;Updated UI of Poker Game&#10;Added music to menu and game&#10;New checkbox to toggle music playing/paused&#10;Updated dependencies for media player" />
     <MESSAGE value="Music changes&#10;Music now loops when the song is completed&#10;Credit to music creator is now given as a tooltip to user" />
@@ -526,6 +528,7 @@
     <MESSAGE value="Finished writing tests&#10;Last todo's for card is straightFlush and royalFlush" />
     <MESSAGE value="All tests passed&#10;So all player functions are working&#10;Finished royal flush and fixed specific issue with ace being recognized" />
     <MESSAGE value="Created labels for player bet and player balance&#10;Fixed FourOfAKind error" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created labels for player bet and player balance&#10;Fixed FourOfAKind error" />
+    <MESSAGE value="Created official window to ask user about bet&#10;WIll only allow integer bet values" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created official window to ask user about bet&#10;WIll only allow integer bet values" />
   </component>
 </project>

@@ -200,10 +200,8 @@ public class PokerGameController implements Initializable {
         getBetStage.setResizable(false);
         //keep stage from being ignored by user
         getBetStage.initModality(Modality.APPLICATION_MODAL);
-
         FXMLLoader fxmlLoader = new FXMLLoader(ThePokerGame.class.getResource("getBet-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-
         GetBetController controller = fxmlLoader.getController();
 
         //give player info to next stage, so it can check player balance
@@ -213,10 +211,7 @@ public class PokerGameController implements Initializable {
         getBetStage.setScene(scene);
         getBetStage.showAndWait();
 
-
         betAmount = controller.getBet();
-        System.out.println("betAmount = " +betAmount);
-
 
         //the two player cards are set out in front of them
         imageView_Hand1.setImage(player1.getHand(0).getCardImage());
@@ -254,18 +249,10 @@ public class PokerGameController implements Initializable {
     public void getHowToPLay(ActionEvent actionEvent) throws IOException {
         Stage howToPlayStage = new Stage();
         howToPlayStage.setResizable(false);
-
         FXMLLoader fxmlLoader = new FXMLLoader(ThePokerGame.class.getResource("howToPlay-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         scene.setFill(Color.web("#81c483"));
-
-        //Todo: This is optional but the icon for the new window is not set. The path (/images/icon.png) is not correct
-        //add icon picture (this shows up in the upper left corner of the window and is the icon in the task bar)
-//        Image icon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/icon.png")));
-//        howToPlayStage.getIcons().add(icon);
-
         HowToPlayController controller = fxmlLoader.getController();
-
         howToPlayStage.setTitle("How to play");
         howToPlayStage.setScene(scene);
         howToPlayStage.show();
@@ -279,15 +266,13 @@ public class PokerGameController implements Initializable {
     public void replace(ActionEvent actionEvent) {
         //set text in game text field
         gameText.setText("Select up to three cards to replace.");
-
-
         setCheckboxes(true);
         bReplaceCardConfirm.setVisible(true);
         setInvisibleButtons();
     }
 
     public void noReplace(ActionEvent actionEvent) throws IOException {
-        System.out.println(evaluate());
+        //System.out.println(evaluate());
         Alert infoAlert = new Alert(Alert.AlertType.INFORMATION);
         infoAlert.setHeaderText("Game Results");
         infoAlert.setContentText(evaluate());
@@ -471,53 +456,65 @@ public class PokerGameController implements Initializable {
     public String evaluate() throws IOException {
 
         String eval = "";
+        int winnings = 0;
         setCheckboxes(false);
         bReplaceCardConfirm.setVisible(false);
         setInvisibleButtons();
 
-        /*if(player1.royalFlush() == true)
+        if(player1.royalFlush())
         {
             eval = "Royal Flush";
+            setWinnings(100);
             return eval;
-        }*/
+        }
         if(player1.straightFlush())
         {
             eval = "Straight Flush";
+            winnings = 12;
+            player1.setBalance(player1.getBalance()+winnings);
+            setWinnings(50);
             return eval;
         }else
         if(player1.fourOfAKind())
         {
             eval = "Four Of A Kind";
+            setWinnings(10);
             return eval;
         }else
         if(player1.fullHouse())
         {
             eval = "Full House";
+            setWinnings(8);
             return eval;
         }else
         if(player1.flush())
         {
             eval = "Flush";
+            setWinnings(5);
             return eval;
         }else
         if(player1.straight())
         {
             eval = "Straight";
+            setWinnings(4);
             return eval;
         }else
         if(player1.threeOfAKind())
         {
             eval = "Three Of A Kind";
+            setWinnings(3);
             return eval;
         }else
         if(player1.twoPair())
         {
             eval = "Two Pairs";
+            setWinnings(2);
             return eval;
         }else
         if(player1.onePair())
         {
             eval = "One Pair";
+            setWinnings(1);
             return eval;
         }else
         if(player1.noPair())
@@ -526,10 +523,14 @@ public class PokerGameController implements Initializable {
             return eval;
         }
 
-        //todo update players balance
         //save stats here before returning eval to user
         saveStatistics();
         return eval;
+    }
+
+    public void setWinnings(int multiplier){
+        int winnings = betAmount*multiplier;
+        player1.setBalance(player1.getBalance()+winnings);
     }
 
 
