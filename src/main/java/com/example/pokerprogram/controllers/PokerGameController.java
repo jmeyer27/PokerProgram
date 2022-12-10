@@ -30,7 +30,7 @@ public class PokerGameController implements Initializable {
     public Label labelBet;
     Player player1;//player
     String name; //players name
-    String betAmount; //initial bet
+    int betAmount; //initial bet
 
     int count = 0;
 
@@ -148,7 +148,7 @@ public class PokerGameController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        //todo ask user for name here
+        //ask user for name here
         // going to make a new window with a new view? it will be reused for multiplayer also
         // the below commented code works to get the users name but has a million ways the user can not put a name in
         // it also does not say anything about insert name here or whatever but it works????
@@ -178,7 +178,7 @@ public class PokerGameController implements Initializable {
      * Starts game when Start Game button is clicked by user
      * @param actionEvent user clicks Start Game button
      */
-    public void startGame(ActionEvent actionEvent) {
+    public void startGame(ActionEvent actionEvent) throws IOException {
 
         //set count to 0
         count = 0;
@@ -195,19 +195,28 @@ public class PokerGameController implements Initializable {
         player1.addCard(deck.dealTopCard()); //add card 4
         player1.addCard(deck.dealTopCard()); //add card 5
 
-        TextInputDialog betDialog = new TextInputDialog();
-        betDialog.setTitle("Enter Bet Amount");
-        Optional<String> result = betDialog.showAndWait();
-        result.ifPresent(string -> betAmount = string);
+        //open new window to inquire about bet
+        Stage getBetStage = new Stage();
+        getBetStage.setResizable(false);
+        //keep stage from being ignored by user
+        getBetStage.initModality(Modality.APPLICATION_MODAL);
 
-        //check for null first (user clicks cancel or the x button)
-        if(betAmount == null){
-            betAmount = "0";
-        }
-        //then check if user didn't put anything in the textbox but clicked confirm
-        if(betAmount.equals("") || betAmount.isEmpty() ){
-            betAmount = "0";
-        }
+        FXMLLoader fxmlLoader = new FXMLLoader(ThePokerGame.class.getResource("getBet-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        GetBetController controller = fxmlLoader.getController();
+
+        //give player info to next stage, so it can check player balance
+        controller.initData(player1);
+
+        getBetStage.setTitle("Enter Bet");
+        getBetStage.setScene(scene);
+        getBetStage.showAndWait();
+
+
+        betAmount = controller.getBet();
+        System.out.println("betAmount = " +betAmount);
+
 
         //the two player cards are set out in front of them
         imageView_Hand1.setImage(player1.getHand(0).getCardImage());
@@ -222,6 +231,8 @@ public class PokerGameController implements Initializable {
         //change bettingPot and user/player balance text
         //potBalance.setText("Pot balance: "+bettingPot);
         playerName.setText(player1.getUsername() +"'s cards: ");
+        //here update player balance by - bet number
+        player1.setBalance(player1.getBalance()-betAmount);
         labelBalance.setText(player1.getUsername() +"'s balance: " + player1.getBalance());
         labelBet.setText("Bet: " + betAmount);
 
@@ -514,6 +525,8 @@ public class PokerGameController implements Initializable {
             eval = "No Pair";
             return eval;
         }
+
+        //todo update players balance
         //save stats here before returning eval to user
         saveStatistics();
         return eval;
@@ -567,10 +580,9 @@ public class PokerGameController implements Initializable {
             if(!file.exists()){
                 PrintWriter output = new PrintWriter(new FileOutputStream(file));
 
-                //todo if player wins game then wins = 1, update $$ won or lost
-                int wins = 0;
+                int games = 1;
 
-                output.println(wins);
+                output.println(games);
 
                 //System.out.println("Successfully written data to a new file"); //debug line
                 output.close();
@@ -589,7 +601,7 @@ public class PokerGameController implements Initializable {
 
                 PrintWriter output = new PrintWriter(new FileOutputStream(file));
 
-                //todo if player has won, then add to count
+
                 statistics[0] ++;
 
                 //put number into file

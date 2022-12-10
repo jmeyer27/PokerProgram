@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="All tests passed&#10;So all player functions are working&#10;Finished royal flush and fixed specific issue with ace being recognized">
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Created labels for player bet and player balance&#10;Fixed FourOfAKind error">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/GetBetController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/getBet-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerGame-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerGame-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/StatisticsController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,10 +19,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
-        <option value="FxmlFile" />
         <option value="JUnit5 Test Class" />
         <option value="JUnit4 Test Class" />
+        <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -87,7 +89,7 @@
       <recent name="com.example.pokerprogram" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestPlayer.fourOfAKind_False_TwoPairs">
+  <component name="RunManager" selected="Application.ThePokerGame">
     <configuration name="ThePokerGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.pokerprogram.ThePokerGame" />
       <module name="PokerProgram" />
@@ -166,8 +168,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestPlayer.fourOfAKind_False_TwoPairs" />
         <item itemvalue="Application.ThePokerGame" />
+        <item itemvalue="JUnit.TestPlayer.fourOfAKind_False_TwoPairs" />
         <item itemvalue="JUnit.TestPlayer" />
         <item itemvalue="JUnit.TestPlayer.royalFlush_unOrderedTrue" />
         <item itemvalue="JUnit.TestPlayer.royalFlush_orderedTrue" />
@@ -477,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670548610057</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Created labels for player bet and player balance&#10;Fixed FourOfAKind error">
+      <created>1670622335811</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1670622335811</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -492,7 +501,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated Poker Game with buttons&#10;Added buttons for bet, check, raise, call&#10;Created empty functions for these buttons&#10;Created text field called gameText where user actions are updated based on button clicks" />
     <MESSAGE value="Back of card image added&#10;Referenced in Card class to each card obj&#10;Fold function in poker game now folds players hand face down&#10;Buttons now are invisible before the game begins&#10;Visibility of buttons is different depending on game progress" />
     <MESSAGE value="Updated UI of Poker Game" />
     <MESSAGE value="Updated UI and added Music&#10;Updated UI of Poker Game&#10;Added music to menu and game&#10;New checkbox to toggle music playing/paused&#10;Updated dependencies for media player" />
@@ -517,6 +525,7 @@
     <MESSAGE value="Fixed TwoPair function&#10;wrote tests to confirm" />
     <MESSAGE value="Finished writing tests&#10;Last todo's for card is straightFlush and royalFlush" />
     <MESSAGE value="All tests passed&#10;So all player functions are working&#10;Finished royal flush and fixed specific issue with ace being recognized" />
-    <option name="LAST_COMMIT_MESSAGE" value="All tests passed&#10;So all player functions are working&#10;Finished royal flush and fixed specific issue with ace being recognized" />
+    <MESSAGE value="Created labels for player bet and player balance&#10;Fixed FourOfAKind error" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created labels for player bet and player balance&#10;Fixed FourOfAKind error" />
   </component>
 </project>
