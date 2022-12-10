@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Created official window to ask user about bet&#10;WIll only allow integer bet values">
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Player now wins points based on the winning hand">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/getBet-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/getBet-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -489,7 +491,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670637466407</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Player now wins points based on the winning hand">
+      <created>1670638661874</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1670638661874</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -504,7 +513,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated UI of Poker Game" />
     <MESSAGE value="Updated UI and added Music&#10;Updated UI of Poker Game&#10;Added music to menu and game&#10;New checkbox to toggle music playing/paused&#10;Updated dependencies for media player" />
     <MESSAGE value="Music changes&#10;Music now loops when the song is completed&#10;Credit to music creator is now given as a tooltip to user" />
     <MESSAGE value="Changes to Player, PokerGame and others&#10;Moved song to Music folder and changed references&#10;Added username to Player&#10;PokerGame now references playerBalance and potBalance in UI&#10;Added a placeholder prompt for user to insert name&#10;Name is referened in poker game" />
@@ -529,6 +537,7 @@
     <MESSAGE value="All tests passed&#10;So all player functions are working&#10;Finished royal flush and fixed specific issue with ace being recognized" />
     <MESSAGE value="Created labels for player bet and player balance&#10;Fixed FourOfAKind error" />
     <MESSAGE value="Created official window to ask user about bet&#10;WIll only allow integer bet values" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created official window to ask user about bet&#10;WIll only allow integer bet values" />
+    <MESSAGE value="Player now wins points based on the winning hand" />
+    <option name="LAST_COMMIT_MESSAGE" value="Player now wins points based on the winning hand" />
   </component>
 </project>

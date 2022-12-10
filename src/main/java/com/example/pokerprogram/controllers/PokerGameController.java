@@ -153,7 +153,7 @@ public class PokerGameController implements Initializable {
         // the below commented code works to get the users name but has a million ways the user can not put a name in
         // it also does not say anything about insert name here or whatever but it works????
         // maybe I'll just accept it lol
-        //window.initModality(Modality.APPLICATION_MODAL)=-0b987
+        //window.initModality(Modality.APPLICATION_MODAL)
 
         TextInputDialog dialog = new TextInputDialog();
         dialog.setTitle("Enter Name");
@@ -168,8 +168,10 @@ public class PokerGameController implements Initializable {
         if(name.equals("") || name.isEmpty() ){
             name = "Player";
         }
-        //debug line to check name value
-        //System.out.println(name);
+
+        //make new player and give them a name
+        player1 = new Player();
+        player1.setUsername(name);
     }
 
 
@@ -186,9 +188,7 @@ public class PokerGameController implements Initializable {
         //get new deck and shuffle deck
         deck = new Deck();
         deck.shuffle();
-        //new player and give player 2 cards to their hand
-        player1 = new Player();
-        player1.setUsername(name);
+        //give player 2 cards to their hand
         player1.addCard(deck.dealTopCard()); //add card 1
         player1.addCard(deck.dealTopCard()); //add card 2
         player1.addCard(deck.dealTopCard()); //add card 3
@@ -288,7 +288,7 @@ public class PokerGameController implements Initializable {
         if(numCardsSelected())
         {
             replaceCards();
-            System.out.println(evaluate());
+            //System.out.println(evaluate());
             Alert infoAlert = new Alert(Alert.AlertType.INFORMATION);
             infoAlert.setHeaderText("Game Results");
             infoAlert.setContentText(evaluate());
@@ -454,12 +454,13 @@ public class PokerGameController implements Initializable {
     }
 
     public String evaluate() throws IOException {
-
+        gameText.setText("Start a new game");
         String eval = "";
         int winnings = 0;
         setCheckboxes(false);
         bReplaceCardConfirm.setVisible(false);
         setInvisibleButtons();
+        System.out.println("Evaluate");
 
         if(player1.royalFlush())
         {
@@ -528,9 +529,16 @@ public class PokerGameController implements Initializable {
         return eval;
     }
 
+    /**
+     * Set the winnings for a player who has won the poker game
+     * @param multiplier a value depending on how strong their hand was
+     */
     public void setWinnings(int multiplier){
         int winnings = betAmount*multiplier;
-        player1.setBalance(player1.getBalance()+winnings);
+        winnings = player1.getBalance() + winnings;
+        player1.setBalance(winnings);
+        labelBalance.setText(player1.getUsername() +"'s balance: " + player1.getBalance());
+
     }
 
 
