@@ -31,10 +31,22 @@ public class StatisticsController {
 
             //todo update this after finalizing statistics in PokerGameController
             //get values from textfile to put into label
-            String numWins = "Number of games played: " +inputStream.nextLine();
+            //String numWins = "Number of games played: " +inputStream.nextLine();
+
+            String stats = "Number of games played: " +inputStream.nextLine();
+            stats += "\nNumber of games with no wins: "+inputStream.nextLine();
+            stats += "\nOne Pair: "+inputStream.nextLine();
+            stats += "\nTwo Pair: "+inputStream.nextLine();
+            stats += "\nThree Pair: "+inputStream.nextLine();
+            stats += "\nStraight: "+inputStream.nextLine();
+            stats += "\nFlush: "+inputStream.nextLine();
+            stats += "\nFull House: "+inputStream.nextLine();
+            stats += "\nFour of a kind: "+inputStream.nextLine();
+            stats += "\nStraight Flush: "+inputStream.nextLine();
+            stats += "\nRoyal Flush: "+inputStream.nextLine();
 
             //set textbox to have value from textfile
-            textBox.setText(numWins);
+            textBox.setText(stats);
 
             //important step of closing file
             inputStream.close();

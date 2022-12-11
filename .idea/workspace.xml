@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Player no longer resets with every poker game&#10;Player winnings are now correctly added to player balance (hopefully)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/Player.java" afterDir="false" />
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="fixed small issue with player cards &#10;not being taken out of player hand when new game begins&#10;Also created error alert for when statistics file does not exist">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerMenu-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerMenu-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/StatisticsController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -507,7 +504,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670640348426</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="fixed small issue with player cards &#10;not being taken out of player hand when new game begins&#10;Also created error alert for when statistics file does not exist">
+      <created>1670793944620</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1670793944620</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -522,7 +526,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Music changes&#10;Music now loops when the song is completed&#10;Credit to music creator is now given as a tooltip to user" />
     <MESSAGE value="Changes to Player, PokerGame and others&#10;Moved song to Music folder and changed references&#10;Added username to Player&#10;PokerGame now references playerBalance and potBalance in UI&#10;Added a placeholder prompt for user to insert name&#10;Name is referened in poker game" />
     <MESSAGE value="Created ChooseGame Controller and view&#10;This new window will pop up when user clicks &quot;Play Game&quot; in menu&#10;User is able to click if they are playing a multiplayer or single player game&#10;so far multiplayer is not implemented so this is just a placeholder button&#10;Added two pictures dog.jpg and dogs.jpg to ChooseGame view" />
     <MESSAGE value="added some validating hand methods" />
@@ -547,6 +550,7 @@
     <MESSAGE value="Created official window to ask user about bet&#10;WIll only allow integer bet values" />
     <MESSAGE value="Player now wins points based on the winning hand" />
     <MESSAGE value="Player no longer resets with every poker game&#10;Player winnings are now correctly added to player balance (hopefully)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Player no longer resets with every poker game&#10;Player winnings are now correctly added to player balance (hopefully)" />
+    <MESSAGE value="fixed small issue with player cards &#10;not being taken out of player hand when new game begins&#10;Also created error alert for when statistics file does not exist" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed small issue with player cards &#10;not being taken out of player hand when new game begins&#10;Also created error alert for when statistics file does not exist" />
   </component>
 </project>

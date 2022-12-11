@@ -81,9 +81,7 @@ public class PokerGameController implements Initializable {
     private ImageView imageView_Hand5;
 
     public Button bStartGame;
-    //betting pot for game, this is where bets go
 
-    int playerBalance;
 
 
     //This is all for the menu music. Gets path and sets up media player.
@@ -533,6 +531,7 @@ public class PokerGameController implements Initializable {
         if(player1.noPair())
         {
             eval = "No Pair";
+            setWinnings(0);
             return eval;
         }
 
@@ -545,7 +544,11 @@ public class PokerGameController implements Initializable {
      * Set the winnings for a player who has won the poker game
      * @param multiplier a value depending on how strong their hand was
      */
-    public void setWinnings(int multiplier){
+    public void setWinnings(int multiplier) throws IOException {
+        result = multiplier; //this is used for statistics purposes
+        saveStatistics();
+
+        //calculate winnings for user to win $$
         int winnings = betAmount*multiplier;
         winnings = player1.getBalance() + winnings;
         player1.setBalance(winnings);
@@ -582,6 +585,9 @@ public class PokerGameController implements Initializable {
         }
     }
 
+    //this is used to for statistics to show what kind of hands the player has won
+    int result;
+
 
     /**
      * This will save information to statistics
@@ -602,14 +608,41 @@ public class PokerGameController implements Initializable {
 
                 int games = 1;
 
-                output.println(games);
+                int nopair, onepair, twopair, threepair, fourpair, straight, flush, fullhouse, straightflush, royalflush;
+                nopair = onepair = twopair = threepair = fourpair = straight= flush = fullhouse = straightflush = royalflush = 0;
 
-                //System.out.println("Successfully written data to a new file"); //debug line
+                switch (result) {
+                    case 0 -> nopair = 1;
+                    case 1 -> onepair = 1;
+                    case 2 -> twopair = 1;
+                    case 3 -> threepair = 1;
+                    case 4 -> straight = 1;
+                    case 5 -> flush = 1;
+                    case 8 -> fullhouse = 1;
+                    case 10 -> fourpair = 1;
+                    case 12 -> straightflush = 1;
+                    case 100 -> royalflush = 1;
+                }
+
+
+                output.println(games);
+                output.println(nopair);
+                output.println(onepair);
+                output.println(twopair);
+                output.println(threepair);
+                output.println(straight);
+                output.println(flush);
+                output.println(fullhouse);
+                output.println(fourpair);
+                output.println(straightflush);
+                output.println(royalflush);
+
+                System.out.println("Successfully written data to a new file"); //debug line
                 output.close();
 
             }else{//file exist
                 Scanner scanner = new Scanner(new File(fileName));
-                int[] statistics = new int [10]; //picked 10 randomly
+                int[] statistics = new int [12];
                 int i = 0;
 
 
@@ -624,8 +657,25 @@ public class PokerGameController implements Initializable {
 
                 statistics[0] ++;
 
-                //put number into file
-                output.println(statistics[0]);
+
+                switch (result) {
+                    case 0 -> statistics[1] ++;
+                    case 1 -> statistics[2] ++;
+                    case 2 -> statistics[3] ++;
+                    case 3 -> statistics[4] ++;
+                    case 4 -> statistics[5] ++;
+                    case 5 -> statistics[6] ++;
+                    case 8 -> statistics[7] ++;
+                    case 10 -> statistics[8] ++;
+                    case 12 -> statistics[9] ++;
+                    case 100 -> statistics[10] ++;
+                }
+
+                //put numbers into file
+                //output.println(statistics[0]);
+                for(i = 0; i < 12; i++){
+                    output.println(statistics[i]);
+                }
 
 
                 //System.out.println("Successfully updated data to the file"); //debug
@@ -639,12 +689,6 @@ public class PokerGameController implements Initializable {
             //e.printStackTrace();
             System.out.println("Error in saving file in Poker Game!");
         }
-
-            //save to file about wins
-            //save to file about currency won/lost (1000-playersbalance >0)
-        //System.out.println("the game is done and statistics should be saved here");//debug line
-
-
 
 
 
