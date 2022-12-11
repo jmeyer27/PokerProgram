@@ -83,6 +83,7 @@ public class PokerGameController implements Initializable {
     public Button bStartGame;
     //betting pot for game, this is where bets go
 
+    int playerBalance;
 
 
     //This is all for the menu music. Gets path and sets up media player.
@@ -172,6 +173,7 @@ public class PokerGameController implements Initializable {
         //make new player and give them a name
         player1 = new Player();
         player1.setUsername(name);
+
     }
 
 
@@ -188,7 +190,17 @@ public class PokerGameController implements Initializable {
         //get new deck and shuffle deck
         deck = new Deck();
         deck.shuffle();
-        //give player 2 cards to their hand
+
+
+        //if the player loses all of their betting money then they can get 1000 again
+        //why not lol
+        if(player1.getBalance() == 0){
+            player1.setBalance(1000);
+        }
+        //removes cards from players hand just in case there was a previously played game
+        player1.removeCards();
+
+        //give player 5 cards to their hand
         player1.addCard(deck.dealTopCard()); //add card 1
         player1.addCard(deck.dealTopCard()); //add card 2
         player1.addCard(deck.dealTopCard()); //add card 3
@@ -460,7 +472,7 @@ public class PokerGameController implements Initializable {
         setCheckboxes(false);
         bReplaceCardConfirm.setVisible(false);
         setInvisibleButtons();
-        System.out.println("Evaluate");
+        //System.out.println("Evaluate");
 
         if(player1.royalFlush())
         {
@@ -538,7 +550,6 @@ public class PokerGameController implements Initializable {
         winnings = player1.getBalance() + winnings;
         player1.setBalance(winnings);
         labelBalance.setText(player1.getUsername() +"'s balance: " + player1.getBalance());
-
     }
 
 

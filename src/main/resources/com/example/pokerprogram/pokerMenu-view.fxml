@@ -16,8 +16,8 @@
          <effect>
             <DropShadow />
          </effect></Button>
-      <Button fx:id="statisticsButton" layoutX="347.0" layoutY="426.0" mnemonicParsing="false" onAction="#openStatistics" text="Statistics Button Placeholder" />
-      <Button fx:id="exitButton" layoutX="669.0" layoutY="426.0" mnemonicParsing="false" onAction="#closeButtonAction" text="Quit Game" />
+      <Button fx:id="statisticsButton" layoutX="368.0" layoutY="426.0" mnemonicParsing="false" onAction="#openStatistics" text="View Statistics" />
+      <Button fx:id="exitButton" layoutX="618.0" layoutY="426.0" mnemonicParsing="false" onAction="#closeButtonAction" text="Quit Game" />
       <Text fill="#b1b6ba" fontSmoothingType="LCD" layoutY="122.0" stroke="#302f2f" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Poker Game!" textAlignment="CENTER" wrappingWidth="825.8000000000001">
          <font>
             <Font name="Georgia" size="50.0" />

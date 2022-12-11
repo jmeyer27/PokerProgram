@@ -57,6 +57,14 @@ public class Player {
     }
 
     /**
+     * This method will reset the players hand so they do not have any cards
+     * Useful for ending a game
+     */
+    public void removeCards(){
+        hand = new ArrayList<Card>(5);
+    }
+
+    /**
      * This method will return the card from the players hand
      * @param index an integer that represents which card in the players hand is being asked for (the first card, second.. etc)
      * @return the card in the deck in the index that was asked for.

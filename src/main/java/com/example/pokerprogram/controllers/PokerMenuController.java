@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Tooltip;
@@ -172,7 +173,10 @@ public class PokerMenuController {
 
             if(!file.exists()){//if file does not exist
 
-                //todo tell user that file does not exist
+                Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+                errorAlert.setHeaderText("No Statistics file found");
+                errorAlert.setContentText("The file does not exist! Play game to create statistics. Thank you.");
+                errorAlert.showAndWait();
                 System.out.println("There was no file.");//debug line
 
             }else{//the file exists open Statistics window
