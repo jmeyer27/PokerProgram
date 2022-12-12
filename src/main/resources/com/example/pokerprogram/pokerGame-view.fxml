@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #2e8545;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokerprogram.controllers.PokerGameController">
    <children>
-      <Button id="returnToMenuButton" layoutX="150.0" layoutY="27.0" mnemonicParsing="false" onAction="#returnToMenuAction" prefHeight="41.0" prefWidth="202.0" text="Return to Menu" />
+      <Button id="returnToMenuButton" layoutX="150.0" layoutY="27.0" mnemonicParsing="false" onAction="#returnToMenuAction" prefHeight="41.0" prefWidth="202.0" style="-fx-background-color: #DAF7A6;" text="Return to Menu">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Ebrima" size="14.0" />
+         </font></Button>
       <ImageView fx:id="imageView_Hand1" fitHeight="177.0" fitWidth="119.0" layoutX="108.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/pokerCardImages/Bicycle_Playing_Cards_red.jpg" />
@@ -33,8 +40,14 @@
             <Image url="@images/pokerCardImages/Bicycle_Playing_Cards_red.jpg" />
          </image>
       </ImageView>
-      <Button id="bNewGame" fx:id="bNewGame" layoutX="391.0" layoutY="35.0" mnemonicParsing="false" onAction="#startGame" text="New Game" />
-      <Button fx:id="bHowToPlay" layoutX="41.0" layoutY="35.0" mnemonicParsing="false" onAction="#getHowToPLay" text="How to Play" />
+      <Button id="bNewGame" fx:id="bNewGame" layoutX="391.0" layoutY="35.0" mnemonicParsing="false" onAction="#startGame" style="-fx-background-color: #DAF7A6;" text="New Game">
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <Button fx:id="bHowToPlay" layoutX="41.0" layoutY="35.0" mnemonicParsing="false" onAction="#getHowToPLay" style="-fx-background-color: #DAF7A6;" text="How to Play">
+         <effect>
+            <DropShadow />
+         </effect></Button>
       <Button fx:id="bReplaceCardConfirm" layoutX="382.0" layoutY="496.0" mnemonicParsing="false" onAction="#replaceConfirm" text="Replace Cards" visible="false" />
       <Label fx:id="gameText" layoutX="320.0" layoutY="86.0" prefHeight="122.0" prefWidth="644.0" text="Start a new game" textFill="#f2e9e9">
          <font>

@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="PokerProgram:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="fixed small issue with player cards &#10;not being taken out of player hand when new game begins&#10;Also created error alert for when statistics file does not exist">
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Added game outcomes to statistics file">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/StatisticsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerMenu-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerMenu-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/statistics-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/statistics-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +59,7 @@
     &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/jasmi/IdeaProjects/PokerProgram/src/main/java/com/example/pokerprogram&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/jasmi/IdeaProjects/PokerProgram/src/main/resources/com/example/pokerprogram/images&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
@@ -511,7 +519,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670793944620</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Added game outcomes to statistics file">
+      <created>1670795845132</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1670795845132</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -526,7 +541,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changes to Player, PokerGame and others&#10;Moved song to Music folder and changed references&#10;Added username to Player&#10;PokerGame now references playerBalance and potBalance in UI&#10;Added a placeholder prompt for user to insert name&#10;Name is referened in poker game" />
     <MESSAGE value="Created ChooseGame Controller and view&#10;This new window will pop up when user clicks &quot;Play Game&quot; in menu&#10;User is able to click if they are playing a multiplayer or single player game&#10;so far multiplayer is not implemented so this is just a placeholder button&#10;Added two pictures dog.jpg and dogs.jpg to ChooseGame view" />
     <MESSAGE value="added some validating hand methods" />
     <MESSAGE value="Starting statistics stuff&#10;Changed some comments in various classes" />
@@ -551,6 +565,7 @@
     <MESSAGE value="Player now wins points based on the winning hand" />
     <MESSAGE value="Player no longer resets with every poker game&#10;Player winnings are now correctly added to player balance (hopefully)" />
     <MESSAGE value="fixed small issue with player cards &#10;not being taken out of player hand when new game begins&#10;Also created error alert for when statistics file does not exist" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed small issue with player cards &#10;not being taken out of player hand when new game begins&#10;Also created error alert for when statistics file does not exist" />
+    <MESSAGE value="Added game outcomes to statistics file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added game outcomes to statistics file" />
   </component>
 </project>

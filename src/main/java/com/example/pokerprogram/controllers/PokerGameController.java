@@ -591,7 +591,7 @@ public class PokerGameController implements Initializable {
 
     /**
      * This will save information to statistics
-     * todo add more statistics info for player
+     *
      */
     public void saveStatistics() throws IOException {
 
@@ -637,7 +637,7 @@ public class PokerGameController implements Initializable {
                 output.println(straightflush);
                 output.println(royalflush);
 
-                System.out.println("Successfully written data to a new file"); //debug line
+                //System.out.println("Successfully written data to a new file"); //debug line
                 output.close();
 
             }else{//file exist

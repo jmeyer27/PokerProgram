@@ -2,17 +2,30 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #58bf81;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokerprogram.controllers.StatisticsController">
    <children>
-      <Label fx:id="textBox" layoutX="40.0" layoutY="34.0" prefHeight="316.0" prefWidth="243.0" style="-fx-background-color: #bdfccd;">
+      <Label fx:id="textBox" layoutX="40.0" layoutY="34.0" lineSpacing="4.0" prefHeight="316.0" prefWidth="243.0" style="-fx-background-color: #bdfccd;">
          <effect>
             <DropShadow />
-         </effect></Label>
-      <Button fx:id="bShowStatistics" layoutX="400.0" layoutY="54.0" mnemonicParsing="false" onAction="#showStats" style="-fx-background-color: #faf87a;" text="Calculate Statistics">
+         </effect>
+         <font>
+            <Font name="Georgia" size="17.0" />
+         </font></Label>
+      <Button fx:id="bShowStatistics" layoutX="359.0" layoutY="34.0" mnemonicParsing="false" onAction="#showStats" style="-fx-background-color: #faf87a;" text="Calculate Statistics">
          <effect>
             <DropShadow />
-         </effect></Button>
+         </effect>
+         <font>
+            <Font name="Georgia" size="18.0" />
+         </font></Button>
+      <ImageView fitHeight="225.0" fitWidth="168.0" layoutX="366.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/dogs.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

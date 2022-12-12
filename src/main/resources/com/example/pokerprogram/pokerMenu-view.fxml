@@ -9,15 +9,27 @@
 
 
    <children>
-      <Button fx:id="gameButton" layoutX="96.0" layoutY="151.0" mnemonicParsing="false" onAction="#startGameAction" prefHeight="183.0" prefWidth="635.0" text="Play Game" textFill="#4e4a4a">
+      <Button fx:id="gameButton" layoutX="96.0" layoutY="151.0" mnemonicParsing="false" onAction="#startGameAction" prefHeight="183.0" prefWidth="635.0" style="-fx-background-color: #FFC300;" text="Play Game" textFill="#4e4a4a">
          <font>
             <Font name="Georgia Bold" size="47.0" />
          </font>
          <effect>
             <DropShadow />
          </effect></Button>
-      <Button fx:id="statisticsButton" layoutX="368.0" layoutY="426.0" mnemonicParsing="false" onAction="#openStatistics" text="View Statistics" />
-      <Button fx:id="exitButton" layoutX="618.0" layoutY="426.0" mnemonicParsing="false" onAction="#closeButtonAction" text="Quit Game" />
+      <Button fx:id="statisticsButton" layoutX="338.0" layoutY="408.0" mnemonicParsing="false" onAction="#openStatistics" style="-fx-background-color: #DAF7A6;" text="View Statistics">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font></Button>
+      <Button fx:id="exitButton" layoutX="570.0" layoutY="408.0" mnemonicParsing="false" onAction="#closeButtonAction" style="-fx-background-color: #DAF7A6;" text="Quit Game">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Button>
       <Text fill="#b1b6ba" fontSmoothingType="LCD" layoutY="122.0" stroke="#302f2f" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Poker Game!" textAlignment="CENTER" wrappingWidth="825.8000000000001">
          <font>
             <Font name="Georgia" size="50.0" />
@@ -25,7 +37,13 @@
          <effect>
             <DropShadow />
          </effect></Text>
-      <Button fx:id="bHowToPlay" layoutX="109.0" layoutY="426.0" mnemonicParsing="false" onAction="#getHowToPlay" text="How to Play" />
+      <Button fx:id="bHowToPlay" layoutX="123.0" layoutY="406.0" mnemonicParsing="false" onAction="#getHowToPlay" style="-fx-background-color: #DAF7A6;" text="How to Play">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Button>
       <CheckBox fx:id="toggleMusic" layoutX="675.0" layoutY="27.0" mnemonicParsing="false" onAction="#toggleMusic" text="♫ Music" textFill="#dfd7d7">
          <font>
             <Font name="System Bold" size="12.0" />
