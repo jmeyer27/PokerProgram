@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
@@ -696,5 +697,48 @@ public class PokerGameController implements Initializable {
     }
 
 
+    /**
+     * If the card image is clicked in the poker game then it selects and deselects the checkboxes
+     * @param mouseEvent the card image is clicked
+     */
+    public void selectCard1(MouseEvent mouseEvent) {
+        checkReplaceCard1.setSelected(!checkReplaceCard1.isSelected());
+        checkSelectedCard1();
+    }
 
+    /**
+     * If the card image is clicked in the poker game then it selects and deselects the checkboxes
+     * @param mouseEvent the card image is clicked
+     */
+    public void selectCard2(MouseEvent mouseEvent) {
+        checkReplaceCard2.setSelected(!checkReplaceCard2.isSelected());
+        checkSelectedCard2();
+    }
+
+    /**
+     * If the card image is clicked in the poker game then it selects and deselects the checkboxes
+     * @param mouseEvent the card image is clicked
+     */
+    public void selectCard3(MouseEvent mouseEvent) {
+        checkReplaceCard3.setSelected(!checkReplaceCard3.isSelected());
+        checkSelectedCard3();
+    }
+
+    /**
+     * If the card image is clicked in the poker game then it selects and deselects the checkboxes
+     * @param mouseEvent the card image is clicked
+     */
+    public void selectCard4(MouseEvent mouseEvent) {
+        checkReplaceCard4.setSelected(!checkReplaceCard4.isSelected());
+        checkSelectedCard4();
+    }
+
+    /**
+     * If the card image is clicked in the poker game then it selects and deselects the checkboxes
+     * @param mouseEvent the card image is clicked
+     */
+    public void selectCard5(MouseEvent mouseEvent) {
+        checkReplaceCard5.setSelected(!checkReplaceCard5.isSelected());
+        checkSelectedCard5();
+    }
 }

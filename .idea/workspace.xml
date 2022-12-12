@@ -9,12 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Added game outcomes to statistics file">
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Added color to buttons&#10;Also updated Statistics window layout and added picture">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/StatisticsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerMenu-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerMenu-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/statistics-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/statistics-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerGame-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerGame-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -526,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670795845132</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Added color to buttons&#10;Also updated Statistics window layout and added picture">
+      <created>1670879548589</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1670879548589</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -541,8 +546,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created ChooseGame Controller and view&#10;This new window will pop up when user clicks &quot;Play Game&quot; in menu&#10;User is able to click if they are playing a multiplayer or single player game&#10;so far multiplayer is not implemented so this is just a placeholder button&#10;Added two pictures dog.jpg and dogs.jpg to ChooseGame view" />
-    <MESSAGE value="added some validating hand methods" />
     <MESSAGE value="Starting statistics stuff&#10;Changed some comments in various classes" />
     <MESSAGE value="Created new PokerGame function saveStatistics&#10;Worked on statistics button event in poker menu, will give system out messages if file exists or not" />
     <MESSAGE value="Created new Statistics window&#10;Game now saves statistics file when folding (will be when game ends when that is finished)&#10;Menu will open Statistics window that will show statistics info from text file" />
@@ -566,6 +569,8 @@
     <MESSAGE value="Player no longer resets with every poker game&#10;Player winnings are now correctly added to player balance (hopefully)" />
     <MESSAGE value="fixed small issue with player cards &#10;not being taken out of player hand when new game begins&#10;Also created error alert for when statistics file does not exist" />
     <MESSAGE value="Added game outcomes to statistics file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added game outcomes to statistics file" />
+    <MESSAGE value="Added color to buttons&#10;Also updated Statistics window a bit" />
+    <MESSAGE value="Added color to buttons&#10;Also updated Statistics window layout and added picture" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added color to buttons&#10;Also updated Statistics window layout and added picture" />
   </component>
 </project>

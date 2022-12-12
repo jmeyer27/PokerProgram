@@ -4,49 +4,60 @@
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #2e8545;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokerprogram.controllers.PokerGameController">
    <children>
       <Button id="returnToMenuButton" layoutX="150.0" layoutY="27.0" mnemonicParsing="false" onAction="#returnToMenuAction" prefHeight="41.0" prefWidth="202.0" style="-fx-background-color: #DAF7A6;" text="Return to Menu">
          <effect>
-            <DropShadow />
+            <DropShadow>
+               <color>
+                  <Color red="0.27368420362472534" green="0.2676023244857788" blue="0.2676023244857788" />
+               </color></DropShadow>
          </effect>
          <font>
             <Font name="Ebrima" size="14.0" />
          </font></Button>
-      <ImageView fx:id="imageView_Hand1" fitHeight="177.0" fitWidth="119.0" layoutX="108.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imageView_Hand1" fitHeight="177.0" fitWidth="119.0" layoutX="108.0" layoutY="243.0" onMouseClicked="#selectCard1" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/pokerCardImages/Bicycle_Playing_Cards_red.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="imageView_Hand2" fitHeight="196.0" fitWidth="119.0" layoutX="240.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imageView_Hand2" fitHeight="196.0" fitWidth="119.0" layoutX="240.0" layoutY="243.0" onMouseClicked="#selectCard2" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/pokerCardImages/Bicycle_Playing_Cards_red.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="imageView_Hand3" fitHeight="177.0" fitWidth="119.0" layoutX="369.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imageView_Hand3" fitHeight="177.0" fitWidth="119.0" layoutX="369.0" layoutY="243.0" onMouseClicked="#selectCard3" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/pokerCardImages/Bicycle_Playing_Cards_red.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="imageView_Hand4" fitHeight="177.0" fitWidth="119.0" layoutX="500.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imageView_Hand4" fitHeight="177.0" fitWidth="119.0" layoutX="500.0" layoutY="243.0" onMouseClicked="#selectCard4" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/pokerCardImages/Bicycle_Playing_Cards_red.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="imageView_Hand5" fitHeight="177.0" fitWidth="119.0" layoutX="631.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imageView_Hand5" fitHeight="177.0" fitWidth="119.0" layoutX="631.0" layoutY="243.0" onMouseClicked="#selectCard5" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/pokerCardImages/Bicycle_Playing_Cards_red.jpg" />
          </image>
       </ImageView>
       <Button id="bNewGame" fx:id="bNewGame" layoutX="391.0" layoutY="35.0" mnemonicParsing="false" onAction="#startGame" style="-fx-background-color: #DAF7A6;" text="New Game">
          <effect>
-            <DropShadow />
+            <DropShadow>
+               <color>
+                  <Color red="0.2947368323802948" green="0.28600388765335083" blue="0.28600388765335083" />
+               </color>
+            </DropShadow>
          </effect></Button>
       <Button fx:id="bHowToPlay" layoutX="41.0" layoutY="35.0" mnemonicParsing="false" onAction="#getHowToPLay" style="-fx-background-color: #DAF7A6;" text="How to Play">
          <effect>
-            <DropShadow />
+            <DropShadow>
+               <color>
+                  <Color red="0.2526315748691559" green="0.24701754748821259" blue="0.24701754748821259" />
+               </color></DropShadow>
          </effect></Button>
       <Button fx:id="bReplaceCardConfirm" layoutX="382.0" layoutY="496.0" mnemonicParsing="false" onAction="#replaceConfirm" text="Replace Cards" visible="false" />
       <Label fx:id="gameText" layoutX="320.0" layoutY="86.0" prefHeight="122.0" prefWidth="644.0" text="Start a new game" textFill="#f2e9e9">
