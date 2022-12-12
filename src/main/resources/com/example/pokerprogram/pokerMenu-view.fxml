@@ -16,14 +16,14 @@
          <effect>
             <DropShadow />
          </effect></Button>
-      <Button fx:id="statisticsButton" layoutX="338.0" layoutY="408.0" mnemonicParsing="false" onAction="#openStatistics" style="-fx-background-color: #DAF7A6;" text="View Statistics">
+      <Button fx:id="statisticsButton" layoutX="338.0" layoutY="408.0" mnemonicParsing="false" onAction="#openStatistics" style="-fx-background-color: #C8E5EF;" text="View Statistics">
          <effect>
             <DropShadow />
          </effect>
          <font>
             <Font name="Cambria" size="18.0" />
          </font></Button>
-      <Button fx:id="exitButton" layoutX="570.0" layoutY="408.0" mnemonicParsing="false" onAction="#closeButtonAction" style="-fx-background-color: #DAF7A6;" text="Quit Game">
+      <Button fx:id="exitButton" layoutX="570.0" layoutY="408.0" mnemonicParsing="false" onAction="#closeButtonAction" style="-fx-background-color: #C8E5EF;" text="Quit Game">
          <font>
             <Font name="Cambria" size="18.0" />
          </font>
@@ -37,7 +37,7 @@
          <effect>
             <DropShadow />
          </effect></Text>
-      <Button fx:id="bHowToPlay" layoutX="123.0" layoutY="406.0" mnemonicParsing="false" onAction="#getHowToPlay" style="-fx-background-color: #DAF7A6;" text="How to Play">
+      <Button fx:id="bHowToPlay" layoutX="123.0" layoutY="406.0" mnemonicParsing="false" onAction="#getHowToPlay" style="-fx-background-color: #C8E5EF;" text="How to Play">
          <font>
             <Font name="Cambria" size="18.0" />
          </font>
