@@ -9,7 +9,7 @@
 
 
    <children>
-      <Button fx:id="gameButton" layoutX="96.0" layoutY="151.0" mnemonicParsing="false" onAction="#startGameAction" prefHeight="183.0" prefWidth="635.0" style="-fx-background-color: #FFC300;" text="Play Game" textFill="#4e4a4a">
+      <Button fx:id="gameButton" layoutX="96.0" layoutY="151.0" mnemonicParsing="false" onAction="#startGameAction" prefHeight="183.0" prefWidth="635.0" style="-fx-background-color: #C8E5EF;" text="Play Game" textFill="#4e4a4a">
          <font>
             <Font name="Georgia Bold" size="47.0" />
          </font>
