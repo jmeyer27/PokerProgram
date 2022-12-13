@@ -476,7 +476,7 @@ public class PokerGameController implements Initializable {
         if(player1.royalFlush())
         {
             eval = "Royal Flush";
-            setWinnings(100);
+            eval+= setWinnings(100);
             return eval;
         }
         if(player1.straightFlush())
@@ -484,55 +484,55 @@ public class PokerGameController implements Initializable {
             eval = "Straight Flush";
             winnings = 12;
             player1.setBalance(player1.getBalance()+winnings);
-            setWinnings(50);
+            eval+= setWinnings(50);
             return eval;
         }else
         if(player1.fourOfAKind())
         {
             eval = "Four Of A Kind";
-            setWinnings(10);
+            eval+= setWinnings(10);
             return eval;
         }else
         if(player1.fullHouse())
         {
             eval = "Full House";
-            setWinnings(8);
+            eval+= setWinnings(8);
             return eval;
         }else
         if(player1.flush())
         {
             eval = "Flush";
-            setWinnings(5);
+            eval+= setWinnings(5);
             return eval;
         }else
         if(player1.straight())
         {
             eval = "Straight";
-            setWinnings(4);
+            eval+= setWinnings(4);
             return eval;
         }else
         if(player1.threeOfAKind())
         {
             eval = "Three Of A Kind";
-            setWinnings(3);
+            eval+= setWinnings(3);
             return eval;
         }else
         if(player1.twoPair())
         {
             eval = "Two Pairs";
-            setWinnings(2);
+            eval+= setWinnings(2);
             return eval;
         }else
         if(player1.onePair())
         {
             eval = "One Pair";
-            setWinnings(1);
+            eval+= setWinnings(1);
             return eval;
         }else
         if(player1.noPair())
         {
             eval = "No Pair";
-            setWinnings(0);
+            eval+= setWinnings(0);
             return eval;
         }
 
@@ -545,7 +545,7 @@ public class PokerGameController implements Initializable {
      * Set the winnings for a player who has won the poker game
      * @param multiplier a value depending on how strong their hand was
      */
-    public void setWinnings(int multiplier) throws IOException {
+    public String setWinnings(int multiplier) throws IOException {
         result = multiplier; //this is used for statistics purposes
         saveStatistics();
 
@@ -554,6 +554,7 @@ public class PokerGameController implements Initializable {
         winnings = player1.getBalance() + winnings;
         player1.setBalance(winnings);
         labelBalance.setText(player1.getUsername() +"'s balance: " + player1.getBalance());
+        return (". You win: " + betAmount * multiplier);
     }
 
 

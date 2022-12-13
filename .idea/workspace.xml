@@ -9,10 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Added color to buttons&#10;Also updated Statistics window layout and added picture">
+    <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Ok I promise this is the last time I change button colors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerGame-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/pokerGame-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,27 +186,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667435367848</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Initial Commit">
-      <created>1667435465834</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1667435465834</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Menu&#10;A crude menu was added to Poker Game.&#10;The only button that works as intended right now is the Exit button :)">
-      <created>1667453925657</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1667453925657</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Menu&#10;Start game button will load poker game window. (Which is currently empty)">
-      <created>1667497475135</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1667497475135</updated>
     </task>
     <task id="LOCAL-00004" summary="The Poker Game and Poker Menu&#10;Changed how the start game button switches scenes to the Poker Game.&#10;Added a button in the Poker Game that will return the user back to the menu">
       <created>1667500805076</created>
@@ -531,7 +509,28 @@
       <option name="project" value="LOCAL" />
       <updated>1670879548589</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Poker cards now become selectable when the image is clicked &#10;Updated button colors in poker menu and game">
+      <created>1670880650219</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1670880650220</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Poker cards now become selectable when the image is clicked &#10;Updated button colors in poker menu and game">
+      <created>1670880659254</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1670880659254</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Ok I promise this is the last time I change button colors">
+      <created>1670880808702</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1670880808702</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -546,8 +545,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Starting statistics stuff&#10;Changed some comments in various classes" />
-    <MESSAGE value="Created new PokerGame function saveStatistics&#10;Worked on statistics button event in poker menu, will give system out messages if file exists or not" />
     <MESSAGE value="Created new Statistics window&#10;Game now saves statistics file when folding (will be when game ends when that is finished)&#10;Menu will open Statistics window that will show statistics info from text file" />
     <MESSAGE value="single player updates" />
     <MESSAGE value="replace cards" />
@@ -571,6 +568,8 @@
     <MESSAGE value="Added game outcomes to statistics file" />
     <MESSAGE value="Added color to buttons&#10;Also updated Statistics window a bit" />
     <MESSAGE value="Added color to buttons&#10;Also updated Statistics window layout and added picture" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added color to buttons&#10;Also updated Statistics window layout and added picture" />
+    <MESSAGE value="Poker cards now become selectable when the image is clicked &#10;Updated button colors in poker menu and game" />
+    <MESSAGE value="Ok I promise this is the last time I change button colors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ok I promise this is the last time I change button colors" />
   </component>
 </project>
