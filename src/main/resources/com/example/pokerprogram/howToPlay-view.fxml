@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane prefHeight="500.0" prefWidth="400.0"
-            style="-fx-background-color: #81c483;" xmlns="http://javafx.com/javafx/11.0.14-internal"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokerprogram.controllers.HowToPlayController">
-
+<AnchorPane prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #81c483;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokerprogram.controllers.HowToPlayController">
+   <children>
+      <Button fx:id="bMenu" onAction="#closeMenu" layoutX="283.0" layoutY="449.0" mnemonicParsing="false" text="Back" />
+      <TextField alignment="TOP_CENTER" layoutX="110.0" layoutY="24.0" text="How To Play" />
+      <TextArea blendMode="COLOR_BURN" layoutX="10.0" layoutY="61.0" prefHeight="218.0" prefWidth="372.0" text="1. When the game starts, player will be dealt 5 cards and have to&#10;bet money.&#10;&#10;2. Player will decide between 2 options. to replace 3 cards from the &#10;hand or to play the current hand.&#10;&#10;3. After the player's hand is done and dealt, if there is a hand in&#10;the 5 cards, they win!&#10;&#10;These are the possible hands and the rankings of each from top &#10;to bottom:" />
+      <ImageView fitHeight="99.0" fitWidth="232.0" layoutX="28.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/cardranks1.jpeg" />
+         </image></ImageView>
+      <ImageView fitHeight="93.0" fitWidth="212.0" layoutX="28.0" layoutY="378.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/cardranks2.jpeg" />
+         </image></ImageView>
+   </children>
 </AnchorPane>

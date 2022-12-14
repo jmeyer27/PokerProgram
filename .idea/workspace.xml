@@ -11,7 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9e4d5e87-0747-4319-8880-ba93a992e525" name="Changes" comment="Ok I promise this is the last time I change button colors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/PokerGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/HowToPlayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pokerprogram/controllers/HowToPlayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/howToPlay-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/howToPlay-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +56,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/jasmi/IdeaProjects/PokerProgram/src/main/java/com/example/pokerprogram&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jasmi/IdeaProjects/PokerProgram/src/main/resources/com/example/pokerprogram/images&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/benji/Documents/GitHub/PokerProgram/src/main/resources/com/example/pokerprogram/images&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -64,11 +65,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/com/example/pokerprogram/images" />
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram\images" />
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\java\com\example\pokerprogram\music" />
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram" />
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\resources\com\example\pokerprogram\images\pokerCardImages" />
-      <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\java\com\example\pokerprogram" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jasmi\IdeaProjects\PokerProgram\src\main\java\com\example\pokerprogram" />
