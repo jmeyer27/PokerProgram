@@ -4,11 +4,13 @@
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #58bf81;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokerprogram.controllers.StatisticsController">
    <children>
-      <Label fx:id="textBox" layoutX="40.0" layoutY="34.0" lineSpacing="4.0" prefHeight="316.0" prefWidth="243.0" style="-fx-background-color: #bdfccd;">
+      <Label fx:id="textBox" alignment="CENTER" graphicTextGap="8.0" layoutX="40.0" layoutY="34.0" lineSpacing="8.0" prefHeight="316.0" prefWidth="243.0" style="-fx-background-color: #bdfccd;" textAlignment="CENTER">
          <effect>
             <DropShadow />
          </effect>
@@ -22,7 +24,16 @@
          <font>
             <Font name="Georgia" size="18.0" />
          </font></Button>
-      <ImageView fitHeight="225.0" fitWidth="168.0" layoutX="366.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#befacd" height="264.0" layoutX="336.0" layoutY="86.0" stroke="#383838" strokeType="INSIDE" width="220.0">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.10526315867900848" green="0.10487329214811325" blue="0.10487329214811325" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Rectangle>
+      <ImageView fitHeight="225.0" fitWidth="168.0" layoutX="366.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/dogs.jpg" />
          </image>
